@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G-Lab</title>
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+    <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+    <meta
+      name="description"
+      content="公式カードリストの日本語データとカード画像を使って、カード検索、構築、初手確認、共有までまとめて回せる構築支援サイトです。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero panel">
+        <div class="hero-copy">
+          <div class="hero-title-row">
+            <div class="hero-brand-slot">
+              <svg class="hero-logo-image" viewBox="0 0 920 190" role="img" aria-label="G-Lab Gundam Deck Builder">
+                <g class="hero-logo-wordmark" fill="currentColor" text-anchor="middle">
+                  <text x="460" y="92" font-size="108" font-style="italic" font-weight="800">G-Lab</text>
+                  <path d="M240 118H680" stroke="currentColor" stroke-width="3" opacity="0.2" />
+                  <text x="460" y="154" font-size="34" font-weight="700" letter-spacing="8">GUNDAM DECK BUILDER</text>
+                </g>
+              </svg>
+              <h1 class="hero-site-name">G-Lab</h1>
+            </div>
+            <span id="dbStamp" class="hero-db-stamp">DB更新 --</span>
+            <button
+              id="themeToggleButton"
+              class="theme-toggle-button"
+              type="button"
+              aria-label="テーマを切り替える"
+              title="テーマを切り替える"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M7 7a7 7 0 0 1 11.2 2M18 5v4h-4M17 17A7 7 0 0 1 5.8 15M6 19v-4h4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.9"
+                />
+              </svg>
+            </button>
+          </div>
+          <p class="hero-lead">
+            公式カードリストの日本語データとカード画像を使って、カード検索、構築、初手確認、共有までまとめて回せる構築支援サイトです。
+          </p>
+          <div class="hero-badges" aria-hidden="true">
+            <span id="dbSourceCount">0枚 / 0商品</span>
+            <span>メインデッキ 50枚</span>
+            <span>Token / EX support</span>
+            <span>同名 4枚制限</span>
+            <span>2色チェック</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="top-stats" aria-hidden="true">
+        <div class="stat-chip">
+          <span>Main Deck</span>
+          <strong id="mainDeckCounter">0 / 50</strong>
+        </div>
+        <div class="stat-chip">
+          <span>Token</span>
+          <strong id="tokenDeckCounter">0</strong>
+        </div>
+        <div class="stat-chip">
+          <span>Colors</span>
+          <strong id="colorCounter">-</strong>
+        </div>
+        <div class="stat-chip">
+          <span>Validation</span>
+          <strong id="validationCounter">Loading</strong>
+        </div>
+      </section>
+
+      <section class="mobile-quickbar">
+        <button id="mobileFilterButton" class="mobile-quick-action" type="button" aria-label="カード検索を開く" title="カード検索を開く">
+          ⌕
+        </button>
+      </section>
+
+      <div id="mobileDrawerBackdrop" class="mobile-drawer-backdrop"></div>
+
+      <main class="workspace">
+        <aside class="panel filters-panel" data-mobile-panel="filters">
+          <div class="panel-head">
+            <div>
+              <p class="kicker">Filter Console</p>
+              <h2>カード検索</h2>
+            </div>
+            <div class="panel-head-actions">
+              <button id="resetFiltersButton" class="ghost-button" type="button">Reset</button>
+              <button id="closeFiltersButton" class="ghost-button" type="button">Close</button>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>キーワード</span>
+            <input id="searchInput" type="search" placeholder="例: テキスト:破壊 特徴:ジオン lv&lt;=3" />
+          </label>
+
+          <div class="field-inline">
+            <label class="field">
+              <span>追加先</span>
+              <select id="quickAddTarget">
+                <option value="main">Main Deck</option>
+                <option value="token">Token</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>並び順</span>
+              <select id="catalogSort">
+                <option value="featured">おすすめ順</option>
+                <option value="package">収録順</option>
+                <option value="level">Lv順</option>
+                <option value="cost">コスト順</option>
+                <option value="ap">AP順</option>
+                <option value="name">名前順</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="toggle-row filter-toggle">
+            <span class="toggle-wrap">
+              <input id="showExtraCards" type="checkbox" />
+              <span>トークン / EX系も表示する</span>
+            </span>
+          </label>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>収録商品</h3>
+              <button class="mini-reset" data-filter-group="packages" type="button">clear</button>
+            </div>
+            <div id="packageFilters" class="chip-grid wide"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>色</h3>
+              <button class="mini-reset" data-filter-group="colors" type="button">clear</button>
+            </div>
+            <div id="colorFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>種類</h3>
+              <button class="mini-reset" data-filter-group="types" type="button">clear</button>
+            </div>
+            <div id="typeFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>作品</h3>
+              <button class="mini-reset" data-filter-group="titles" type="button">clear</button>
+            </div>
+            <div id="titleFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>Rarity</h3>
+              <button class="mini-reset" data-filter-group="rarities" type="button">clear</button>
+            </div>
+            <div id="rarityFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>特徴タグ</h3>
+              <button class="mini-reset" data-filter-group="traits" type="button">clear</button>
+            </div>
+            <div id="traitFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>Quick Presets</h3>
+            </div>
+            <div class="preset-stack">
+              <button class="preset-button" type="button" data-preset="starter">スターター中心</button>
+              <button class="preset-button" type="button" data-preset="booster">ブースター中心</button>
+              <button class="preset-button" type="button" data-preset="lowcurve">低カーブ寄り</button>
+              <button class="preset-button" type="button" data-preset="link">リンク関連</button>
+            </div>
+          </section>
+
+          <section class="panel-note">
+            <h3>検索メモ</h3>
+            <p>テキスト、特徴、色、種類、レア、Lv条件を組み合わせて絞り込めます。複数語はAND検索です。</p>
+          </section>
+        </aside>
+
+        <section class="panel catalog-panel" data-mobile-panel="catalog">
+          <div class="panel-head">
+            <div>
+              <p class="kicker">Catalog</p>
+              <h2>カード一覧</h2>
+            </div>
+            <div class="catalog-controls">
+              <button
+                id="desktopFilterButton"
+                class="ghost-button desktop-filter-button"
+                type="button"
+                aria-label="カード検索を開く"
+                title="カード検索を開く"
+              >
+                ⌕
+              </button>
+              <div class="catalog-view-switch">
+                <button class="view-button is-active" data-view="grid" type="button">Grid</button>
+                <button class="view-button" data-view="list" type="button">List</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="activeFilterSummary" class="active-filter-summary" hidden></div>
+
+          <div class="catalog-status">
+            <strong id="resultCount">0</strong>
+            <span id="resultLabel">cards</span>
+          </div>
+
+          <div id="cardCatalog" class="catalog-grid"></div>
+        </section>
+
+        <aside class="panel side-panel" data-mobile-panel="side">
+          <div class="side-tabs">
+            <button class="side-tab is-active" data-tab="deck" type="button">Deck</button>
+            <button class="side-tab" data-tab="sim" type="button">Sim</button>
+            <button class="side-tab" data-tab="save" type="button">Save</button>
+          </div>
+
+          <section id="tab-deck" class="tab-panel is-active">
+            <div class="panel-head compact">
+              <div>
+                <p class="kicker">Build</p>
+                <h2>現在のデッキ</h2>
+              </div>
+            </div>
+
+            <label class="field">
+              <span>デッキ名</span>
+              <input id="deckNameInput" type="text" maxlength="60" />
+            </label>
+
+            <details class="note-accordion accordion-box">
+              <summary class="accordion-summary">
+                <span class="accordion-title">メモ</span>
+              </summary>
+              <div class="accordion-body">
+                <label class="field field-inside">
+                  <span>メモ</span>
+                  <textarea id="deckNoteInput" rows="3" placeholder="構築方針、採用理由、調整メモ"></textarea>
+                </label>
+              </div>
+            </details>
+
+            <div class="deck-actions">
+              <button id="sortDeckButton" class="solid-button" type="button">整列</button>
+              <button id="copyDecklistButton" class="ghost-button" type="button">コピー</button>
+              <button id="clearDeckButton" class="ghost-button danger-button" type="button">消去</button>
+            </div>
+
+            <section class="ai-diagnosis-box">
+              <div class="ai-diagnosis-head">
+                <h3>艦長一言診断</h3>
+                <button id="runAiDiagnosisButton" class="ghost-button" type="button">診断する</button>
+              </div>
+              <div id="aiDiagnosisResult" class="ai-diagnosis-result">
+                <p>まだ艦長診断がありません。</p>
+                <span>デッキを組んだら「診断する」を押してください。</span>
+              </div>
+            </section>
+
+            <details class="diagnostic-box accordion-box">
+              <summary class="diagnostic-head accordion-summary">
+                <h3>構築診断</h3>
+                <span id="deckDiagnosticSummary" class="accordion-status is-ok">OK</span>
+              </summary>
+              <div class="accordion-body">
+                <div id="deckInsights" class="diagnostic-list"></div>
+              </div>
+            </details>
+
+            <section class="curve-box">
+              <div class="diagnostic-head">
+                <h3>カーブ</h3>
+                <span>ユニットLv.</span>
+              </div>
+              <div id="curveChart" class="curve-chart"></div>
+            </section>
+
+            <div class="deck-zone">
+              <div class="deck-zone-head">
+                <h3>メインデッキ</h3>
+                <span id="mainZoneSummary">0 / 50</span>
+              </div>
+              <div id="mainDeckList" class="deck-list"></div>
+            </div>
+          </section>
+
+          <section id="tab-sim" class="tab-panel">
+            <div class="panel-head compact">
+              <div>
+                <p class="kicker">Simulation</p>
+                <h2>初手ドロー / 初動チェック</h2>
+              </div>
+            </div>
+
+            <div class="sim-section">
+              <div class="sim-head">
+                <h3>初手ドロー</h3>
+                <button id="drawOpeningHandButton" class="solid-button" type="button">5枚引く</button>
+              </div>
+              <div id="openingHand" class="opening-hand"></div>
+            </div>
+
+            <div class="sim-section">
+              <div class="sim-head">
+                <h3>初動チェック</h3>
+                <button id="runCheckButton" class="solid-button" type="button">2000回試行</button>
+              </div>
+
+              <label class="field">
+                <span>チェックプリセット</span>
+                <select id="checkPreset">
+                  <option value="balanced">安定初動</option>
+                  <option value="link">リンク重視</option>
+                  <option value="aggro">アグロ寄り</option>
+                  <option value="focus">注目カード重視</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>注目カード</span>
+                <select id="focusCards" multiple size="7"></select>
+              </label>
+
+              <label class="toggle-row">
+                <span class="toggle-wrap">
+                  <input id="focusRequireAll" type="checkbox" />
+                  <span>注目カードをすべて要求</span>
+                </span>
+                <span class="toggle-wrap">
+                  <input id="requireBaseToggle" type="checkbox" />
+                  <span>ベースも要求</span>
+                </span>
+              </label>
+
+              <div id="checkResult" class="check-result">メインデッキを50枚にすると、初手チェックを実行できます。</div>
+            </div>
+          </section>
+
+          <section id="tab-save" class="tab-panel">
+            <div class="panel-head compact">
+              <div>
+                <p class="kicker">Library</p>
+                <h2>保存 / 共有</h2>
+              </div>
+            </div>
+
+            <div class="save-actions">
+              <button id="saveDeckButton" class="solid-button" type="button">ローカル保存</button>
+              <button id="duplicateDeckButton" class="ghost-button" type="button">複製保存</button>
+              <button id="copyShareButton" class="ghost-button" type="button">共有URLをコピー</button>
+              <button id="exportDeckButton" class="ghost-button" type="button">JSONを書き出し</button>
+              <label class="import-button">
+                JSON読込
+                <input id="importDeckInput" type="file" accept=".json" />
+              </label>
+            </div>
+
+            <div class="save-subsection">
+              <h3>保存済みデッキ</h3>
+              <div id="savedDeckList" class="saved-list"></div>
+            </div>
+
+            <div class="save-subsection">
+              <h3>スターター / ブースター別一覧</h3>
+              <div id="starterList" class="saved-list"></div>
+            </div>
+          </section>
+        </aside>
+      </main>
+
+      <section class="panel inspector-panel" data-mobile-panel="detail">
+        <div class="panel-head">
+          <div>
+            <p class="kicker">Inspector</p>
+            <h2>カード詳細</h2>
+          </div>
+        </div>
+        <div id="selectedCardDetails" class="selected-card"></div>
+      </section>
+    </div>
+
+    <template id="emptyStateTemplate">
+      <div class="empty-state">
+        <p>該当するカードがありません。</p>
+        <span>検索条件やフィルタを見直してみてください。</span>
+      </div>
+    </template>
+
+    <button id="mobileFilterFab" class="mobile-fab mobile-filter-fab" type="button" aria-label="カード検索を開く" title="カード検索を開く">
+      ⌕
+    </button>
+
+    <button id="mobileTopFab" class="mobile-fab mobile-top-fab" type="button" aria-label="TOPに戻る" title="TOPに戻る" aria-hidden="true">
+      ↑
+    </button>
+
+    <button
+      id="mobileDeckFab"
+      class="mobile-fab mobile-deck-fab"
+      type="button"
+      aria-label="現在のデッキを開く"
+      title="現在のデッキを開く"
+    >
+      ⧉
+    </button>
+
+    <button
+      id="mobileCompareFab"
+      class="mobile-fab mobile-compare-fab"
+      type="button"
+      aria-label="カード比較を開く"
+      title="カード比較を開く"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="4" y="6" width="7" height="10" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <rect x="13" y="8" width="7" height="10" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8" />
+      </svg>
+      <span id="mobileCompareCount" class="mobile-fab-count" hidden>0</span>
+    </button>
+
+    <div id="imagePreviewModal" class="image-preview-modal" aria-hidden="true">
+      <div class="image-preview-dialog" role="dialog" aria-modal="true" aria-labelledby="imagePreviewTitle">
+        <button id="imagePreviewClose" class="image-preview-close" type="button" aria-label="拡大画像を閉じる">
+          &times;
+        </button>
+        <div class="image-preview-frame">
+          <img id="imagePreviewImage" src="" alt="" />
+        </div>
+        <div class="image-preview-meta">
+          <strong id="imagePreviewTitle"></strong>
+          <span id="imagePreviewCode"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="confirmModal" class="confirm-modal" aria-hidden="true">
+      <div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+        <h2 id="confirmTitle">デッキを消去しますか？</h2>
+        <p id="confirmMessage">現在のメインデッキ、トークン、初手チェック結果を消去します。</p>
+        <div class="confirm-actions">
+          <button id="confirmCancelButton" class="ghost-button" type="button">戻る</button>
+          <button id="confirmAcceptButton" class="ghost-button danger-button" type="button">消去する</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./data/official-cards-jp.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

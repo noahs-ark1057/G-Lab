@@ -1,0 +1,38 @@
+name: Daily Gundam Card DB Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 15 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-db:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh official card database
+        run: |
+          python scripts/fetch_official_cards.py --out data/official-cards-jp.json --js-out data/official-cards-jp.js --cache-dir cache/official --workers 8
+
+      - name: Cache official card images
+        run: |
+          python scripts/cache_official_images.py --json data/official-cards-jp.json --js data/official-cards-jp.js --image-dir assets/official-cards --workers 12
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/official-cards-jp.json data/official-cards-jp.js assets/official-cards
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: refresh official card db"
+          git push
