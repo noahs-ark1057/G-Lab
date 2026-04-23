@@ -18,6 +18,7 @@ const COMPARE_LIMIT = 3;
 const THEME_SWITCH_OUT_MS = 280;
 const THEME_SWITCH_BG_MS = 360;
 const THEME_SWITCH_IN_MS = 420;
+const DECK_TYPE_ORDER = ["UNIT", "PILOT", "COMMAND", "BASE"];
 let confirmAcceptHandler = null;
 const TYPE_SPLIT_PATTERN = /\s*(?:\/|／|,|，|\+|＋|&|＆|\|)\s*/g;
 
@@ -280,6 +281,7 @@ const state = {
   preset: "",
   showExtras: false,
   theme: loadTheme(),
+  curvePage: "level",
   favorites: loadFavorites(),
   compareIds: [],
   selectedCardId: ALL_CARDS.find((card) => card.isMainDeckCard)?.id || ALL_CARDS[0]?.id || null,
@@ -363,6 +365,8 @@ const elements = {
   deckInsights: document.getElementById("deckInsights"),
   deckDiagnosticSummary: document.getElementById("deckDiagnosticSummary"),
   curveChart: document.getElementById("curveChart"),
+  curveTypeChart: document.getElementById("curveTypeChart"),
+  curvePages: document.getElementById("curvePages"),
   inspectorPanel: document.querySelector(".inspector-panel"),
   selectedCardDetails: document.getElementById("selectedCardDetails"),
   detailModal: null,
@@ -391,9 +395,13 @@ const elements = {
   runCheckButton: document.getElementById("runCheckButton"),
   checkResult: document.getElementById("checkResult"),
   sortDeckButton: document.getElementById("sortDeckButton"),
+  sortDeckMenu: document.getElementById("sortDeckMenu"),
+  sortDeckByLevelButton: document.getElementById("sortDeckByLevelButton"),
+  sortDeckByTypeButton: document.getElementById("sortDeckByTypeButton"),
   copyDecklistButton: document.getElementById("copyDecklistButton"),
   clearDeckButton: document.getElementById("clearDeckButton"),
   toggleReferenceDecksButton: document.getElementById("toggleReferenceDecksButton"),
+  referenceDeckCountBadge: document.getElementById("referenceDeckCountBadge"),
   referenceDecksBox: document.getElementById("referenceDecksBox"),
   referenceModal: null,
   referenceModalDialog: null,
@@ -2530,6 +2538,9 @@ function renderReferenceDecks() {
   if (!elements.referenceDecksList || !elements.referenceDecksModalCount || !elements.referenceDecksFetchedAt) return;
 
   const referenceDecks = getReferenceDecks();
+  if (elements.referenceDeckCountBadge) {
+    elements.referenceDeckCountBadge.textContent = `${referenceDecks.length}件`;
+  }
   elements.referenceDecksModalCount.textContent = `${referenceDecks.length}件`;
   elements.referenceDecksFetchedAt.textContent = formatDateTimeJa(RAW_REFERENCE_DECKS.generatedAt);
   elements.referenceDecksList.innerHTML = "";
@@ -2677,7 +2688,7 @@ function renderStats() {
 }
 
 function renderCurve() {
-  const buckets = [
+  const levelBuckets = [
     { label: "Lv1", min: 1, max: 1 },
     { label: "Lv2", min: 2, max: 2 },
     { label: "Lv3", min: 3, max: 3 },
@@ -2685,30 +2696,62 @@ function renderCurve() {
     { label: "Lv5", min: 5, max: 5 },
     { label: "Lv6+", min: 6, max: 99 },
   ];
-  const counts = buckets.map((bucket) =>
+  const levelCounts = levelBuckets.map((bucket) =>
     state.deck.main.reduce((sum, entry) => {
       const card = CARD_LOOKUP.get(entry.cardId);
-      if (!card || card.type !== "UNIT" || card.level === null) return sum;
+      if (!card || getPrimaryDeckType(card) !== "UNIT" || card.level === null) return sum;
       if (card.level < bucket.min || card.level > bucket.max) return sum;
       return sum + entry.qty;
     }, 0),
   );
-  const maxCount = Math.max(1, ...counts);
-  elements.curveChart.innerHTML = "";
-  buckets.forEach((bucket, index) => {
-    const count = counts[index];
-    const fillHeight = count === 0 ? 0 : Math.max(6, (count / maxCount) * 100);
-    const bar = document.createElement("div");
-    bar.className = "curve-bar";
-    bar.innerHTML = `
-      <div class="curve-bar-visual">
-        <div class="curve-bar-fill ${count === 0 ? "is-zero" : ""}" style="height:${fillHeight}%"></div>
-      </div>
-      <div class="curve-bar-label">${bucket.label}</div>
-      <div class="curve-bar-value">${count}</div>
-    `;
-    elements.curveChart.appendChild(bar);
+  const typeBuckets = [
+    { label: "ユニット", type: "UNIT" },
+    { label: "パイロット", type: "PILOT" },
+    { label: "コマンド", type: "COMMAND" },
+    { label: "ベース", type: "BASE" },
+  ];
+  const typeCounts = typeBuckets.map((bucket) =>
+    state.deck.main.reduce((sum, entry) => {
+      const card = CARD_LOOKUP.get(entry.cardId);
+      if (!card || getPrimaryDeckType(card) !== bucket.type) return sum;
+      return sum + entry.qty;
+    }, 0),
+  );
+
+  const renderChartBars = (target, buckets, counts) => {
+    if (!target) return;
+    const maxCount = Math.max(1, ...counts);
+    target.innerHTML = "";
+    buckets.forEach((bucket, index) => {
+      const count = counts[index];
+      const fillHeight = count === 0 ? 0 : Math.max(6, (count / maxCount) * 100);
+      const bar = document.createElement("div");
+      bar.className = "curve-bar";
+      bar.innerHTML = `
+        <div class="curve-bar-visual">
+          <div class="curve-bar-fill ${count === 0 ? "is-zero" : ""}" style="height:${fillHeight}%"></div>
+        </div>
+        <div class="curve-bar-label">${bucket.label}</div>
+        <div class="curve-bar-value">${count}</div>
+      `;
+      target.appendChild(bar);
+    });
+  };
+
+  renderChartBars(elements.curveChart, levelBuckets, levelCounts);
+  renderChartBars(elements.curveTypeChart, typeBuckets, typeCounts);
+
+  document.querySelectorAll("[data-curve-page]").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.curvePage === state.curvePage);
   });
+  if (elements.curvePages) {
+    elements.curvePages.dataset.curvePage = state.curvePage;
+  }
+}
+
+function setCurvePage(page) {
+  state.curvePage = page === "type" ? "type" : "level";
+  renderCurve();
 }
 
 function bindSelectedCardVariantButtons(container, card) {
@@ -3011,15 +3054,38 @@ function renderCheckResult() {
   `;
 }
 
-function sortDeckByType() {
-  const order = { UNIT: 0, PILOT: 1, COMMAND: 2, BASE: 3, RESOURCE: 4 };
+function getPrimaryDeckType(card) {
+  const tokens = card?.typeTokens || [card?.type];
+  return DECK_TYPE_ORDER.find((type) => tokens.includes(type)) || card?.type || "OTHER";
+}
+
+function getDeckTypeRank(card) {
+  const index = DECK_TYPE_ORDER.indexOf(getPrimaryDeckType(card));
+  return index === -1 ? 99 : index;
+}
+
+function sortDeckByLevel() {
   state.deck.main.sort((left, right) => {
     const cardA = CARD_LOOKUP.get(left.cardId);
     const cardB = CARD_LOOKUP.get(right.cardId);
     return (
-      (order[cardA.type] ?? 99) - (order[cardB.type] ?? 99) ||
-      (cardA.level ?? 99) - (cardB.level ?? 99) ||
-      cardA.number.localeCompare(cardB.number, "ja")
+      (cardA?.level ?? 99) - (cardB?.level ?? 99) ||
+      (cardA?.cost ?? 99) - (cardB?.cost ?? 99) ||
+      getDeckTypeRank(cardA) - getDeckTypeRank(cardB) ||
+      String(cardA?.number || "").localeCompare(String(cardB?.number || ""), "ja")
+    );
+  });
+  render();
+}
+
+function sortDeckByType() {
+  state.deck.main.sort((left, right) => {
+    const cardA = CARD_LOOKUP.get(left.cardId);
+    const cardB = CARD_LOOKUP.get(right.cardId);
+    return (
+      getDeckTypeRank(cardA) - getDeckTypeRank(cardB) ||
+      (cardA?.level ?? 99) - (cardB?.level ?? 99) ||
+      String(cardA?.number || "").localeCompare(String(cardB?.number || ""), "ja")
     );
   });
   render();
@@ -3675,9 +3741,48 @@ function bindEvents() {
     });
   });
 
+  document.querySelectorAll("#curvePageTabs [data-curve-page]").forEach((button) => {
+    button.addEventListener("click", () => {
+      setCurvePage(button.dataset.curvePage || "level");
+    });
+  });
+
+  if (elements.curvePages) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    elements.curvePages.addEventListener(
+      "touchstart",
+      (event) => {
+        touchStartX = event.changedTouches[0]?.clientX || 0;
+      },
+      { passive: true },
+    );
+    elements.curvePages.addEventListener(
+      "touchend",
+      (event) => {
+        touchEndX = event.changedTouches[0]?.clientX || 0;
+        const delta = touchEndX - touchStartX;
+        if (Math.abs(delta) < 40) return;
+        if (delta < 0) {
+          setCurvePage("type");
+        } else {
+          setCurvePage("level");
+        }
+      },
+      { passive: true },
+    );
+  }
+
   elements.drawOpeningHandButton.addEventListener("click", drawOpeningHand);
   elements.runCheckButton.addEventListener("click", runOpeningCheck);
-  elements.sortDeckButton.addEventListener("click", sortDeckByType);
+  elements.sortDeckByLevelButton?.addEventListener("click", () => {
+    sortDeckByLevel();
+    elements.sortDeckMenu?.removeAttribute("open");
+  });
+  elements.sortDeckByTypeButton?.addEventListener("click", () => {
+    sortDeckByType();
+    elements.sortDeckMenu?.removeAttribute("open");
+  });
   elements.copyDecklistButton.addEventListener("click", copyDecklist);
   elements.toggleReferenceDecksButton?.addEventListener("click", openReferenceModal);
   elements.clearDeckButton.addEventListener("click", clearDeck);

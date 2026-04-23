@@ -256,17 +256,21 @@
 
         <aside class="panel side-panel" data-mobile-panel="side">
           <div class="side-tabs">
-            <button class="side-tab is-active" data-tab="deck" type="button">構築</button>
+            <button class="side-tab is-active" data-tab="deck" type="button">デッキ</button>
             <button class="side-tab" data-tab="sim" type="button">初動</button>
             <button class="side-tab" data-tab="save" type="button">保存</button>
           </div>
 
           <section id="tab-deck" class="tab-panel is-active">
-            <div class="panel-head compact">
+            <div class="panel-head compact deck-panel-head">
               <div>
                 <p class="kicker">Build</p>
                 <h2>現在のデッキ</h2>
               </div>
+              <button id="toggleReferenceDecksButton" class="solid-button reference-open-button" type="button">
+                <span>参考</span>
+                <span id="referenceDeckCountBadge" class="reference-open-count">0件</span>
+              </button>
             </div>
 
             <label class="field">
@@ -287,9 +291,16 @@
             </details>
 
             <div class="deck-actions">
-              <button id="sortDeckButton" class="solid-button" type="button">整列</button>
+              <details class="sort-menu" id="sortDeckMenu">
+                <summary id="sortDeckButton" class="solid-button sort-menu-summary">整列</summary>
+                <div class="sort-menu-panel">
+                  <button id="sortDeckByLevelButton" class="ghost-button sort-menu-option" type="button">Lv順</button>
+                  <button id="sortDeckByTypeButton" class="ghost-button sort-menu-option" type="button">
+                    種類順
+                  </button>
+                </div>
+              </details>
               <button id="copyDecklistButton" class="ghost-button" type="button">コピー</button>
-              <button id="toggleReferenceDecksButton" class="ghost-button" type="button">参考</button>
               <button id="clearDeckButton" class="ghost-button danger-button" type="button">消去</button>
             </div>
 
@@ -315,11 +326,23 @@
             </details>
 
             <section class="curve-box">
-              <div class="diagnostic-head">
+              <div class="diagnostic-head curve-head">
                 <h3>カーブ</h3>
-                <span>ユニットLv.</span>
+                <div id="curvePageTabs" class="curve-page-tabs deck-zone-tabbar">
+                  <button class="deck-zone-tab is-active" data-curve-page="level" type="button">Lv</button>
+                  <button class="deck-zone-tab" data-curve-page="type" type="button">種類</button>
+                </div>
               </div>
-              <div id="curveChart" class="curve-chart"></div>
+              <div id="curvePages" class="curve-pages" data-curve-page="level">
+                <div class="curve-pages-track">
+                  <div class="curve-page" data-curve-panel="level">
+                    <div id="curveChart" class="curve-chart"></div>
+                  </div>
+                  <div class="curve-page" data-curve-panel="type">
+                    <div id="curveTypeChart" class="curve-chart curve-chart--type"></div>
+                  </div>
+                </div>
+              </div>
             </section>
 
             <div class="deck-zone">
