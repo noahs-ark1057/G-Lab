@@ -1,5 +1,11 @@
 ﻿const RAW_DB = window.__OFFICIAL_GUNDAM_CARD_DB || { cards: [], packages: [], generatedAt: "" };
 
+const RAW_REFERENCE_DECKS = window.__TOURNAMENT_REFERENCE_DECKS || {
+  generatedAt: "",
+  deckCount: 0,
+  decks: [],
+};
+
 const MAIN_DECK_TYPES = ["UNIT", "PILOT", "COMMAND", "BASE"];
 const RESOURCE_TYPE = "RESOURCE";
 const EXTRA_TYPES = ["UNIT TOKEN", "EX BASE", "EX RESOURCE"];
@@ -19,12 +25,19 @@ function getDiagnosisMode(theme = loadTheme()) {
   return theme === "red" ? "colonel" : "captain";
 }
 
+function getSearchPlaceholder(theme = loadTheme()) {
+  return theme === "red"
+    ? "例: シャア / ファルメル / etc..."
+    : "例: アムロ / ホワイトベース / etc...";
+}
+
 function getDiagnosisLabels(theme = loadTheme()) {
   if (getDiagnosisMode(theme) === "colonel") {
     return {
       mode: "colonel",
       title: "大佐一言診断",
       badge: "大佐所見",
+      suggestionTitle: "大佐推奨カード",
       emptyTitle: "まだ大佐診断がない。",
       emptyBody: "デッキを組んだなら「診断する」を押すことだ。",
       freshNote: "現状デッキに対する私の所見だ。",
@@ -36,9 +49,10 @@ function getDiagnosisLabels(theme = loadTheme()) {
     mode: "captain",
     title: "艦長一言診断",
     badge: "艦長所見",
-    emptyTitle: "まだ艦長診断がありません。",
-    emptyBody: "デッキを組んだら「診断する」を押してください。",
-    freshNote: "現状デッキへの所見だ。",
+    suggestionTitle: "艦長提案カード",
+    emptyTitle: "まだ診断に値する構成ではない。",
+    emptyBody: "まずデッキを整えろ。準備ができたなら「診断する」を押してくれ。",
+    freshNote: "現状デッキに対する私の所見だ。",
     staleNote: "デッキ内容が変わっている。再診断で更新しろ。",
   };
 }
@@ -50,6 +64,7 @@ function createEmptyAiDiagnosis(theme = loadTheme()) {
     good: "",
     caution: "",
     suggestion: "",
+    suggestedCards: [],
     status: "info",
     persona: labels.mode,
     signature: "",
@@ -63,6 +78,27 @@ function normalizeTypeToken(value = "") {
 
 function parseTypeTokens(value = "") {
   return [...new Set(String(value || "").split(TYPE_SPLIT_PATTERN).map(normalizeTypeToken).filter(Boolean))];
+}
+
+function extractImplicitTypeTokens(text = "") {
+  const source = String(text || "");
+  const tokens = [];
+  const keywordMap = [
+    ["【パイロット】", "PILOT"],
+    ["【コマンド】", "COMMAND"],
+    ["【ベース】", "BASE"],
+    ["【ユニット】", "UNIT"],
+    ["[PILOT]", "PILOT"],
+    ["[COMMAND]", "COMMAND"],
+    ["[BASE]", "BASE"],
+    ["[UNIT]", "UNIT"],
+  ];
+  keywordMap.forEach(([keyword, type]) => {
+    if (source.includes(keyword) && !tokens.includes(type)) {
+      tokens.push(type);
+    }
+  });
+  return tokens;
 }
 
 function inferType(raw) {
@@ -104,7 +140,14 @@ function hasCardType(card, type) {
 
 function normalizeCard(raw) {
   const type = inferType(raw);
-  const typeTokens = [...new Set((parseTypeTokens(raw.type).length ? parseTypeTokens(raw.type) : [type]).map(normalizeTypeToken))];
+  const typeTokens = [
+    ...new Set(
+      [
+        ...(parseTypeTokens(raw.type).length ? parseTypeTokens(raw.type) : [type]),
+        ...extractImplicitTypeTokens(raw.text),
+      ].map(normalizeTypeToken),
+    ),
+  ];
   const packageInfo = raw.packages?.[0] || { id: "unknown", name: raw.whereToGet || "未分類" };
   const primaryImageUrl = raw.imageUrlLocal || raw.imageUrl || "";
   const name = inferName(raw);
@@ -191,6 +234,12 @@ function normalizeCard(raw) {
 const PACKAGE_ORDER = new Map(RAW_DB.packages.map((pkg, index) => [pkg.id, index]));
 const ALL_CARDS = RAW_DB.cards.map(normalizeCard);
 const CARD_LOOKUP = new Map(ALL_CARDS.map((card) => [card.id, card]));
+const CARD_BY_NUMBER = new Map();
+ALL_CARDS.forEach((card) => {
+  if (card.number && !CARD_BY_NUMBER.has(card.number)) {
+    CARD_BY_NUMBER.set(card.number, card);
+  }
+});
 
 const TITLE_COUNTS = countValues(ALL_CARDS.map((card) => card.title).filter(Boolean));
 const TRAIT_COUNTS = countValues(ALL_CARDS.flatMap((card) => card.traits));
@@ -208,13 +257,17 @@ const TRAITS = [...TRAIT_COUNTS.entries()]
   .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "ja"))
   .slice(0, 28)
   .map(([trait]) => trait);
+const LEVEL_VALUES = Array.from({ length: 8 }, (_, index) => String(index + 1));
+const COST_VALUES = Array.from({ length: 8 }, (_, index) => String(index + 1));
+const AP_VALUES = Array.from({ length: 6 }, (_, index) => String(index + 1));
+const HP_VALUES = Array.from({ length: 7 }, (_, index) => String(index + 1));
 
 const state = {
   dbLoaded: ALL_CARDS.length > 0,
   query: "",
   sort: "featured",
   view: "grid",
-  mobileView: "catalog",
+  mobileView: "side",
   isFilterDrawerOpen: false,
   isSideDrawerOpen: false,
   isDetailDrawerOpen: false,
@@ -222,7 +275,7 @@ const state = {
   activeDeckZone: "main",
   quickAddTarget: "main",
   activeTab: "deck",
-  detailReturnView: "catalog",
+  detailReturnView: "side",
   detailReturnTab: "deck",
   preset: "",
   showExtras: false,
@@ -235,6 +288,10 @@ const state = {
     packages: new Set(),
     colors: new Set(),
     types: new Set(),
+    levels: new Set(),
+    costs: new Set(),
+    aps: new Set(),
+    hps: new Set(),
     titles: new Set(),
     rarities: new Set(),
     traits: new Set(),
@@ -251,6 +308,7 @@ const state = {
   savedDecks: loadSavedDecks(),
   lastCheck: null,
   aiDiagnosis: createEmptyAiDiagnosis(),
+  referenceDeckZones: {},
   dragState: null,
 };
 
@@ -266,6 +324,10 @@ const elements = {
   packageFilters: document.getElementById("packageFilters"),
   colorFilters: document.getElementById("colorFilters"),
   typeFilters: document.getElementById("typeFilters"),
+  levelFilters: document.getElementById("levelFilters"),
+  costFilters: document.getElementById("costFilters"),
+  apFilters: document.getElementById("apFilters"),
+  hpFilters: document.getElementById("hpFilters"),
   titleFilters: document.getElementById("titleFilters"),
   rarityFilters: document.getElementById("rarityFilters"),
   traitFilters: document.getElementById("traitFilters"),
@@ -331,6 +393,14 @@ const elements = {
   sortDeckButton: document.getElementById("sortDeckButton"),
   copyDecklistButton: document.getElementById("copyDecklistButton"),
   clearDeckButton: document.getElementById("clearDeckButton"),
+  toggleReferenceDecksButton: document.getElementById("toggleReferenceDecksButton"),
+  referenceDecksBox: document.getElementById("referenceDecksBox"),
+  referenceModal: null,
+  referenceModalDialog: null,
+  referenceModalClose: null,
+  referenceDecksModalCount: null,
+  referenceDecksFetchedAt: document.getElementById("referenceDecksFetchedAt"),
+  referenceDecksList: document.getElementById("referenceDecksList"),
   runAiDiagnosisButton: document.getElementById("runAiDiagnosisButton"),
   aiDiagnosisResult: document.getElementById("aiDiagnosisResult"),
   aiDiagnosisTitle: document.querySelector(".ai-diagnosis-head h3"),
@@ -440,7 +510,9 @@ function setupDetailUI() {
 function setupEnhancementUI() {
   elements.starterList?.closest(".save-subsection")?.remove();
   elements.backToTopButton?.remove();
-  elements.searchInput.placeholder = '例: テキスト:破壊 特徴:ジオン lv<=3';
+  if (elements.searchInput) {
+    elements.searchInput.placeholder = getSearchPlaceholder(state.theme);
+  }
   if (elements.desktopFilterButton) {
     elements.desktopFilterButton.textContent = "⌕";
     elements.desktopFilterButton.setAttribute("aria-label", "カード検索を開く");
@@ -457,8 +529,9 @@ function setupEnhancementUI() {
     elements.mobileTopFab.setAttribute("title", "TOPに戻る");
   }
   if (elements.mobileDeckFab) {
-    elements.mobileDeckFab.setAttribute("aria-label", "現在のデッキを開く");
-    elements.mobileDeckFab.setAttribute("title", "現在のデッキを開く");
+    elements.mobileDeckFab.textContent = "⌕";
+    elements.mobileDeckFab.setAttribute("aria-label", "カード一覧を開く");
+    elements.mobileDeckFab.setAttribute("title", "カード一覧を開く");
   }
   if (elements.mobileCompareFab) {
     elements.mobileCompareFab.setAttribute("aria-label", "カード比較を開く");
@@ -466,13 +539,7 @@ function setupEnhancementUI() {
   }
 
   const searchField = elements.searchInput?.closest(".field");
-  if (searchField && !document.getElementById("searchHint")) {
-    const hint = document.createElement("p");
-    hint.id = "searchHint";
-    hint.className = "search-hint";
-    hint.textContent = "複数語はAND検索。テキスト: / 特徴: / 色: / 種類: / レア: と lv<=3 に対応。";
-    searchField.appendChild(hint);
-  }
+  document.getElementById("searchHint")?.remove();
 
   if (elements.filtersPanel && !document.getElementById("favoriteTools")) {
     const controls = document.createElement("section");
@@ -530,6 +597,32 @@ function setupEnhancementUI() {
     document.body.appendChild(modal);
   }
 
+  if (!document.getElementById("referenceModal")) {
+    const modal = document.createElement("div");
+    modal.id = "referenceModal";
+    modal.className = "compare-modal reference-modal";
+    modal.setAttribute("aria-hidden", "true");
+    modal.innerHTML = `
+      <div class="compare-modal-dialog reference-modal-dialog" role="dialog" aria-modal="true" aria-label="大会入賞デッキ参考">
+        <div class="compare-modal-head reference-modal-head">
+          <div class="reference-modal-title">
+            <p class="kicker">Reference</p>
+            <div class="reference-modal-title-row">
+              <h2>大会入賞デッキ参考</h2>
+              <span id="referenceDecksModalCount" class="reference-modal-count">0件</span>
+            </div>
+            <p class="reference-modal-meta">データ取得日時 <strong id="referenceDecksFetchedAt">--</strong></p>
+          </div>
+          <button id="referenceModalClose" class="compare-modal-close reference-modal-close" type="button" aria-label="参考デッキを閉じる">&times;</button>
+        </div>
+        <div id="referenceDecksList" class="reference-list reference-modal-content"></div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+
+  elements.referenceDecksBox?.remove();
+
   elements.favoriteOnlyToggle = document.getElementById("favoriteOnlyToggle");
   elements.favoriteCount = document.getElementById("favoriteCount");
   elements.compareSummary = document.getElementById("compareSummary");
@@ -538,6 +631,13 @@ function setupEnhancementUI() {
   elements.compareModal = document.getElementById("compareModal");
   elements.compareModalContent = document.getElementById("compareModalContent");
   elements.compareModalClose = document.getElementById("compareModalClose");
+  elements.referenceModal = document.getElementById("referenceModal");
+  elements.referenceModalDialog = elements.referenceModal?.querySelector(".reference-modal-dialog") || null;
+  elements.referenceModalClose = document.getElementById("referenceModalClose");
+  elements.referenceDecksModalCount = document.getElementById("referenceDecksModalCount");
+  elements.referenceDecksFetchedAt = document.getElementById("referenceDecksFetchedAt");
+  elements.referenceDecksList = document.getElementById("referenceDecksList");
+  setupFilterAccordions();
   setupAccordionUI();
 
   [
@@ -575,23 +675,28 @@ function closeFilterDrawer() {
 
 function openFilterDrawer() {
   if (isMobileViewport()) {
-    closeSideDrawer();
     closeDetailDrawer();
+    state.mobileView = "catalog";
+    state.isSideDrawerOpen = true;
+    elements.filtersPanel?.scrollTo({ top: 0, behavior: "auto" });
   }
   state.isFilterDrawerOpen = true;
 }
 
 function closeSideDrawer() {
   state.isSideDrawerOpen = false;
+  if (isMobileViewport()) {
+    state.mobileView = "side";
+  }
 }
 
 function openSideDrawer() {
   if (!isMobileViewport()) return;
   closeFilterDrawer();
   closeDetailDrawer();
-  state.activeTab = "deck";
+  state.mobileView = "catalog";
   state.isSideDrawerOpen = true;
-  elements.sidePanel?.scrollTo({ top: 0, behavior: "auto" });
+  elements.catalogPanel?.scrollTo({ top: 0, behavior: "auto" });
 }
 
 function closeDetailDrawer() {
@@ -615,26 +720,33 @@ function restoreFromDetailDrawer() {
     closeDetailDrawer();
     return;
   }
-  const returnView = state.detailReturnView || "catalog";
+  const returnView = state.detailReturnView || "side";
   const returnTab = state.detailReturnTab || "deck";
   state.isDetailDrawerOpen = false;
+  closeFilterDrawer();
   if (returnView === "side") {
-    closeFilterDrawer();
     state.mobileView = "side";
     state.activeTab = returnTab;
-    state.isSideDrawerOpen = true;
+    closeSideDrawer();
     renderTabs();
+    renderMobileState();
     return;
   }
-  closeFilterDrawer();
-  closeSideDrawer();
   state.mobileView = "catalog";
+  state.isSideDrawerOpen = true;
+  renderTabs();
+  renderMobileState();
 }
 
 function setMobileView(view) {
   state.mobileView = view;
   if (view !== "filters") {
     closeFilterDrawer();
+  }
+  if (view !== "catalog") {
+    closeSideDrawer();
+  } else if (isMobileViewport()) {
+    state.isSideDrawerOpen = true;
   }
   if (view !== "detail") {
     closeDetailDrawer();
@@ -787,6 +899,7 @@ function scrollAllViewsToTop() {
     elements.inspectorPanel,
     elements.detailModalContent,
     elements.compareModalContent,
+    elements.referenceModalDialog,
   ].forEach((target) => scrollToTopTarget(target));
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -817,9 +930,10 @@ function getScrollTopForTarget(target) {
 function getActiveMobileTopTarget() {
   if (!isMobileViewport()) return window;
   if (document.body.classList.contains("is-compare-modal-open")) return elements.compareModalContent || window;
+  if (document.body.classList.contains("is-reference-modal-open")) return elements.referenceModalDialog || window;
   if (document.body.classList.contains("is-detail-modal-open")) return elements.detailModalContent || window;
   if (state.isDetailDrawerOpen) return elements.inspectorPanel || window;
-  if (state.isSideDrawerOpen) return elements.sidePanel || window;
+  if (state.isSideDrawerOpen) return elements.catalogPanel || window;
   if (state.isFilterDrawerOpen) return elements.filtersPanel || window;
   return window;
 }
@@ -833,10 +947,10 @@ function isSectionButtonContextVisible(button) {
   }
 
   if (isMobileViewport()) {
-    if (button.closest(".side-panel")) return state.isSideDrawerOpen;
+    if (button.closest(".side-panel")) return !state.isFilterDrawerOpen && !state.isDetailDrawerOpen;
     if (button.closest(".inspector-panel")) return state.isDetailDrawerOpen;
     if (button.closest(".catalog-panel")) {
-      return !state.isFilterDrawerOpen && !state.isSideDrawerOpen && !state.isDetailDrawerOpen;
+      return state.isSideDrawerOpen;
     }
   }
 
@@ -951,6 +1065,15 @@ function persistTheme() {
   window.localStorage.setItem(THEME_STORAGE_KEY, state.theme);
 }
 
+function formatDateTimeJa(value) {
+  if (!value) return "--";
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    return String(value);
+  }
+  return parsed.toLocaleString("ja-JP");
+}
+
 function toggleFavorite(cardId) {
   if (state.favorites.has(cardId)) {
     state.favorites.delete(cardId);
@@ -977,6 +1100,10 @@ function clearCompare() {
 
 function openCompareModal() {
   if (!elements.compareModal) return;
+  if (isMobileViewport()) {
+    closeFilterDrawer();
+    closeDetailDrawer();
+  }
   elements.compareModal.classList.add("is-open");
   elements.compareModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("is-compare-modal-open");
@@ -988,6 +1115,24 @@ function closeCompareModal() {
   elements.compareModal.classList.remove("is-open");
   elements.compareModal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("is-compare-modal-open");
+  renderMobileState();
+}
+
+function openReferenceModal() {
+  if (!elements.referenceModal) return;
+  renderReferenceDecks();
+  elements.referenceModal.classList.add("is-open");
+  elements.referenceModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("is-reference-modal-open");
+  elements.referenceModalDialog?.scrollTo({ top: 0, behavior: "auto" });
+  renderMobileState();
+}
+
+function closeReferenceModal() {
+  if (!elements.referenceModal) return;
+  elements.referenceModal.classList.remove("is-open");
+  elements.referenceModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("is-reference-modal-open");
   renderMobileState();
 }
 
@@ -1191,6 +1336,196 @@ function applyCardTagFilter(group, value) {
   render();
 }
 
+function focusCatalogWithTagFilter(group, value) {
+  if (!group || !value || !state.filters[group]) return;
+  state.filters[group].add(value);
+  if (elements.searchInput) {
+    elements.searchInput.value = state.query;
+  }
+  closeDetailModal();
+  closeDetailDrawer();
+  closeFilterDrawer();
+  state.mobileView = "catalog";
+  state.isSideDrawerOpen = isMobileViewport();
+  render();
+  if (isMobileViewport()) {
+    elements.catalogPanel?.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    elements.catalogPanel?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function focusCatalogWithQueryToken(token) {
+  if (!token) return;
+  const tokens = tokenizeSearchQuery(state.query);
+  if (!tokens.includes(token)) {
+    tokens.push(token);
+  }
+  state.query = tokens.join(" ").trim();
+  if (elements.searchInput) {
+    elements.searchInput.value = state.query;
+  }
+  closeDetailModal();
+  closeDetailDrawer();
+  closeFilterDrawer();
+  state.mobileView = "catalog";
+  state.isSideDrawerOpen = isMobileViewport();
+  render();
+  if (isMobileViewport()) {
+    elements.catalogPanel?.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    elements.catalogPanel?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function normalizeReferenceEntries(entries = []) {
+  return (entries || [])
+    .map(([number, qty]) => {
+      const normalizedNumber = String(number || "").trim().toUpperCase();
+      const resolvedCard = CARD_BY_NUMBER.get(normalizedNumber) || null;
+      return {
+        number: normalizedNumber,
+        qty: Number(qty) || 0,
+        card: resolvedCard,
+      };
+    })
+    .filter((entry) => entry.number && entry.qty > 0);
+}
+
+function getReferenceDecks() {
+  const parseDeckDate = (value = "") => {
+    const match = String(value).match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);
+    if (!match) return 0;
+    const [, year, month, day] = match;
+    return Date.UTC(Number(year), Number(month) - 1, Number(day));
+  };
+
+  return (RAW_REFERENCE_DECKS.decks || [])
+    .map((deck) => ({
+      ...deck,
+      mainEntries: normalizeReferenceEntries(deck.main),
+      tokenEntries: normalizeReferenceEntries(deck.token),
+    }))
+    .sort((left, right) => {
+      const dateGap = parseDeckDate(right.eventDate) - parseDeckDate(left.eventDate);
+      if (dateGap !== 0) return dateGap;
+      return String(right.deckName || "").localeCompare(String(left.deckName || ""), "ja");
+    });
+}
+
+function getReferenceDeckCardCount(entries = []) {
+  return entries.reduce((total, entry) => total + (Number(entry.qty) || 0), 0);
+}
+
+function buildReferenceDeckNote(deck) {
+  return [deck.eventName, deck.eventDate].filter(Boolean).join(" / ");
+}
+
+function applyReferenceDeck(deck) {
+  if (!deck) return;
+  const normalizeZone = (entries = []) =>
+    entries
+      .map((entry) => (entry.card ? [entry.card.id, Number(entry.qty) || 0] : null))
+      .filter(Boolean);
+
+  state.deck.id = `reference-${deck.id || Date.now()}-${Date.now()}`;
+  state.deck.name = deck.deckName || "大会参考デッキ";
+  state.deck.note = buildReferenceDeckNote(deck);
+  setDeckZone("main", normalizeZone(deck.mainEntries));
+  setDeckZone("token", normalizeZone(deck.tokenEntries));
+  setDeckZone("resource", []);
+  state.aiDiagnosis = createEmptyAiDiagnosis();
+  state.lastCheck = null;
+  setActiveDeckZone("main");
+  closeReferenceModal();
+  render();
+}
+
+function buildDetailTagEntries(card) {
+  const entries = [];
+  const seen = new Set();
+  const pushEntry = (group, value, label = value) => {
+    if (!group || !value) return;
+    const key = `${group}::${value}::${label}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    entries.push({ group, value, label });
+  };
+
+  (card.typeTokens || [card.type]).filter(Boolean).forEach((type) => pushEntry("types", type));
+  card.traits.forEach((trait) => pushEntry("traits", trait));
+  card.links.forEach((link) => pushEntry("traits", link, `Link: ${link}`));
+  card.zones.forEach((zone) => pushEntry("traits", zone));
+  return entries;
+}
+
+function buildDetailBadgeEntries(card) {
+  const entries = [];
+  if (card.rarity) entries.push({ label: card.rarity, filterGroup: "rarities", filterValue: card.rarity });
+  if (card.displayColor && card.displayColor !== "Colorless") {
+    entries.push({ label: card.displayColor, filterGroup: "colors", filterValue: card.displayColor });
+  }
+  if (card.level !== null) entries.push({ label: `Lv ${card.level}`, filterGroup: "levels", filterValue: String(card.level) });
+  if (card.cost !== null) entries.push({ label: `Cost ${card.cost}`, filterGroup: "costs", filterValue: String(card.cost) });
+  if (card.ap !== null) entries.push({ label: `AP ${card.ap}`, filterGroup: "aps", filterValue: String(card.ap) });
+  if (card.hp !== null) entries.push({ label: `HP ${card.hp}`, filterGroup: "hps", filterValue: String(card.hp) });
+  return entries;
+}
+
+function setupFilterAccordions() {
+  if (!elements.filtersPanel) return;
+  elements.filtersPanel.querySelectorAll(".filter-block").forEach((section) => {
+    const reset = section.querySelector(".mini-reset");
+    const heading = section.querySelector(".filter-heading");
+    const title = heading?.querySelector("h3")?.textContent?.trim();
+    const group = reset?.dataset.filterGroup;
+    if (!reset || !heading || !title || !group || section.dataset.accordionified === "true") return;
+
+    const details = document.createElement("details");
+    details.className = "accordion-box filter-block filter-accordion";
+    details.dataset.filterGroup = group;
+    details.dataset.expanded = "false";
+    details.open = false;
+
+    const summary = document.createElement("summary");
+    summary.className = "accordion-summary filter-accordion-summary";
+    summary.innerHTML = `
+      <span class="accordion-title">${escapeHtml(title)}</span>
+      <span class="accordion-status filter-selection-count" data-filter-count-for="${escapeHtml(group)}" hidden>0</span>
+    `;
+
+    const body = document.createElement("div");
+    body.className = "accordion-body";
+
+    const bodyHead = document.createElement("div");
+    bodyHead.className = "filter-heading filter-heading--inside";
+    const titlePlaceholder = document.createElement("span");
+    titlePlaceholder.className = "filter-heading-spacer";
+    bodyHead.appendChild(titlePlaceholder);
+    bodyHead.appendChild(reset);
+    body.appendChild(bodyHead);
+
+    [...section.children].forEach((child) => {
+      if (child === heading) return;
+      body.appendChild(child);
+    });
+
+    details.appendChild(summary);
+    details.appendChild(body);
+    section.replaceWith(details);
+    details.dataset.accordionified = "true";
+  });
+}
+
+function renderFilterAccordionCounts() {
+  document.querySelectorAll("[data-filter-count-for]").forEach((badge) => {
+    const group = badge.dataset.filterCountFor;
+    const count = group && state.filters[group] ? state.filters[group].size : 0;
+    badge.textContent = String(count);
+    badge.hidden = count <= 0;
+  });
+}
+
 function buildActiveFilterTokens() {
   const tokens = [];
   if (state.query.trim()) {
@@ -1204,6 +1539,10 @@ function buildActiveFilterTokens() {
     packages: "収録",
     colors: "色",
     types: "種類",
+    levels: "Lv",
+    costs: "Cost",
+    aps: "AP",
+    hps: "HP",
     titles: "作品",
     rarities: "レア",
     traits: "タグ",
@@ -1298,6 +1637,10 @@ function filterCards() {
     if (state.filters.packages.size && !state.filters.packages.has(card.packageName)) return false;
     if (state.filters.colors.size && !state.filters.colors.has(card.displayColor)) return false;
     if (state.filters.types.size && !(card.typeTokens || [card.type]).some((type) => state.filters.types.has(type))) return false;
+    if (state.filters.levels.size && !state.filters.levels.has(String(card.level ?? ""))) return false;
+    if (state.filters.costs.size && !state.filters.costs.has(String(card.cost ?? ""))) return false;
+    if (state.filters.aps.size && !state.filters.aps.has(String(card.ap ?? ""))) return false;
+    if (state.filters.hps.size && !state.filters.hps.has(String(card.hp ?? ""))) return false;
     if (state.filters.titles.size && !state.filters.titles.has(card.title)) return false;
     if (state.filters.rarities.size && !state.filters.rarities.has(card.rarity)) return false;
     if (
@@ -1306,6 +1649,7 @@ function filterCards() {
         (trait) =>
           card.traits.includes(trait) ||
           card.links.includes(trait) ||
+          card.zones.includes(trait) ||
           card.text.includes(trait) ||
           card.name.includes(trait),
       )
@@ -1517,6 +1861,103 @@ function abbreviateColorName(color) {
   return map[color] || color;
 }
 
+function buildAiSuggestedCards(stats) {
+  const mode = getDiagnosisMode(state.theme);
+  const deckCardIds = new Set(state.deck.main.map((entry) => entry.cardId));
+  const deckColorSet = new Set(stats.colors);
+  const needLowUnits = stats.lowUnits < 12;
+  const needBase = stats.bases < 3;
+  const needCommand = (stats.typeCounts.COMMAND || 0) < 6;
+  const needPilot = (stats.typeCounts.PILOT || 0) < 4 && (stats.typeCounts.UNIT || 0) >= 12;
+
+  const candidates = ALL_CARDS.filter((card) => {
+    if (!card.isMainDeckCard) return false;
+    if (deckCardIds.has(card.id)) return false;
+    if (stats.colors.length && !deckColorSet.has(card.displayColor)) return false;
+    return true;
+  })
+    .map((card) => {
+      let score = featuredScore(card);
+      const reasons = [];
+
+      if (stats.primaryTitle && card.title === stats.primaryTitle) {
+        score += 20;
+        reasons.push("title");
+      }
+      if (stats.primaryTrait && (card.traits || []).includes(stats.primaryTrait)) {
+        score += 16;
+        reasons.push("trait");
+      }
+      if (needLowUnits && hasCardType(card, "UNIT") && (card.level || 99) <= 3) {
+        score += 34;
+        reasons.push("low");
+      }
+      if (needBase && hasCardType(card, "BASE")) {
+        score += 34;
+        reasons.push("base");
+      }
+      if (needCommand && hasCardType(card, "COMMAND")) {
+        score += 24;
+        reasons.push("command");
+      }
+      if (needPilot && hasCardType(card, "PILOT")) {
+        score += 22;
+        reasons.push("pilot");
+      }
+      if ((card.links || []).length) {
+        score += 6;
+      }
+      if (stats.colors.length === 1 && card.displayColor === stats.colors[0]) {
+        score += 8;
+      }
+
+      return {
+        card,
+        score,
+        reason: formatAiSuggestionReason(mode, reasons),
+      };
+    })
+    .sort((left, right) => right.score - left.score || left.card.name.localeCompare(right.card.name, "ja"));
+
+  const selected = [];
+  const usedNames = new Set();
+  for (const entry of candidates) {
+    if (usedNames.has(entry.card.name)) continue;
+    usedNames.add(entry.card.name);
+    selected.push({
+      cardId: entry.card.id,
+      reason: entry.reason,
+    });
+    if (selected.length >= 3) break;
+  }
+
+  return selected;
+}
+
+function formatAiSuggestionReason(mode, reasons = []) {
+  const primary = reasons[0] || "general";
+  const colonelMap = {
+    title: "主軸に連なる札だ。採っておいて損はない。",
+    trait: "君の構想に沿う札だ。輪郭を濁らせずに済む。",
+    low: "序盤の穴を埋める役だ。立ち上がりを曖昧にするな。",
+    base: "基盤を補う札だ。この薄さを放置するのは感心せん。",
+    command: "受けの幅を増やせる。選択肢は備えておくべきだ。",
+    pilot: "連携役として働く。主役を孤立させるわけにはいかん。",
+    general: "編成に自然に収まる候補だ。試してみる価値はある。",
+  };
+  const captainMap = {
+    title: "主軸に噛み合う。まず試してくれ。",
+    trait: "テーマに沿っている。動きがぶれにくい。",
+    low: "序盤を補いやすい。立ち上がりの安定につながる。",
+    base: "ベース不足を埋めやすい。中盤の支えになる。",
+    command: "受けの選択肢を増やせる。無駄にはならん。",
+    pilot: "連携役として見込みがある。打点の伸びが変わる。",
+    general: "今の編成に入れやすい候補だ。確認してくれ。",
+  };
+  const map = mode === "colonel" ? colonelMap : captainMap;
+  return map[primary] || map.general;
+}
+
 function buildAiDiagnosis(stats, theme = state.theme) {
   const labels = getDiagnosisLabels(theme);
   if (!stats.mainCount) {
@@ -1528,6 +1969,7 @@ function buildAiDiagnosis(stats, theme = state.theme) {
         good: "私の見るところ、まだ盤上に論ずるだけの骨格がない。",
         caution: "だが、空のままでは評価も戦略も成立せん。",
         suggestion: "君が主役と定める一枚を置け。話はそれからだ。",
+        suggestedCards: [],
       };
     }
 
@@ -1535,9 +1977,10 @@ function buildAiDiagnosis(stats, theme = state.theme) {
       badge: labels.badge,
       status: "info",
       persona: labels.mode,
-      good: "方針さえ定まれば、立て直しは利く。",
-      caution: "だが、まだカードが入っていない。",
-      suggestion: "まず主役にしたいカードを入れろ。それから診断をやり直す。",
+      good: "方針さえ定まれば、立て直しはできる。",
+      caution: "だが、まだカードが入っていない。このままでは診断にならん。",
+      suggestion: "まず主役に据えるカードを入れろ。それから私に見せてくれ。",
+      suggestedCards: [],
     };
   }
 
@@ -1597,29 +2040,29 @@ function buildAiDiagnosis(stats, theme = state.theme) {
 
   const positiveLine = positives[0] || "方向性は見えている";
   const cautionLine = cautions[0] || "大きな破綻はないが、まだ詰めは甘い";
-  let suggestionLine = "役割が重なっている枠を2〜3枚見直せ。そうすれば全体が締まる。";
+  let suggestionLine = "役割が重なっている枠を2〜3枚見直せ。全体を締めるべきだ。";
   let colonelSuggestionLine = "役割が重なった枠を2〜3枚見直すことだ。君の美点は、まだ磨ける。";
 
   if (stats.colors.length > 2) {
-    suggestionLine = "色は2色以内に絞れ。まずはそこからだ。";
+    suggestionLine = "色は2色以内に絞れ。輪郭を曖昧にするわけにはいかん。";
     colonelSuggestionLine = "色は2色以内に絞ることだ。欲を出せば輪郭が濁るだけだ。";
   } else if (stats.lowUnits < 12) {
-    suggestionLine = "Lv3以下を2〜4枚増やせ。序盤の着地が見えてくる。";
+    suggestionLine = "Lv3以下を2〜4枚増やせ。序盤を疎かにするのでは困る。";
     colonelSuggestionLine = "Lv3以下を2〜4枚増やせ。序盤を曖昧にするのは愚策にすぎん。";
   } else if (stats.bases < 3) {
-    suggestionLine = "ベースをあと1〜2枚試せ。中盤の支えを厚くしておきたい。";
+    suggestionLine = "ベースをあと1〜2枚試してくれ。中盤の支えを欠くわけにはいかん。";
     colonelSuggestionLine = "ベースをあと1〜2枚試すことだ。中盤の支えを欠くのは得策ではない。";
   } else if (commandCount === 0) {
-    suggestionLine = "軽いコマンドを数枚入れて受けの幅を作れ。選択肢が増える。";
+    suggestionLine = "軽いコマンドを数枚入れろ。受けの選択肢が細いのでは困る。";
     colonelSuggestionLine = "軽いコマンドを数枚差し込め。君の選択肢は、まだ細い。";
   } else if (pilotCount === 0 && unitCount >= 16) {
-    suggestionLine = "主役ユニットを支えるパイロットも試せ。打点の伸び方が変わる。";
+    suggestionLine = "主役ユニットを支えるパイロットも試してくれ。打点の伸びを確保すべきだ。";
     colonelSuggestionLine = "主役を支えるパイロットも試すことだ。打点の伸び方が変わるだろう。";
   } else if (lateUnits >= 10) {
-    suggestionLine = "終盤札がやや多い。1〜2枠は軽い札に寄せて回転を上げろ。";
+    suggestionLine = "終盤札は1〜2枠ほど軽くしろ。重さに寄せすぎるべきではない。";
     colonelSuggestionLine = "終盤札は1〜2枠ほど軽くしろ。重さは美徳ではない。";
   } else if (stats.mainCount < 50) {
-    suggestionLine = "残り枠は序盤札かベースに寄せろ。骨格を先に固めるべきだ。";
+    suggestionLine = "残り枠は序盤札かベースに充てろ。骨格を先に固めるべきだ。";
     colonelSuggestionLine = "残り枠は序盤札かベースに寄せろ。骨格を固めるのが先だ。";
   }
 
@@ -1631,6 +2074,7 @@ function buildAiDiagnosis(stats, theme = state.theme) {
       good: `私の見るところ、${themeLead}としての骨格は見えている。${colorLead}で、${positiveLine}というわけだ。`,
       caution: `だが、${cautionLine}。そのままでは君の構えに甘さが残る。`,
       suggestion: colonelSuggestionLine,
+      suggestedCards: buildAiSuggestedCards(stats),
     };
   }
 
@@ -1638,9 +2082,10 @@ function buildAiDiagnosis(stats, theme = state.theme) {
     badge: labels.badge,
     status: stats.mainCount === 50 && stats.colors.length <= 2 && stats.lowUnits >= 12 ? "ok" : stats.mainCount >= 36 ? "warn" : "info",
     persona: labels.mode,
-    good: `${themeLead}として筋は通っている。${colorLead}で、${positiveLine}。`,
-    caution: `だが、${cautionLine}。`,
+    good: `私の見るところ、${themeLead}として骨格は見えている。${colorLead}で、${positiveLine}。`,
+    caution: `だが、${cautionLine}。そのまま進めるのでは困る。`,
     suggestion: suggestionLine,
+    suggestedCards: buildAiSuggestedCards(stats),
   };
 }
 
@@ -1680,16 +2125,47 @@ function renderAiDiagnosis() {
   }
 
   const combinedText = [diagnosis.good, diagnosis.caution, diagnosis.suggestion].filter(Boolean).join(" ");
+  const suggestionCards = (diagnosis.suggestedCards || [])
+    .map((entry) => {
+      const card = CARD_LOOKUP.get(entry.cardId);
+      if (!card) return "";
+      const variant = getCardVariant(card);
+      return `
+        <button type="button" class="ai-suggestion-card" data-ai-card-id="${escapeHtml(card.id)}">
+          <span class="ai-suggestion-thumb">
+            <img src="${variant.imageUrl}" alt="${escapeHtml(card.name)}" loading="lazy" />
+          </span>
+          <span class="ai-suggestion-copy">
+            <strong>${escapeHtml(card.name)}</strong>
+            <span>${escapeHtml(entry.reason || "相性が良い候補")}</span>
+          </span>
+        </button>
+      `;
+    })
+    .filter(Boolean)
+    .join("");
   elements.aiDiagnosisResult.className = `ai-diagnosis-result is-${diagnosis.status || "info"} ${isFresh ? "is-fresh" : "is-stale"}`;
   elements.aiDiagnosisResult.innerHTML = `
     <div class="ai-diagnosis-meta">
-      <span class="ai-diagnosis-badge">${escapeHtml(diagnosis.badge || labels.badge)}</span>
       <span class="ai-diagnosis-note">${escapeHtml(
         isFresh ? labels.freshNote : labels.staleNote,
       )}</span>
     </div>
     <p>${escapeHtml(combinedText)}</p>
+    ${
+      suggestionCards
+        ? `<div class="ai-suggestion-list-wrap">
+            <h4>${escapeHtml(labels.suggestionTitle || "提案カード")}</h4>
+            <div class="ai-suggestion-list">${suggestionCards}</div>
+          </div>`
+        : ""
+    }
   `;
+  elements.aiDiagnosisResult.querySelectorAll("[data-ai-card-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      openCardDetails(button.dataset.aiCardId || "", "side", "deck");
+    });
+  });
 }
 
 function runAiDiagnosis() {
@@ -1727,6 +2203,26 @@ function renderFilterGroups() {
   elements.typeFilters.innerHTML = "";
   TYPES.forEach((type) => createChip(elements.typeFilters, type, "types"));
 
+  if (elements.levelFilters) {
+    elements.levelFilters.innerHTML = "";
+    LEVEL_VALUES.forEach((value) => createChip(elements.levelFilters, value, "levels"));
+  }
+
+  if (elements.costFilters) {
+    elements.costFilters.innerHTML = "";
+    COST_VALUES.forEach((value) => createChip(elements.costFilters, value, "costs"));
+  }
+
+  if (elements.apFilters) {
+    elements.apFilters.innerHTML = "";
+    AP_VALUES.forEach((value) => createChip(elements.apFilters, value, "aps"));
+  }
+
+  if (elements.hpFilters) {
+    elements.hpFilters.innerHTML = "";
+    HP_VALUES.forEach((value) => createChip(elements.hpFilters, value, "hps"));
+  }
+
   elements.titleFilters.innerHTML = "";
   TITLES.forEach((title) => createChip(elements.titleFilters, title, "titles"));
 
@@ -1762,6 +2258,7 @@ function renderCompareModal() {
   elements.compareModalContent.innerHTML = compareCards
     .map((card) => {
       const variant = getCardVariant(card);
+      const detailTags = buildDetailTagEntries(card);
       return `
         <article class="compare-card">
           <div class="compare-card-head">
@@ -1775,13 +2272,18 @@ function renderCompareModal() {
             <span class="detail-pill">${escapeHtml(card.number)}</span>
             <span class="detail-pill">${escapeHtml(card.rarity)}</span>
             <span class="detail-pill">${escapeHtml(card.displayColor)}</span>
-            <span class="detail-pill">${escapeHtml(card.type)}</span>
             ${card.level !== null ? `<span class="detail-pill">Lv ${card.level}</span>` : ""}
             ${card.cost !== null ? `<span class="detail-pill">Cost ${card.cost}</span>` : ""}
             ${card.ap !== null ? `<span class="detail-pill">AP ${card.ap}</span>` : ""}
             ${card.hp !== null ? `<span class="detail-pill">HP ${card.hp}</span>` : ""}
           </div>
-          <p class="detail-copy">${escapeHtml(card.packageName)} / ${escapeHtml(card.title)}</p>
+          ${
+            detailTags.length
+              ? `<div class="detail-tag-strip">
+                  ${detailTags.map((tag) => `<span class="detail-pill detail-pill--soft">${escapeHtml(tag.label)}</span>`).join("")}
+                </div>`
+              : ""
+          }
           <p class="selected-copy">${escapeHtml(card.text || "テキストなし")}</p>
         </article>
       `;
@@ -1881,12 +2383,6 @@ function renderCatalog() {
         <p class="card-code-line">${escapeHtml(card.number)}</p>
         <p class="card-subline">${escapeHtml(card.packageName)}</p>
         <div class="card-meta">
-          ${(card.typeTokens || [card.type])
-            .map(
-              (type) =>
-                `<button type="button" class="detail-pill is-filterable" data-tag-filter-group="types" data-tag-filter-value="${escapeHtml(type)}">${escapeHtml(type)}</button>`,
-            )
-            .join("")}
           ${
             card.title
               ? `<button type="button" class="detail-pill is-filterable" data-tag-filter-group="titles" data-tag-filter-value="${escapeHtml(card.title)}">${escapeHtml(card.title)}</button>`
@@ -1902,8 +2398,8 @@ function renderCatalog() {
           <div class="catalog-qty-actions">
             <button type="button" data-action="remove" ${copiesInZone > 0 ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>-1</button>
             <button type="button" data-action="add" ${canAddToZone ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>+1</button>
-            <span class="card-copy">In deck ${copiesInZone}</span>
           </div>
+          <span class="card-copy">Deck ${copiesInZone}</span>
           <button
             type="button"
             data-action="favorite"
@@ -2030,6 +2526,121 @@ function renderDeckList(zone, container) {
   });
 }
 
+function renderReferenceDecks() {
+  if (!elements.referenceDecksList || !elements.referenceDecksModalCount || !elements.referenceDecksFetchedAt) return;
+
+  const referenceDecks = getReferenceDecks();
+  elements.referenceDecksModalCount.textContent = `${referenceDecks.length}件`;
+  elements.referenceDecksFetchedAt.textContent = formatDateTimeJa(RAW_REFERENCE_DECKS.generatedAt);
+  elements.referenceDecksList.innerHTML = "";
+
+  if (!referenceDecks.length) {
+    elements.referenceDecksList.innerHTML = `
+      <div class="empty-state">
+        <p>大会入賞デッキの参考データがまだありません。</p>
+        <span>公式大会結果ページから取得したデータをここに表示します。</span>
+      </div>
+    `;
+    return;
+  }
+
+  referenceDecks.forEach((deck) => {
+    const activeZone = state.referenceDeckZones[deck.id] || "main";
+    const mainCount = getReferenceDeckCardCount(deck.mainEntries);
+    const tokenCount = getReferenceDeckCardCount(deck.tokenEntries);
+    const activeEntries = activeZone === "token" ? deck.tokenEntries : deck.mainEntries;
+    const previewMarkup = activeEntries.length
+      ? activeEntries
+          .map((entry) => {
+            const qtyLabel = `${entry.qty}`;
+            if (entry.card) {
+              const variant = getCardVariant(entry.card);
+              return `
+                <button
+                  type="button"
+                  class="reference-preview-card"
+                  data-reference-card-id="${escapeHtml(entry.card.id)}"
+                  title="${escapeHtml(entry.card.name)}"
+                >
+                  <span class="reference-preview-thumb">
+                    <img src="${variant.imageUrl}" alt="${escapeHtml(entry.card.name)}" loading="lazy" />
+                    <span class="reference-preview-qty">${qtyLabel}</span>
+                  </span>
+                </button>
+              `;
+            }
+            return `
+              <div class="reference-preview-card is-unresolved" title="${escapeHtml(entry.number)}">
+                <span class="reference-preview-thumb reference-preview-thumb--empty">
+                  <span class="reference-preview-qty">${qtyLabel}</span>
+                </span>
+              </div>
+            `;
+          })
+          .join("")
+      : `
+        <div class="reference-preview-empty">
+          <p>${activeZone === "token" ? "トークン情報は未掲載です。" : "カード情報がありません。"}</p>
+          <span>${escapeHtml(deck.tokenNote || "公式大会結果ページにはトークン一覧がありません。")}</span>
+        </div>
+      `;
+
+    const article = document.createElement("article");
+    article.className = "reference-item";
+    article.innerHTML = `
+      <div class="reference-item-head">
+        <div class="reference-title-block">
+          <strong>${escapeHtml(deck.deckName || "大会入賞デッキ")}</strong>
+        </div>
+        <button type="button" class="ghost-button reference-apply-button" data-reference-apply="${escapeHtml(deck.id)}">このデッキを反映</button>
+      </div>
+      <div class="reference-meta">
+        <span>大会名: ${escapeHtml(deck.eventName || "-")}</span>
+        <span>開催日: ${escapeHtml(deck.eventDate || "-")}</span>
+      </div>
+      <div class="deck-zone-tabbar reference-zone-tabbar">
+        <button type="button" class="deck-zone-tab ${activeZone === "main" ? "is-active" : ""}" data-reference-zone="main" data-reference-id="${escapeHtml(deck.id)}">
+          Main ${mainCount}
+        </button>
+        <button type="button" class="deck-zone-tab ${activeZone === "token" ? "is-active" : ""}" data-reference-zone="token" data-reference-id="${escapeHtml(deck.id)}">
+          Token ${tokenCount}
+        </button>
+      </div>
+      <div class="reference-preview-frame">
+        <div class="reference-preview-list">
+          ${previewMarkup}
+        </div>
+      </div>
+    `;
+
+    article.querySelectorAll("[data-reference-zone]").forEach((button) => {
+      button.addEventListener("click", () => {
+        state.referenceDeckZones[deck.id] = button.dataset.referenceZone || "main";
+        renderReferenceDecks();
+      });
+    });
+    article.querySelector("[data-reference-apply]")?.addEventListener("click", () => {
+      openConfirmModal({
+        title: "参考デッキを反映",
+        message: "現在のデッキをこの参考デッキで上書きします。続行してくれますか？",
+        acceptLabel: "反映する",
+        onAccept: () => {
+          closeConfirmModal();
+          applyReferenceDeck(deck);
+        },
+      });
+    });
+    article.querySelectorAll("[data-reference-card-id]").forEach((button) => {
+      button.addEventListener("click", () => {
+        closeReferenceModal();
+        openCardDetails(button.dataset.referenceCardId || "", "side", "deck");
+      });
+    });
+
+    elements.referenceDecksList.appendChild(article);
+  });
+}
+
 function renderStats() {
   const stats = computeStats();
   const compactDiagnostics = buildCompactDiagnostics(stats);
@@ -2122,11 +2733,27 @@ function bindSelectedCardVariantButtons(container, card) {
     event.preventDefault();
     openImagePreview(card, getCardVariant(card));
   });
+
+  container.querySelectorAll("[data-detail-filter-group]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      focusCatalogWithTagFilter(button.dataset.detailFilterGroup, button.dataset.detailFilterValue || "");
+    });
+  });
+
+  container.querySelectorAll("[data-detail-query-token]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      focusCatalogWithQueryToken(button.dataset.detailQueryToken || "");
+    });
+  });
 }
 
 function buildSelectedCardMarkupClean(card) {
   const currentVariant = getCardVariant(card);
   const faqItems = card.faq.slice(0, 3);
+  const detailTags = buildDetailTagEntries(card);
+  const detailBadges = buildDetailBadgeEntries(card);
   const variantButtons = card.variants
     .map(
       (variant) => `
@@ -2150,27 +2777,34 @@ function buildSelectedCardMarkupClean(card) {
         <div class="selected-body">
           <div class="selected-section">
             <h3>${escapeHtml(card.name)}</h3>
+            <p class="selected-number-line">${escapeHtml(card.number)}</p>
             <div class="detail-badges">
-              <span class="detail-pill">${escapeHtml(card.number)}</span>
-              <span class="detail-pill">${escapeHtml(card.rarity)}</span>
-              <span class="detail-pill">${escapeHtml(card.displayColor)}</span>
-              <span class="detail-pill">${escapeHtml(card.type)}</span>
-              ${card.level !== null ? `<span class="detail-pill">Lv ${card.level}</span>` : ""}
-              ${card.cost !== null ? `<span class="detail-pill">Cost ${card.cost}</span>` : ""}
-              ${card.ap !== null ? `<span class="detail-pill">AP ${card.ap}</span>` : ""}
-              ${card.hp !== null ? `<span class="detail-pill">HP ${card.hp}</span>` : ""}
+              ${detailBadges
+                .map((badge) => {
+                  const filterAttrs = badge.filterGroup
+                    ? ` data-detail-filter-group="${escapeHtml(badge.filterGroup)}" data-detail-filter-value="${escapeHtml(badge.filterValue)}"`
+                    : "";
+                  const queryAttrs = badge.queryToken ? ` data-detail-query-token="${escapeHtml(badge.queryToken)}"` : "";
+                  const titleText = `${badge.label} でカード検索`;
+                  return `<button type="button" class="detail-pill is-filterable" aria-label="${escapeHtml(titleText)}" title="${escapeHtml(titleText)}"${filterAttrs}${queryAttrs}>${escapeHtml(badge.label)}</button>`;
+                })
+                .join("")}
             </div>
-            <p class="detail-copy">${escapeHtml(card.packageName)} / ${escapeHtml(card.title)}</p>
+            ${
+              detailTags.length
+                ? `<div class="detail-tag-strip">
+                    ${detailTags
+                      .map(
+                        (tag) =>
+                          `<button type="button" class="detail-pill detail-pill--soft is-filterable" data-detail-filter-group="${escapeHtml(tag.group)}" data-detail-filter-value="${escapeHtml(tag.value)}">${escapeHtml(tag.label)}</button>`,
+                      )
+                      .join("")}
+                  </div>`
+                : ""
+            }
           </div>
           <div class="selected-section">
             <p class="selected-copy">${escapeHtml(card.text || "テキストなし")}</p>
-          </div>
-          <div class="selected-section">
-            <div class="detail-badges">
-              ${card.traits.map((trait) => `<span class="detail-pill">${escapeHtml(trait)}</span>`).join("")}
-              ${card.links.map((link) => `<span class="detail-pill">Link: ${escapeHtml(link)}</span>`).join("")}
-              ${card.zones.map((zone) => `<span class="detail-pill">${escapeHtml(zone)}</span>`).join("")}
-            </div>
           </div>
           ${
             faqItems.length
@@ -2632,6 +3266,22 @@ function renderDatabaseMeta() {
 
 function renderThemeToggle() {
   document.body.dataset.theme = state.theme;
+  if (elements.searchInput) {
+    elements.searchInput.placeholder = getSearchPlaceholder(state.theme);
+  }
+  const brandName = state.theme === "red" ? "Z-Lab" : "G-Lab";
+  const heroLogo = document.querySelector(".hero-logo-image");
+  const heroWordmark = document.querySelector(".hero-logo-wordmark text");
+  const heroSiteName = document.querySelector(".hero-site-name");
+  if (heroLogo) {
+    heroLogo.setAttribute("aria-label", `${brandName} Gundam Deck Builder`);
+  }
+  if (heroWordmark) {
+    heroWordmark.textContent = brandName;
+  }
+  if (heroSiteName) {
+    heroSiteName.textContent = brandName;
+  }
   if (!elements.themeToggleButton) return;
   const nextTheme = state.theme === "light" ? "red" : "light";
   const nextThemeLabel = nextTheme === "red" ? "赤テーマ" : "白テーマ";
@@ -2679,6 +3329,7 @@ function renderMobileState() {
   const filterDrawerOpen = state.isFilterDrawerOpen;
   const sideDrawerOpen = state.isSideDrawerOpen && isMobileViewport();
   const detailDrawerOpen = state.isDetailDrawerOpen && isMobileViewport();
+  const compareModalOpen = document.body.classList.contains("is-compare-modal-open");
   document.body.classList.toggle("is-filter-drawer-open", filterDrawerOpen);
   document.body.classList.toggle("is-side-drawer-open", sideDrawerOpen);
   document.body.classList.toggle("is-detail-drawer-open", detailDrawerOpen);
@@ -2688,7 +3339,9 @@ function renderMobileState() {
     button.classList.toggle("is-active", isActive);
   });
   if (elements.mobileFilterFab) {
-    elements.mobileFilterFab.classList.toggle("is-active", filterDrawerOpen);
+    elements.mobileFilterFab.classList.add("is-hidden");
+    elements.mobileFilterFab.classList.remove("is-active");
+    elements.mobileFilterFab.setAttribute("aria-hidden", "true");
   }
   if (elements.mobileBottomFilterButton) {
     elements.mobileBottomFilterButton.classList.toggle("is-active", filterDrawerOpen);
@@ -2699,12 +3352,22 @@ function renderMobileState() {
     elements.desktopFilterButton.setAttribute("aria-expanded", filterDrawerOpen ? "true" : "false");
   }
   if (elements.mobileDeckFab) {
-    elements.mobileDeckFab.classList.toggle("is-hidden", sideDrawerOpen);
+    const catalogControlActive = sideDrawerOpen || filterDrawerOpen;
+    elements.mobileDeckFab.classList.toggle("is-active", catalogControlActive);
+    elements.mobileDeckFab.setAttribute("aria-expanded", catalogControlActive ? "true" : "false");
+    const deckFabLabel = !sideDrawerOpen
+      ? "カード一覧を開く"
+      : filterDrawerOpen
+        ? "検索を閉じる"
+        : "検索を開く";
+    elements.mobileDeckFab.setAttribute("aria-label", deckFabLabel);
+    elements.mobileDeckFab.setAttribute("title", deckFabLabel);
   }
   if (elements.mobileCompareFab) {
-    const compareModalOpen = document.body.classList.contains("is-compare-modal-open");
-    elements.mobileCompareFab.classList.toggle("is-hidden", compareModalOpen || sideDrawerOpen);
+    const canShowCompareFab = isMobileViewport() && sideDrawerOpen;
+    elements.mobileCompareFab.classList.toggle("is-hidden", !canShowCompareFab && !compareModalOpen);
     elements.mobileCompareFab.classList.toggle("is-active", compareModalOpen);
+    elements.mobileCompareFab.setAttribute("aria-hidden", !canShowCompareFab && !compareModalOpen ? "true" : "false");
   }
   updateSectionTopButtons();
 }
@@ -2735,6 +3398,7 @@ function render() {
   renderDeckZoneTabs();
   renderMobileState();
   renderFilterGroups();
+  renderFilterAccordionCounts();
   renderCatalog();
   renderCompareBar();
   renderDeckList("main", elements.mainDeckList);
@@ -2742,6 +3406,7 @@ function render() {
   renderTokenEmptyState();
   renderStats();
   renderAiDiagnosis();
+  renderReferenceDecks();
   renderCurve();
   renderSelectedCard();
   renderSavedDecks();
@@ -2850,21 +3515,24 @@ function bindEvents() {
   });
 
   elements.mobileDrawerBackdrop?.addEventListener("click", () => {
-    closeFilterDrawer();
-    closeSideDrawer();
     if (state.isDetailDrawerOpen) {
       restoreFromDetailDrawer();
+    } else if (state.isFilterDrawerOpen) {
+      closeFilterDrawer();
     } else {
+      closeSideDrawer();
       closeDetailDrawer();
     }
     renderMobileState();
   });
 
   elements.mobileDeckFab?.addEventListener("click", () => {
-    if (state.isSideDrawerOpen) {
-      closeSideDrawer();
-    } else {
+    if (!state.isSideDrawerOpen) {
       openSideDrawer();
+    } else if (!state.isFilterDrawerOpen) {
+      openFilterDrawer();
+    } else {
+      closeFilterDrawer();
     }
     renderTabs();
     renderMobileState();
@@ -2921,6 +3589,12 @@ function bindEvents() {
   elements.compareModal?.addEventListener("click", (event) => {
     if (event.target === elements.compareModal) {
       closeCompareModal();
+    }
+  });
+  elements.referenceModalClose?.addEventListener("click", closeReferenceModal);
+  elements.referenceModal?.addEventListener("click", (event) => {
+    if (event.target === elements.referenceModal) {
+      closeReferenceModal();
     }
   });
 
@@ -3005,6 +3679,7 @@ function bindEvents() {
   elements.runCheckButton.addEventListener("click", runOpeningCheck);
   elements.sortDeckButton.addEventListener("click", sortDeckByType);
   elements.copyDecklistButton.addEventListener("click", copyDecklist);
+  elements.toggleReferenceDecksButton?.addEventListener("click", openReferenceModal);
   elements.clearDeckButton.addEventListener("click", clearDeck);
   elements.runAiDiagnosisButton?.addEventListener("click", runAiDiagnosis);
   elements.saveDeckButton.addEventListener("click", () => saveCurrentDeck({ duplicate: false }));
@@ -3037,6 +3712,7 @@ function bindEvents() {
       closeImagePreview();
       closeDetailModal();
       closeCompareModal();
+      closeReferenceModal();
       closeSideDrawer();
       if (state.isDetailDrawerOpen) {
         restoreFromDetailDrawer();

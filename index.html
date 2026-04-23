@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500;700;800&family=Orbitron:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -165,6 +165,38 @@
 
           <section class="filter-block">
             <div class="filter-heading">
+              <h3>レベル</h3>
+              <button class="mini-reset" data-filter-group="levels" type="button">clear</button>
+            </div>
+            <div id="levelFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>コスト</h3>
+              <button class="mini-reset" data-filter-group="costs" type="button">clear</button>
+            </div>
+            <div id="costFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>AP</h3>
+              <button class="mini-reset" data-filter-group="aps" type="button">clear</button>
+            </div>
+            <div id="apFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
+              <h3>HP</h3>
+              <button class="mini-reset" data-filter-group="hps" type="button">clear</button>
+            </div>
+            <div id="hpFilters" class="chip-grid"></div>
+          </section>
+
+          <section class="filter-block">
+            <div class="filter-heading">
               <h3>作品</h3>
               <button class="mini-reset" data-filter-group="titles" type="button">clear</button>
             </div>
@@ -187,22 +219,6 @@
             <div id="traitFilters" class="chip-grid"></div>
           </section>
 
-          <section class="filter-block">
-            <div class="filter-heading">
-              <h3>Quick Presets</h3>
-            </div>
-            <div class="preset-stack">
-              <button class="preset-button" type="button" data-preset="starter">スターター中心</button>
-              <button class="preset-button" type="button" data-preset="booster">ブースター中心</button>
-              <button class="preset-button" type="button" data-preset="lowcurve">低カーブ寄り</button>
-              <button class="preset-button" type="button" data-preset="link">リンク関連</button>
-            </div>
-          </section>
-
-          <section class="panel-note">
-            <h3>検索メモ</h3>
-            <p>テキスト、特徴、色、種類、レア、Lv条件を組み合わせて絞り込めます。複数語はAND検索です。</p>
-          </section>
         </aside>
 
         <section class="panel catalog-panel" data-mobile-panel="catalog">
@@ -240,9 +256,9 @@
 
         <aside class="panel side-panel" data-mobile-panel="side">
           <div class="side-tabs">
-            <button class="side-tab is-active" data-tab="deck" type="button">Deck</button>
-            <button class="side-tab" data-tab="sim" type="button">Sim</button>
-            <button class="side-tab" data-tab="save" type="button">Save</button>
+            <button class="side-tab is-active" data-tab="deck" type="button">構築</button>
+            <button class="side-tab" data-tab="sim" type="button">初動</button>
+            <button class="side-tab" data-tab="save" type="button">保存</button>
           </div>
 
           <section id="tab-deck" class="tab-panel is-active">
@@ -273,6 +289,7 @@
             <div class="deck-actions">
               <button id="sortDeckButton" class="solid-button" type="button">整列</button>
               <button id="copyDecklistButton" class="ghost-button" type="button">コピー</button>
+              <button id="toggleReferenceDecksButton" class="ghost-button" type="button">参考</button>
               <button id="clearDeckButton" class="ghost-button danger-button" type="button">消去</button>
             </div>
 
@@ -428,10 +445,10 @@
       id="mobileDeckFab"
       class="mobile-fab mobile-deck-fab"
       type="button"
-      aria-label="現在のデッキを開く"
-      title="現在のデッキを開く"
+      aria-label="カード一覧を開く"
+      title="カード一覧を開く"
     >
-      ⧉
+      ⌕
     </button>
 
     <button
@@ -475,6 +492,7 @@
     </div>
 
     <script src="./data/official-cards-jp.js"></script>
+    <script src="./data/tournament-reference-decks-jp.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
