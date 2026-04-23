@@ -470,6 +470,19 @@ function setupDeckZoneUI() {
     elements.mainDeckList.dataset.zonePanel = "main";
   }
 
+  if (mainDeckSection && elements.mainDeckList && elements.tokenDeckList && !mainDeckSection.querySelector(".deck-zone-pages")) {
+    const pages = document.createElement("div");
+    pages.className = "deck-zone-pages";
+    pages.dataset.deckZone = "main";
+    const track = document.createElement("div");
+    track.className = "deck-zone-pages-track";
+    elements.mainDeckList.replaceWith(pages);
+    track.appendChild(elements.mainDeckList);
+    track.appendChild(elements.tokenDeckList);
+    pages.appendChild(track);
+    mainDeckSection.appendChild(pages);
+  }
+
   resourceDeckSection?.remove();
   elements.deckZoneTabs = [...document.querySelectorAll("[data-deck-zone]")];
 }
@@ -3370,6 +3383,9 @@ function renderDeckZoneTabs() {
   elements.deckZoneTabs.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.deckZone === state.activeDeckZone);
   });
+  document.querySelectorAll(".deck-zone-pages").forEach((pages) => {
+    pages.dataset.deckZone = state.activeDeckZone;
+  });
   document.querySelectorAll("[data-zone-panel]").forEach((panel) => {
     panel.classList.toggle("is-active", panel.dataset.zonePanel === state.activeDeckZone);
   });
@@ -3739,6 +3755,33 @@ function bindEvents() {
       setActiveDeckZone(button.dataset.deckZone || "main");
       render();
     });
+  });
+
+  document.querySelectorAll(".deck-zone-pages").forEach((pages) => {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    pages.addEventListener(
+      "touchstart",
+      (event) => {
+        touchStartX = event.changedTouches[0]?.clientX || 0;
+      },
+      { passive: true },
+    );
+    pages.addEventListener(
+      "touchend",
+      (event) => {
+        touchEndX = event.changedTouches[0]?.clientX || 0;
+        const delta = touchEndX - touchStartX;
+        if (Math.abs(delta) < 40) return;
+        if (delta < 0) {
+          setActiveDeckZone("token");
+        } else {
+          setActiveDeckZone("main");
+        }
+        render();
+      },
+      { passive: true },
+    );
   });
 
   document.querySelectorAll("#curvePageTabs [data-curve-page]").forEach((button) => {
