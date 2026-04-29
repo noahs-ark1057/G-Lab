@@ -14,11 +14,13 @@ const PACKAGE_SHORTCUT_LIMIT = 12;
 const RARITY_ORDER = ["C", "U", "R", "LR", "P"];
 const FAVORITES_STORAGE_KEY = `${STORAGE_KEY}-favorites`;
 const THEME_STORAGE_KEY = `${STORAGE_KEY}-theme`;
+const REFERENCE_HISTORY_STORAGE_KEY = `${STORAGE_KEY}-reference-history`;
 const COMPARE_LIMIT = 3;
 const THEME_SWITCH_OUT_MS = 280;
 const THEME_SWITCH_BG_MS = 360;
 const THEME_SWITCH_IN_MS = 420;
 const DECK_TYPE_ORDER = ["UNIT", "PILOT", "COMMAND", "BASE"];
+const REFERENCE_HISTORY_LIMIT = 24;
 let confirmAcceptHandler = null;
 const TYPE_SPLIT_PATTERN = /\s*(?:\/|／|,|，|\+|＋|&|＆|\|)\s*/g;
 
@@ -308,9 +310,19 @@ const state = {
   },
   openingHand: [],
   savedDecks: loadSavedDecks(),
+  referenceHistory: loadReferenceHistory(),
   lastCheck: null,
   aiDiagnosis: createEmptyAiDiagnosis(),
   referenceDeckZones: {},
+  cloud: {
+    configured: false,
+    ready: false,
+    authBusy: false,
+    status: "local",
+    statusMessage: "この端末だけに保存されています。",
+    user: null,
+    lastSyncedAt: "",
+  },
   dragState: null,
 };
 
@@ -417,6 +429,19 @@ const elements = {
   copyShareButton: document.getElementById("copyShareButton"),
   exportDeckButton: document.getElementById("exportDeckButton"),
   importDeckInput: document.getElementById("importDeckInput"),
+  cloudSyncBadge: document.getElementById("cloudSyncBadge"),
+  cloudSyncMessage: document.getElementById("cloudSyncMessage"),
+  cloudUserMeta: document.getElementById("cloudUserMeta"),
+  cloudUserEmail: document.getElementById("cloudUserEmail"),
+  cloudLastSyncText: document.getElementById("cloudLastSyncText"),
+  cloudEmailInput: document.getElementById("cloudEmailInput"),
+  cloudPasswordInput: document.getElementById("cloudPasswordInput"),
+  cloudSignInButton: document.getElementById("cloudSignInButton"),
+  cloudRegisterButton: document.getElementById("cloudRegisterButton"),
+  cloudSignOutButton: document.getElementById("cloudSignOutButton"),
+  cloudDeckCount: document.getElementById("cloudDeckCount"),
+  cloudFavoriteCount: document.getElementById("cloudFavoriteCount"),
+  cloudHistoryCount: document.getElementById("cloudHistoryCount"),
   savedDeckList: document.getElementById("savedDeckList"),
   starterList: document.getElementById("starterList"),
   confirmModal: document.getElementById("confirmModal"),
@@ -429,8 +454,8 @@ const elements = {
 function setupDeckZoneUI() {
   if (elements.quickAddTarget) {
     elements.quickAddTarget.innerHTML = `
-      <option value="main">Main Deck</option>
-      <option value="token">Token</option>
+      <option value="main">メインデッキ</option>
+      <option value="token">トークン</option>
     `;
   }
 
@@ -450,8 +475,8 @@ function setupDeckZoneUI() {
     tabbar.setAttribute("role", "tablist");
     tabbar.setAttribute("aria-label", "Deck zones");
     tabbar.innerHTML = `
-      <button class="deck-zone-tab is-active" data-deck-zone="main" type="button">Main</button>
-      <button class="deck-zone-tab" data-deck-zone="token" type="button">Token</button>
+      <button class="deck-zone-tab is-active" data-deck-zone="main" type="button">メイン</button>
+      <button class="deck-zone-tab" data-deck-zone="token" type="button">トークン</button>
     `;
     mainDeckTitle.replaceWith(tabbar);
   }
@@ -531,8 +556,12 @@ function setupDetailUI() {
 function setupEnhancementUI() {
   elements.starterList?.closest(".save-subsection")?.remove();
   elements.backToTopButton?.remove();
+  elements.closeFiltersButton?.remove();
   if (elements.searchInput) {
     elements.searchInput.placeholder = getSearchPlaceholder(state.theme);
+  }
+  if (elements.resetFiltersButton) {
+    elements.resetFiltersButton.textContent = "リセット";
   }
   if (elements.desktopFilterButton) {
     elements.desktopFilterButton.textContent = "⌕";
@@ -550,13 +579,87 @@ function setupEnhancementUI() {
     elements.mobileTopFab.setAttribute("title", "TOPに戻る");
   }
   if (elements.mobileDeckFab) {
-    elements.mobileDeckFab.textContent = "⌕";
+    elements.mobileDeckFab.innerHTML = `
+      <svg class="mobile-fab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="11" cy="11" r="5.5" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M15.4 15.4 20 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" />
+      </svg>
+    `;
     elements.mobileDeckFab.setAttribute("aria-label", "カード一覧を開く");
     elements.mobileDeckFab.setAttribute("title", "カード一覧を開く");
   }
   if (elements.mobileCompareFab) {
     elements.mobileCompareFab.setAttribute("aria-label", "カード比較を開く");
     elements.mobileCompareFab.setAttribute("title", "カード比較を開く");
+  }
+  document.querySelectorAll(".catalog-panel .kicker, .filters-panel .kicker, .deck-panel-head .kicker, .compare-modal-head .kicker").forEach((node) => node.remove());
+  document.querySelectorAll('.view-button[data-view="grid"]').forEach((button) => {
+    button.textContent = "グリッド";
+  });
+  document.querySelectorAll('.view-button[data-view="list"]').forEach((button) => {
+    button.textContent = "リスト";
+  });
+
+  const savePanelTitle = document.querySelector('#tab-save .panel-head.compact h2');
+  if (savePanelTitle) {
+    savePanelTitle.textContent = "保存 / 共有";
+  }
+
+  const cloudTitle = document.querySelector(".cloud-sync-head h3");
+  if (cloudTitle) {
+    cloudTitle.textContent = "クラウド同期";
+  }
+  if (elements.cloudSyncMessage) {
+    elements.cloudSyncMessage.textContent =
+      "Supabase を設定すると、保存デッキ・お気に入り・テーマ・参考デッキ履歴をユーザーごとに同期できます。";
+  }
+  if (elements.cloudSyncBadge) {
+    elements.cloudSyncBadge.textContent = "ローカル";
+  }
+  if (elements.cloudUserEmail) {
+    elements.cloudUserEmail.textContent = "未ログイン";
+  }
+  if (elements.cloudLastSyncText) {
+    elements.cloudLastSyncText.textContent = "最終同期 --";
+  }
+  if (elements.cloudEmailInput) {
+    elements.cloudEmailInput.placeholder = "name@example.com";
+    const label = elements.cloudEmailInput.closest(".field")?.querySelector("span");
+    if (label) label.textContent = "メールアドレス";
+  }
+  if (elements.cloudPasswordInput) {
+    elements.cloudPasswordInput.placeholder = "6文字以上";
+    const label = elements.cloudPasswordInput.closest(".field")?.querySelector("span");
+    if (label) label.textContent = "パスワード";
+  }
+  if (elements.cloudSignInButton) {
+    elements.cloudSignInButton.textContent = "ログイン";
+  }
+  if (elements.cloudRegisterButton) {
+    elements.cloudRegisterButton.textContent = "新規登録";
+  }
+  if (elements.cloudSignOutButton) {
+    elements.cloudSignOutButton.textContent = "ログアウト";
+  }
+  const cloudStatLabels = document.querySelectorAll(".cloud-sync-stat span");
+  if (cloudStatLabels[0]) cloudStatLabels[0].textContent = "保存デッキ";
+  if (cloudStatLabels[1]) cloudStatLabels[1].textContent = "お気に入り";
+  if (cloudStatLabels[2]) cloudStatLabels[2].textContent = "参考履歴";
+  if (elements.saveDeckButton) {
+    elements.saveDeckButton.textContent = "ローカル保存";
+  }
+  if (elements.duplicateDeckButton) {
+    elements.duplicateDeckButton.textContent = "複製保存";
+  }
+  if (elements.copyShareButton) {
+    elements.copyShareButton.textContent = "共有URLをコピー";
+  }
+  if (elements.exportDeckButton) {
+    elements.exportDeckButton.textContent = "JSONを書き出し";
+  }
+  const importButton = elements.importDeckInput?.closest(".import-button");
+  if (importButton) {
+    importButton.childNodes[0].textContent = "JSON読込";
   }
 
   const searchField = elements.searchInput?.closest(".field");
@@ -602,16 +705,15 @@ function setupEnhancementUI() {
     const modal = document.createElement("div");
     modal.id = "compareModal";
     modal.className = "compare-modal";
-    modal.setAttribute("aria-hidden", "true");
-    modal.innerHTML = `
-      <div class="compare-modal-dialog" role="dialog" aria-modal="true" aria-label="カード比較">
-        <div class="compare-modal-head">
-          <div>
-            <p class="kicker">Compare</p>
-            <h2>カード比較</h2>
+      modal.setAttribute("aria-hidden", "true");
+      modal.innerHTML = `
+        <div class="compare-modal-dialog" role="dialog" aria-modal="true" aria-label="カード比較">
+          <div class="compare-modal-head">
+            <div>
+              <h2>カード比較</h2>
+            </div>
+            <button id="compareModalClose" class="compare-modal-close" type="button" aria-label="比較を閉じる">&times;</button>
           </div>
-          <button id="compareModalClose" class="compare-modal-close" type="button" aria-label="比較を閉じる">&times;</button>
-        </div>
         <div id="compareModalContent" class="compare-modal-content"></div>
       </div>
     `;
@@ -1057,8 +1159,9 @@ function loadSavedDecks() {
   }
 }
 
-function persistDecks() {
+function persistDecks({ skipCloud = false } = {}) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state.savedDecks));
+  if (!skipCloud) notifyCloudState("decks");
 }
 
 function loadFavorites() {
@@ -1078,12 +1181,144 @@ function loadTheme() {
   }
 }
 
-function persistFavorites() {
-  window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...state.favorites]));
+function loadReferenceHistory() {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(REFERENCE_HISTORY_STORAGE_KEY) || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
 }
 
-function persistTheme() {
+function persistFavorites({ skipCloud = false } = {}) {
+  window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...state.favorites]));
+  if (!skipCloud) notifyCloudState("favorites");
+}
+
+function persistTheme({ skipCloud = false } = {}) {
   window.localStorage.setItem(THEME_STORAGE_KEY, state.theme);
+  if (!skipCloud) notifyCloudState("theme");
+}
+
+function persistReferenceHistory({ skipCloud = false } = {}) {
+  window.localStorage.setItem(REFERENCE_HISTORY_STORAGE_KEY, JSON.stringify(state.referenceHistory));
+  if (!skipCloud) notifyCloudState("reference-history");
+}
+
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function normalizeReferenceHistoryItems(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map((item) => {
+      if (!item || typeof item !== "object") return null;
+      return {
+        id: item.id || `reference-${Date.now()}`,
+        deckName: item.deckName || "大会参考デッキ",
+        eventName: item.eventName || "",
+        eventDate: item.eventDate || "",
+        loadedAt: item.loadedAt || new Date().toISOString(),
+      };
+    })
+    .filter(Boolean)
+    .slice(0, REFERENCE_HISTORY_LIMIT);
+}
+
+function getCloudSnapshot() {
+  return {
+    savedDecks: deepClone(state.savedDecks),
+    favorites: [...state.favorites],
+    theme: state.theme,
+    referenceHistory: deepClone(state.referenceHistory),
+    updatedAt: new Date().toISOString(),
+  };
+}
+
+function notifyCloudState(reason = "update") {
+  if (typeof window === "undefined") return;
+  window.dispatchEvent(
+    new CustomEvent("glab:local-state", {
+      detail: {
+        reason,
+        snapshot: getCloudSnapshot(),
+      },
+    }),
+  );
+}
+
+function updateCloudState(patch = {}) {
+  state.cloud = {
+    ...state.cloud,
+    ...patch,
+  };
+  renderCloudSyncPanel();
+}
+
+function applyCloudSnapshot(snapshot, { persistLocal = true } = {}) {
+  if (!snapshot || typeof snapshot !== "object") return;
+  if (Array.isArray(snapshot.savedDecks)) {
+    state.savedDecks = deepClone(snapshot.savedDecks);
+  }
+  if (Array.isArray(snapshot.favorites)) {
+    state.favorites = new Set(snapshot.favorites);
+  }
+  if (snapshot.theme === "red" || snapshot.theme === "light") {
+    state.theme = snapshot.theme;
+  }
+  if (Array.isArray(snapshot.referenceHistory)) {
+    state.referenceHistory = normalizeReferenceHistoryItems(snapshot.referenceHistory);
+  }
+  if (persistLocal) {
+    persistDecks({ skipCloud: true });
+    persistFavorites({ skipCloud: true });
+    persistTheme({ skipCloud: true });
+    persistReferenceHistory({ skipCloud: true });
+  }
+  render();
+}
+
+function renderCloudSyncPanel() {
+  if (!elements.cloudSyncBadge) return;
+
+  const statusMap = {
+    local: { label: "ローカル", className: "is-local" },
+    unconfigured: { label: "未設定", className: "is-local" },
+    signed_out: { label: "未ログイン", className: "is-local" },
+    syncing: { label: "同期中", className: "is-syncing" },
+    connected: { label: "同期済み", className: "is-connected" },
+    error: { label: "エラー", className: "is-error" },
+  };
+
+  const statusInfo = statusMap[state.cloud.status] || statusMap.local;
+  elements.cloudSyncBadge.textContent = statusInfo.label;
+  elements.cloudSyncBadge.className = `cloud-sync-badge ${statusInfo.className}`;
+  elements.cloudSyncMessage.textContent = state.cloud.statusMessage || "この端末だけに保存されています。";
+
+  const hasUser = Boolean(state.cloud.user);
+  if (elements.cloudUserMeta) {
+    elements.cloudUserMeta.hidden = !hasUser;
+  }
+  if (elements.cloudUserEmail) {
+    elements.cloudUserEmail.textContent = state.cloud.user?.email || state.cloud.user?.id || "ログイン中";
+  }
+  if (elements.cloudLastSyncText) {
+    elements.cloudLastSyncText.textContent = `最終同期 ${state.cloud.lastSyncedAt ? formatDateTimeJa(state.cloud.lastSyncedAt) : "--"}`;
+  }
+
+  if (elements.cloudDeckCount) elements.cloudDeckCount.textContent = String(state.savedDecks.length);
+  if (elements.cloudFavoriteCount) elements.cloudFavoriteCount.textContent = String(state.favorites.size);
+  if (elements.cloudHistoryCount) elements.cloudHistoryCount.textContent = String(state.referenceHistory.length);
+
+  const canUseCloud = state.cloud.configured;
+  if (elements.cloudEmailInput) elements.cloudEmailInput.disabled = !canUseCloud || hasUser || state.cloud.authBusy;
+  if (elements.cloudPasswordInput) elements.cloudPasswordInput.disabled = !canUseCloud || hasUser || state.cloud.authBusy;
+  if (elements.cloudSignInButton) elements.cloudSignInButton.disabled = !canUseCloud || hasUser || state.cloud.authBusy;
+  if (elements.cloudRegisterButton) elements.cloudRegisterButton.disabled = !canUseCloud || hasUser || state.cloud.authBusy;
+  if (elements.cloudSignOutButton) {
+    elements.cloudSignOutButton.hidden = !hasUser;
+    elements.cloudSignOutButton.disabled = !hasUser || state.cloud.authBusy;
+  }
 }
 
 function formatDateTimeJa(value) {
@@ -1442,6 +1677,22 @@ function buildReferenceDeckNote(deck) {
   return [deck.eventName, deck.eventDate].filter(Boolean).join(" / ");
 }
 
+function recordReferenceHistory(deck) {
+  if (!deck) return;
+  const entry = {
+    id: deck.id || `reference-${Date.now()}`,
+    deckName: deck.deckName || "大会参考デッキ",
+    eventName: deck.eventName || "",
+    eventDate: deck.eventDate || "",
+    loadedAt: new Date().toISOString(),
+  };
+  state.referenceHistory = normalizeReferenceHistoryItems([
+    entry,
+    ...state.referenceHistory.filter((item) => item.id !== entry.id),
+  ]);
+  persistReferenceHistory();
+}
+
 function applyReferenceDeck(deck) {
   if (!deck) return;
   const normalizeZone = (entries = []) =>
@@ -1458,6 +1709,7 @@ function applyReferenceDeck(deck) {
   state.aiDiagnosis = createEmptyAiDiagnosis();
   state.lastCheck = null;
   setActiveDeckZone("main");
+  recordReferenceHistory(deck);
   closeReferenceModal();
   render();
 }
@@ -1495,10 +1747,14 @@ function buildDetailBadgeEntries(card) {
 
 function setupFilterAccordions() {
   if (!elements.filtersPanel) return;
+  const titleMap = {
+    Rarity: "レアリティ",
+  };
   elements.filtersPanel.querySelectorAll(".filter-block").forEach((section) => {
     const reset = section.querySelector(".mini-reset");
     const heading = section.querySelector(".filter-heading");
-    const title = heading?.querySelector("h3")?.textContent?.trim();
+    const rawTitle = heading?.querySelector("h3")?.textContent?.trim();
+    const title = titleMap[rawTitle] || rawTitle;
     const group = reset?.dataset.filterGroup;
     if (!reset || !heading || !title || !group || section.dataset.accordionified === "true") return;
 
@@ -1870,14 +2126,14 @@ function getDeckSnapshotSignature() {
 
 function abbreviateColorName(color) {
   const map = {
-    Blue: "B",
-    White: "W",
-    Green: "G",
-    Red: "R",
-    Purple: "P",
-    Black: "Bk",
-    Yellow: "Y",
-    Colorless: "-",
+    Blue: "青",
+    White: "白",
+    Green: "緑",
+    Red: "赤",
+    Purple: "紫",
+    Black: "黒",
+    Yellow: "黄",
+    Colorless: "無",
   };
   return map[color] || color;
 }
@@ -2583,8 +2839,8 @@ function renderReferenceDecks() {
                 <button
                   type="button"
                   class="reference-preview-card"
-                  data-reference-card-id="${escapeHtml(entry.card.id)}"
-                  title="${escapeHtml(entry.card.name)}"
+                  data-reference-apply-card="${escapeHtml(deck.id)}"
+                  title="${escapeHtml(entry.card.name)} を反映"
                 >
                   <span class="reference-preview-thumb">
                     <img src="${variant.imageUrl}" alt="${escapeHtml(entry.card.name)}" loading="lazy" />
@@ -2616,7 +2872,6 @@ function renderReferenceDecks() {
         <div class="reference-title-block">
           <strong>${escapeHtml(deck.deckName || "大会入賞デッキ")}</strong>
         </div>
-        <button type="button" class="ghost-button reference-apply-button" data-reference-apply="${escapeHtml(deck.id)}">このデッキを反映</button>
       </div>
       <div class="reference-meta">
         <span>大会名: ${escapeHtml(deck.eventName || "-")}</span>
@@ -2624,10 +2879,10 @@ function renderReferenceDecks() {
       </div>
       <div class="deck-zone-tabbar reference-zone-tabbar">
         <button type="button" class="deck-zone-tab ${activeZone === "main" ? "is-active" : ""}" data-reference-zone="main" data-reference-id="${escapeHtml(deck.id)}">
-          Main ${mainCount}
+          メイン ${mainCount}
         </button>
         <button type="button" class="deck-zone-tab ${activeZone === "token" ? "is-active" : ""}" data-reference-zone="token" data-reference-id="${escapeHtml(deck.id)}">
-          Token ${tokenCount}
+          トークン ${tokenCount}
         </button>
       </div>
       <div class="reference-preview-frame">
@@ -2643,7 +2898,7 @@ function renderReferenceDecks() {
         renderReferenceDecks();
       });
     });
-    article.querySelector("[data-reference-apply]")?.addEventListener("click", () => {
+    const applyReferenceDeckWithConfirm = () => {
       openConfirmModal({
         title: "参考デッキを反映",
         message: "現在のデッキをこの参考デッキで上書きします。続行してくれますか？",
@@ -2653,11 +2908,10 @@ function renderReferenceDecks() {
           applyReferenceDeck(deck);
         },
       });
-    });
-    article.querySelectorAll("[data-reference-card-id]").forEach((button) => {
+    };
+    article.querySelectorAll("[data-reference-apply-card]").forEach((button) => {
       button.addEventListener("click", () => {
-        closeReferenceModal();
-        openCardDetails(button.dataset.referenceCardId || "", "side", "deck");
+        applyReferenceDeckWithConfirm();
       });
     });
 
@@ -2672,8 +2926,7 @@ function renderStats() {
   elements.tokenDeckCounter.textContent = `${stats.tokenCount}`;
   elements.colorCounter.textContent = stats.colors.length ? stats.colors.join(" / ") : "-";
   elements.validationCounter.textContent = stats.mainCount === 50 && stats.colors.length <= 2 ? "Ready" : "Needs Fix";
-  elements.mainZoneSummary.textContent =
-    state.activeDeckZone === "token" ? `${stats.tokenCount} cards` : `${stats.mainCount} / 50`;
+  elements.mainZoneSummary.textContent = state.activeDeckZone === "token" ? `${stats.tokenCount}枚` : `${stats.mainCount} / 50`;
 
   if (elements.deckDiagnosticSummary) {
     const hasBad = compactDiagnostics.some((diagnostic) => diagnostic.status === "bad");
@@ -3395,8 +3648,8 @@ function renderTokenEmptyState() {
   const empty = elements.tokenDeckList?.querySelector(".empty-state");
   if (!empty) return;
   empty.innerHTML = `
-    <p>Token is empty.</p>
-    <span>Add token or EX cards from the catalog.</span>
+    <p>トークンはまだありません。</p>
+    <span>カード一覧からトークンやEX系カードを追加してください。</span>
   `;
 }
 
@@ -3492,6 +3745,7 @@ function render() {
   renderCurve();
   renderSelectedCard();
   renderSavedDecks();
+  renderCloudSyncPanel();
   renderFocusCards();
   renderOpeningHand();
   renderCheckResult();
@@ -3830,6 +4084,21 @@ function bindEvents() {
   elements.toggleReferenceDecksButton?.addEventListener("click", openReferenceModal);
   elements.clearDeckButton.addEventListener("click", clearDeck);
   elements.runAiDiagnosisButton?.addEventListener("click", runAiDiagnosis);
+  elements.cloudSignInButton?.addEventListener("click", () => {
+    window.GLabCloud?.signIn?.({
+      email: elements.cloudEmailInput?.value || "",
+      password: elements.cloudPasswordInput?.value || "",
+    });
+  });
+  elements.cloudRegisterButton?.addEventListener("click", () => {
+    window.GLabCloud?.signUp?.({
+      email: elements.cloudEmailInput?.value || "",
+      password: elements.cloudPasswordInput?.value || "",
+    });
+  });
+  elements.cloudSignOutButton?.addEventListener("click", () => {
+    window.GLabCloud?.signOut?.();
+  });
   elements.saveDeckButton.addEventListener("click", () => saveCurrentDeck({ duplicate: false }));
   elements.duplicateDeckButton.addEventListener("click", () => saveCurrentDeck({ duplicate: true }));
   elements.copyShareButton.addEventListener("click", copyShareUrl);
@@ -3922,6 +4191,12 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
 }
+
+window.GLabApp = {
+  getCloudSnapshot,
+  applyCloudSnapshot,
+  updateCloudState,
+};
 
 seedInitialDeck();
 setupDeckZoneUI();

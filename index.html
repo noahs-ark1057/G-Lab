@@ -97,12 +97,10 @@
         <aside class="panel filters-panel" data-mobile-panel="filters">
           <div class="panel-head">
             <div>
-              <p class="kicker">Filter Console</p>
               <h2>カード検索</h2>
             </div>
             <div class="panel-head-actions">
-              <button id="resetFiltersButton" class="ghost-button" type="button">Reset</button>
-              <button id="closeFiltersButton" class="ghost-button" type="button">Close</button>
+              <button id="resetFiltersButton" class="ghost-button" type="button">リセット</button>
             </div>
           </div>
 
@@ -205,7 +203,7 @@
 
           <section class="filter-block">
             <div class="filter-heading">
-              <h3>Rarity</h3>
+              <h3>レアリティ</h3>
               <button class="mini-reset" data-filter-group="rarities" type="button">clear</button>
             </div>
             <div id="rarityFilters" class="chip-grid"></div>
@@ -224,7 +222,6 @@
         <section class="panel catalog-panel" data-mobile-panel="catalog">
           <div class="panel-head">
             <div>
-              <p class="kicker">Catalog</p>
               <h2>カード一覧</h2>
             </div>
             <div class="catalog-controls">
@@ -238,8 +235,8 @@
                 ⌕
               </button>
               <div class="catalog-view-switch">
-                <button class="view-button is-active" data-view="grid" type="button">Grid</button>
-                <button class="view-button" data-view="list" type="button">List</button>
+                <button class="view-button is-active" data-view="grid" type="button">グリッド</button>
+                <button class="view-button" data-view="list" type="button">リスト</button>
               </div>
             </div>
           </div>
@@ -264,7 +261,6 @@
           <section id="tab-deck" class="tab-panel is-active">
             <div class="panel-head compact deck-panel-head">
               <div>
-                <p class="kicker">Build</p>
                 <h2>現在のデッキ</h2>
               </div>
               <button id="toggleReferenceDecksButton" class="solid-button reference-open-button" type="button">
@@ -414,6 +410,55 @@
               </div>
             </div>
 
+            <section class="save-subsection cloud-sync-box">
+              <div class="cloud-sync-head">
+                <div>
+                  <h3>クラウド同期</h3>
+                  <p id="cloudSyncMessage" class="cloud-sync-message">
+                    Supabase を設定すると、保存デッキ・お気に入り・テーマ・参考デッキ履歴をユーザーごとに同期できます。
+                  </p>
+                </div>
+                <span id="cloudSyncBadge" class="cloud-sync-badge is-local">ローカル</span>
+              </div>
+
+              <div id="cloudUserMeta" class="cloud-user-meta" hidden>
+                <strong id="cloudUserEmail">未ログイン</strong>
+                <span id="cloudLastSyncText">最終同期 --</span>
+              </div>
+
+              <div class="cloud-auth-grid">
+                <label class="field">
+                  <span>メールアドレス</span>
+                  <input id="cloudEmailInput" type="email" placeholder="name@example.com" autocomplete="email" />
+                </label>
+                <label class="field">
+                  <span>パスワード</span>
+                  <input id="cloudPasswordInput" type="password" placeholder="6文字以上" autocomplete="current-password" />
+                </label>
+              </div>
+
+              <div class="save-actions cloud-auth-actions">
+                <button id="cloudSignInButton" class="solid-button" type="button">ログイン</button>
+                <button id="cloudRegisterButton" class="ghost-button" type="button">新規登録</button>
+                <button id="cloudSignOutButton" class="ghost-button" type="button" hidden>ログアウト</button>
+              </div>
+
+              <div class="cloud-sync-stats">
+                <div class="cloud-sync-stat">
+                  <strong id="cloudDeckCount">0</strong>
+                  <span>保存デッキ</span>
+                </div>
+                <div class="cloud-sync-stat">
+                  <strong id="cloudFavoriteCount">0</strong>
+                  <span>お気に入り</span>
+                </div>
+                <div class="cloud-sync-stat">
+                  <strong id="cloudHistoryCount">0</strong>
+                  <span>参考履歴</span>
+                </div>
+              </div>
+            </section>
+
             <div class="save-actions">
               <button id="saveDeckButton" class="solid-button" type="button">ローカル保存</button>
               <button id="duplicateDeckButton" class="ghost-button" type="button">複製保存</button>
@@ -470,9 +515,7 @@
       type="button"
       aria-label="カード一覧を開く"
       title="カード一覧を開く"
-    >
-      ⌕
-    </button>
+    ></button>
 
     <button
       id="mobileCompareFab"
@@ -516,6 +559,8 @@
 
     <script src="./data/official-cards-jp.js"></script>
     <script src="./data/tournament-reference-decks-jp.js"></script>
+    <script src="./supabase-config.js"></script>
     <script src="./app.js"></script>
+    <script type="module" src="./supabase-cloud.js"></script>
   </body>
 </html>
