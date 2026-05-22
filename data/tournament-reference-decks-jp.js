@@ -1,99 +1,23 @@
 window.__TOURNAMENT_REFERENCE_DECKS = {
-  "generatedAt": "2026-05-21T17:29:02Z",
+  "generatedAt": "2026-05-22T17:05:37Z",
   "source": "https://www.gundam-gcg.com/jp/tournament-results/",
   "eventCount": 4,
   "deckCount": 12,
   "decks": [
     {
-      "id": "6538098-0",
-      "deckName": "優勝 りすく 使用デッキ",
+      "id": "6642642-0",
+      "deckName": "優勝 ムルムル 使用デッキ",
       "rank": "優勝",
-      "playerName": "りすく",
+      "playerName": "ムルムル",
       "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "バトロコ新津田沼駅前",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6538098&no=0",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RPS.RPS.RPS.RPS.RPN.RPN.RPN.RPN.RZE.RZE.RZE.RZE.MoV.RPI.RPI.RZZ.RZZ.RZZ.RZZ.Mon.Mon.Mon.RV8.RV8.MpW.MpW.NDH.NDH.NDH.NDH.RZB.RZB.RZB.RZB.NCu.NCu.NCu.NCu.MqO.MqO.MqO.MqO.Jmb.Jmb.Jmb.Jmb.MqS.MqS.MqS.MqS%21%21%21&deck_code=cHjD8kxSjNypgCBv&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
+      "storeName": "ガンダムカードゲーム 公式ショップ 福岡 キャナルシティ博多店",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6642642&no=0",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NBp.NBp.NBp.NBp.NB%2F.NB%2F.NB%2F.NB%2F.NCE.NCE.NCE.NCE.NCJ.NCJ.NCJ.NCJ.Mpo.Mpo.Mpo.Mpo.MpW.MpW.MoV.MoV.MoV.MoV.Mod.Mod.Mod.Mod.Mon.Mon.Mon.Mon.NDZ.NDZ.NDZ.NDZ.RPT.RPT.Mpk.Mpk.Mpk.Mpk.Mpu.Mpu.Mpu.Mpu.NE2.NC8%21%21%21&deck_code=976e1CNkuBWRk0Fz&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
       "main": [
         [
-          "GD04-016",
-          4
-        ],
-        [
-          "GD04-011",
-          4
-        ],
-        [
-          "GD04-003",
-          4
-        ],
-        [
-          "ST01-001",
-          1
-        ],
-        [
-          "GD04-006",
-          2
-        ],
-        [
-          "GD04-081",
-          4
-        ],
-        [
-          "ST01-010",
-          3
-        ],
-        [
-          "GD04-121",
-          2
-        ],
-        [
-          "ST02-016",
-          2
-        ],
-        [
-          "GD01-086",
-          4
-        ],
-        [
-          "ST04-001",
-          4
-        ],
-        [
-          "GD01-066",
-          4
-        ],
-        [
-          "ST04-010",
-          4
-        ],
-        [
-          "GD01-118",
-          4
-        ],
-        [
-          "ST04-012",
-          4
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6538098-1",
-      "deckName": "準優勝 ノムラ 使用デッキ",
-      "rank": "準優勝",
-      "playerName": "ノムラ",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "バトロコ新津田沼駅前",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6538098&no=1",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=MoV.MoV.MoV.MoV.NB%2F.NB%2F.NB%2F.NB%2F.Pye.Pye.Pye.Pye.OUG.OUG.OUG.OUG.NBz.NBz.NBz.NBz.NBp.NBp.NBp.NBp.Mod.Mod.Mod.Mod.OTS.OTS.OTS.OTS.N%2Fq.N%2Fq.O01.O01.O01.O01.Mon.Mon.Mon.Mon.MpW.MpW.NDZ.NDZ.NDZ.O08.O08.O08%21%21%21&deck_code=sfBzPnRKf3eaV54C&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
-        [
-          "ST01-001",
+          "GD01-008",
           4
         ],
         [
@@ -101,39 +25,15 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
           4
         ],
         [
-          "GD03-056",
+          "GD01-030",
           4
         ],
         [
-          "GD02-054",
+          "GD01-035",
           4
         ],
         [
-          "GD01-018",
-          4
-        ],
-        [
-          "GD01-008",
-          4
-        ],
-        [
-          "ST01-005",
-          4
-        ],
-        [
-          "GD02-013",
-          4
-        ],
-        [
-          "ST05-004",
-          2
-        ],
-        [
-          "ST05-010",
-          4
-        ],
-        [
-          "ST01-010",
+          "ST03-008",
           4
         ],
         [
@@ -141,235 +41,39 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
           2
         ],
         [
+          "ST01-001",
+          4
+        ],
+        [
+          "ST01-005",
+          4
+        ],
+        [
+          "ST01-010",
+          4
+        ],
+        [
           "GD01-100",
-          3
-        ],
-        [
-          "ST05-014",
-          3
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6538098-2",
-      "deckName": "3位 KAZU 使用デッキ",
-      "rank": "3位",
-      "playerName": "KAZU",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "バトロコ新津田沼駅前",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6538098&no=2",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=PyI.PyI.PyI.PyH.PyH.PyH.PyH.NCu.NCu.PyJ.PyJ.Mq6.Mq6.Mq6.Mq6.ND4.ND4.ND4.NDH.NDH.NDH.NDH.RQP.RQP.RQP.RQP.Jn7.Jn7.Jn7.Jn7.PzB.PzB.PzB.PzT.PzT.PzT.PzT.Mpy.Mpy.Mpy.Mpy.NDv.NDv.NDv.NDv.Pzl.Pzl.Pzl.Pzl.RR1%21%21%21&deck_code=gCU9gaV51MoV9erS&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
-        [
-          "GD03-034",
-          3
-        ],
-        [
-          "GD03-033",
           4
         ],
         [
-          "GD01-066",
+          "GD04-017",
           2
         ],
         [
-          "GD03-035",
-          2
-        ],
-        [
-          "ST04-001",
+          "ST03-006",
           4
         ],
         [
-          "GD01-073",
-          3
-        ],
-        [
-          "GD01-086",
+          "ST03-011",
           4
-        ],
-        [
-          "GD04-077",
-          4
-        ],
-        [
-          "ST04-010",
-          4
-        ],
-        [
-          "GD03-091",
-          3
-        ],
-        [
-          "GD03-109",
-          4
-        ],
-        [
-          "ST03-013",
-          4
-        ],
-        [
-          "GD01-118",
-          4
-        ],
-        [
-          "GD03-127",
-          4
-        ],
-        [
-          "GD04-117",
-          1
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6535961-0",
-      "deckName": "優勝 なかむらー 使用デッキ",
-      "rank": "優勝",
-      "playerName": "なかむらー",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "カードボックス イオンモール徳島店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6535961&no=0",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=QDr.QDr.QDr.QDr.OUJ.OUJ.OUJ.OUJ.Pye.Pye.Pye.Pye.Pmt.Pmt.Pmt.Pmt.N%2Fv.N%2Fv.N%2Fv.N%2Fv.OUG.OUG.OUG.OUG.Mq6.Mq6.Mq6.Mq6.RE8.RE8.RE8.RE8.O01.O01.O01.O01.MqP.MqP.MqP.MqP.OJo.OJo.OJo.OJo.Q%2Fg.RE7.RE7.RE7.N%2Fk.N%2Fk%21%21%21&deck_code=BJenAUdCrwhs9mzO&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
-        [
-          "GD03-050",
-          4
-        ],
-        [
-          "GD02-055",
-          4
-        ],
-        [
-          "GD03-056",
-          4
-        ],
-        [
-          "ST05-002",
-          4
-        ],
-        [
-          "ST05-006",
-          4
-        ],
-        [
-          "GD02-054",
-          4
-        ],
-        [
-          "ST04-001",
-          4
-        ],
-        [
-          "ST09-010",
-          4
-        ],
-        [
-          "ST05-010",
-          4
-        ],
-        [
-          "ST04-010",
-          4
-        ],
-        [
-          "GD01-118",
-          4
-        ],
-        [
-          "ST09-009",
-          4
-        ],
-        [
-          "ST05-001",
-          2
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6535961-1",
-      "deckName": "準優勝 ふなっく 使用デッキ",
-      "rank": "準優勝",
-      "playerName": "ふなっく",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "カードボックス イオンモール徳島店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6535961&no=1",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NC5.NC5.NC5.NC5.Py5.Py5.NCv.NCv.NCv.Jms.Jms.Jms.Jms.Jn3.Jn3.Jn3.Jn3.RQG.RQG.NDH.NDH.NDH.NDH.RQP.RQP.RQP.RQP.Pzj.Pzj.Pzj.NE2.PnB.PnB.PnB.PnB.P%2B1.P%2B1.P%2B1.P%2B1.RZj.RZj.RZj.RZj.Jmb.Jmb.Jmb.Jmb.NDN.NDN.Ovz%21%21%21&deck_code=BCqZTPv8nUtMWyyr&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
-        [
-          "GD01-024",
-          4
-        ],
-        [
-          "GD03-021",
-          2
-        ],
-        [
-          "GD01-066",
-          3
-        ],
-        [
-          "ST02-001",
-          4
-        ],
-        [
-          "ST04-001",
-          4
-        ],
-        [
-          "GD04-068",
-          2
-        ],
-        [
-          "GD01-086",
-          4
-        ],
-        [
-          "GD04-077",
-          4
-        ],
-        [
-          "GD03-125",
-          3
         ],
         [
           "GD01-126",
           1
         ],
         [
-          "ST02-010",
-          4
-        ],
-        [
-          "ST04-010",
-          4
-        ],
-        [
-          "GD04-117",
-          4
-        ],
-        [
-          "GD01-118",
-          4
-        ],
-        [
-          "GD01-090",
-          2
-        ],
-        [
-          "GD02-117",
+          "GD01-026",
           1
         ]
       ],
@@ -377,291 +81,75 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "tokenNote": "公式大会結果ページにトークン一覧はありません。"
     },
     {
-      "id": "6535961-2",
-      "deckName": "3位 なり 使用デッキ",
-      "rank": "3位",
-      "playerName": "なり",
+      "id": "6642642-1",
+      "deckName": "準優勝 あふてらる 使用デッキ",
+      "rank": "準優勝",
+      "playerName": "あふてらる",
       "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "カードボックス イオンモール徳島店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6535961&no=2",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NC5.NC5.NC5.NC5.RQE.RQE.Mp2.Mp2.Mp2.Mp2.Mq6.Mq6.Mq6.Mq6.RQG.RQG.ND4.ND4.ND4.ND4.NDH.NDH.NDH.NDH.OUo.OUo.OUo.PnB.PnB.PnB.PnB.P%2B1.P%2B1.P%2B1.P%2B1.Pzj.Pzj.Pzj.Pzj.NDw.NDw.NDv.NDv.MqS.MqS.OJR.OJR.RR1.RR1.RR1%21%21%21&deck_code=jnncjpKCReLGNF7O&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
+      "storeName": "ガンダムカードゲーム 公式ショップ 福岡 キャナルシティ博多店",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6642642&no=1",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=Mom.Mom.Pmq.Pmq.Pmq.Pmq.RQP.RQP.OUo.OUo.ND4.ND4.ND4.RZX.RZX.RZX.RZX.Jn3.Jn3.Jn3.Jn3.QDm.NCu.NCu.NCv.RPj.RPj.RPj.RZM.QEH.QEH.QEH.QEH.OJW.Mps.Mps.Mps.Mps.NDw.NDw.NDw.NDw.Mpy.Mpy.NwX.OSj.NE4.NE4.NE4.NE4%21%21%21&deck_code=EUNFb9UVsjafuY9h&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
       "main": [
         [
-          "GD01-024",
-          4
-        ],
-        [
-          "GD04-066",
+          "ST01-009",
           2
-        ],
-        [
-          "ST02-001",
-          4
-        ],
-        [
-          "ST04-001",
-          4
-        ],
-        [
-          "GD04-068",
-          2
-        ],
-        [
-          "GD01-073",
-          4
         ],
         [
           "GD01-086",
           4
-        ],
-        [
-          "GD02-079",
-          3
-        ],
-        [
-          "ST02-010",
-          4
-        ],
-        [
-          "ST04-010",
-          4
-        ],
-        [
-          "GD03-125",
-          4
-        ],
-        [
-          "GD01-118",
-          4
-        ],
-        [
-          "ST04-012",
-          2
-        ],
-        [
-          "ST01-014",
-          2
-        ],
-        [
-          "GD04-117",
-          3
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6530764-0",
-      "deckName": "優勝 バヤシ 使用デッキ",
-      "rank": "優勝",
-      "playerName": "バヤシ",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "シーガル泉中央店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6530764&no=0",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=MoV.MoV.MoV.MoV.Mon.Mon.Mon.Mon.Mod.Mod.Mod.Mod.NB%2F.NB%2F.NB%2F.NB%2F.MpW.MpW.Pye.Pye.Pye.Pye.OUG.OUG.OUG.OUG.O00.O00.O00.O00.N%2Fq.N%2Fq.N%2Fq.N%2Fq.N%2Fu.N%2Fu.N%2Fu.N%2Fu.JmV.JmV.JmV.NBp.NBp.OTS.OTS.OTS.OTS.RQ4.RQ4.RQ4%21%21%21&deck_code=G7dCklmiiFYep9H4&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
-        [
-          "ST01-001",
-          4
-        ],
-        [
-          "ST01-010",
-          4
-        ],
-        [
-          "ST01-005",
-          4
-        ],
-        [
-          "GD01-020",
-          4
-        ],
-        [
-          "ST02-016",
-          2
-        ],
-        [
-          "GD03-056",
-          4
-        ],
-        [
-          "GD02-054",
-          4
-        ],
-        [
-          "ST05-010",
-          4
-        ],
-        [
-          "ST05-004",
-          4
-        ],
-        [
-          "ST05-006",
-          4
-        ],
-        [
-          "GD01-100",
-          3
-        ],
-        [
-          "GD01-008",
-          2
-        ],
-        [
-          "GD02-013",
-          4
-        ],
-        [
-          "GD04-056",
-          3
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6530764-1",
-      "deckName": "準優勝 Vallen 使用デッキ",
-      "rank": "準優勝",
-      "playerName": "Vallen",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "シーガル泉中央店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6530764&no=1",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NC5.NC5.NC5.NC5.RZV.RZV.Mp3.Mp3.Mp3.Mp3.RZB.RZB.RZB.RZB.RZX.RZX.RZX.ND4.ND4.ND4.RQP.RQP.RQP.OUo.OUo.NwR.NwR.NwR.NwR.PnB.PnB.PnB.PnB.QEH.QEH.QEH.QEH.RZj.RZj.RZj.OJS.OJS.NDw.NDw.NDw.NDw.Pzj.Pzj.Pzj.Pzj%21%21%21&deck_code=DE4onVUoXMFiI3cE&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
-        [
-          "GD01-024",
-          4
-        ],
-        [
-          "GD04-066",
-          2
-        ],
-        [
-          "ST02-001",
-          4
-        ],
-        [
-          "ST04-001",
-          4
-        ],
-        [
-          "GD04-068",
-          3
-        ],
-        [
-          "GD01-073",
-          3
         ],
         [
           "GD04-077",
-          3
+          2
         ],
         [
           "GD02-079",
           2
         ],
         [
-          "GD01-086",
-          4
-        ],
-        [
-          "ST02-010",
-          4
-        ],
-        [
-          "ST04-010",
-          4
-        ],
-        [
-          "GD04-117",
+          "GD01-073",
           3
         ],
         [
-          "ST01-014",
-          2
-        ],
-        [
-          "GD01-118",
+          "GD04-068",
           4
         ],
         [
-          "GD03-125",
+          "ST04-001",
           4
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6530764-2",
-      "deckName": "3位 てる 使用デッキ",
-      "rank": "3位",
-      "playerName": "てる",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "シーガル泉中央店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6530764&no=2",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RPj.RPj.RPj.RPj.NCu.NCu.NCu.NCu.Mpa.Mpa.Mpa.Mq6.Mq6.Mq6.Mq6.RQG.RQG.RQG.RPp.RPp.RPp.NDH.NDH.NDH.NDH.OUo.OUo.OUo.Mps.Mps.Mps.Mps.MqO.MqO.MqO.MqO.RR1.RR1.RR1.RR1.MqS.MqS.NDv.NDv.NDv.NDv.NE4.NE4.NE4.NE4%21%21%21&deck_code=1SBcvSS5AepZ8sDb&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
+        ],
+        [
+          "GD03-035",
+          1
+        ],
+        [
+          "GD01-066",
+          3
+        ],
         [
           "GD04-033",
           4
         ],
         [
-          "GD01-066",
+          "ST04-010",
           4
         ],
         [
-          "ST03-001",
-          3
-        ],
-        [
-          "ST04-001",
-          4
-        ],
-        [
-          "GD04-068",
-          3
-        ],
-        [
-          "GD04-039",
-          3
-        ],
-        [
-          "GD01-086",
-          4
-        ],
-        [
-          "GD02-079",
-          3
+          "ST04-011",
+          1
         ],
         [
           "ST03-010",
           4
         ],
         [
-          "ST04-010",
-          4
-        ],
-        [
-          "GD04-117",
-          4
-        ],
-        [
-          "ST04-012",
-          2
-        ],
-        [
           "GD01-118",
+          4
+        ],
+        [
+          "ST03-013",
           4
         ],
         [
@@ -673,43 +161,587 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "tokenNote": "公式大会結果ページにトークン一覧はありません。"
     },
     {
-      "id": "6515275-0",
-      "deckName": "優勝 cokemomo 使用デッキ",
-      "rank": "優勝",
-      "playerName": "cokemomo",
+      "id": "6642642-2",
+      "deckName": "3位 けんけん 使用デッキ",
+      "rank": "3位",
+      "playerName": "けんけん",
       "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "G-PROJECT中津店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6515275&no=0",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NC4.NC4.NC4.NC4.Py2.Py2.RQE.RQE.Mp2.Mp2.Mp2.Mp2.RQF.RQF.RQF.RQF.RQG.RQG.RQP.RQP.RQP.RQP.NDH.NDH.NDH.NDH.RQM.RQM.RQM.RQM.RQj.RQj.RQj.RQj.MpK.MpK.MpK.MpK.RR1.RR1.Mov.Mov.NDv.NDv.NDv.NDv.Pzj.Pzj.Pzj.Pzj%21%21%21&deck_code=5dAfdQVXD8irpyUm&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
+      "storeName": "ガンダムカードゲーム 公式ショップ 福岡 キャナルシティ博多店",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6642642&no=2",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=PyI.PyI.PyI.PyJ.PyJ.PyJ.RZF.RZF.RZF.RZF.RZE.RZE.RZE.RZE.Pmr.Pmr.Pmr.Pmr.RPo.RPo.RPR.RPR.RPN.RPN.RPN.RPN.RPS.RPS.RPS.RPS.RZZ.RZZ.RZZ.RZZ.Mon.Mon.Mon.Mon.Pn1.Pn1.Mpy.Mpy.Mpy.Mpy.PnA.PnA.RV8.RV8.RV8.RV8%21%21%21&deck_code=4dC4eye66Wim1F9e&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
       "main": [
         [
-          "GD01-024",
+          "GD03-034",
+          3
+        ],
+        [
+          "GD03-035",
+          3
+        ],
+        [
+          "GD04-006",
           4
         ],
         [
-          "GD03-018",
+          "GD04-003",
+          4
+        ],
+        [
+          "ST01-001",
+          4
+        ],
+        [
+          "GD04-038",
           2
         ],
         [
-          "GD04-066",
+          "GD04-015",
           2
         ],
         [
-          "ST02-001",
+          "GD04-011",
           4
         ],
         [
-          "GD04-067",
+          "GD04-016",
           4
+        ],
+        [
+          "GD04-081",
+          4
+        ],
+        [
+          "ST01-010",
+          4
+        ],
+        [
+          "GD03-092",
+          2
+        ],
+        [
+          "ST03-013",
+          4
+        ],
+        [
+          "GD01-100",
+          2
+        ],
+        [
+          "GD04-121",
+          4
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6547008-0",
+      "deckName": "優勝 ヴァン・バ・バンシィ 使用デッキ",
+      "rank": "優勝",
+      "playerName": "ヴァン・バ・バンシィ",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "トーナメントセンターバトロコ旭川駅前",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6547008&no=0",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=Mod.Mod.Mod.Mod.Jm%2F.Jm%2F.Jm%2F.Jm%2F.NCJ.NCJ.NCJ.NCJ.NBp.NBp.NBp.NBp.NB%2F.NB%2F.NB%2F.NB%2F.Mpk.Mpk.Mpk.Mpk.NC8.NC8.NC8.NC8.RPT.RPT.NCE.NCE.NCE.NCE.MoV.MoV.MoV.MoV.Mpv.Mpv.Mpv.Mpv.Mon.Mon.Mon.Mon.NDZ.NDZ.MpX.MpX%21%21%21&deck_code=p6pVIu6kWXFJvkHa&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "ST01-005",
+          4
+        ],
+        [
+          "ST03-008",
+          4
+        ],
+        [
+          "GD01-035",
+          4
+        ],
+        [
+          "GD01-008",
+          4
+        ],
+        [
+          "GD01-020",
+          4
+        ],
+        [
+          "ST03-006",
+          4
+        ],
+        [
+          "GD01-026",
+          4
+        ],
+        [
+          "GD04-017",
+          2
+        ],
+        [
+          "GD01-030",
+          4
+        ],
+        [
+          "ST01-001",
+          4
+        ],
+        [
+          "ST03-011",
+          4
+        ],
+        [
+          "ST01-010",
+          4
+        ],
+        [
+          "GD01-100",
+          2
+        ],
+        [
+          "ST02-016",
+          2
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6547008-1",
+      "deckName": "準優勝 アルファ 使用デッキ",
+      "rank": "準優勝",
+      "playerName": "アルファ",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "トーナメントセンターバトロコ旭川駅前",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6547008&no=1",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=Pp8.Pp8.Pp8.Pp8.OU7.OU7.Pp5.Pp5.Pp5.Pp5.PyK.PyK.PyK.NCS.NCS.NCS.NCS.NBh.NBh.NBh.PyI.PyI.PyI.Pp4.Pp4.NDQ.NDQ.NDQ.NDQ.PpD.PpD.PpD.PpD.Mpy.Mpy.Mpy.Mpy.NDm.NDm.PzT.PzT.PzT.PzT.NDZ.NDZ.NDZ.Mq0.Mq0.Mq0.Mq0%21%21%21&deck_code=Wy9YiDTh1kdYr20r&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "ST08-005",
+          4
+        ],
+        [
+          "GD02-046",
+          2
+        ],
+        [
+          "ST08-002",
+          4
+        ],
+        [
+          "GD03-036",
+          3
+        ],
+        [
+          "GD01-044",
+          4
+        ],
+        [
+          "GD01-003",
+          3
+        ],
+        [
+          "GD03-034",
+          3
+        ],
+        [
+          "ST08-001",
+          2
+        ],
+        [
+          "GD01-093",
+          4
+        ],
+        [
+          "ST08-010",
+          4
+        ],
+        [
+          "ST03-013",
+          4
+        ],
+        [
+          "GD01-111",
+          2
+        ],
+        [
+          "GD03-109",
+          4
+        ],
+        [
+          "GD01-100",
+          3
+        ],
+        [
+          "ST03-015",
+          4
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6547008-2",
+      "deckName": "3位 キングオブアイラ 使用デッキ",
+      "rank": "3位",
+      "playerName": "キングオブアイラ",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "トーナメントセンターバトロコ旭川駅前",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6547008&no=2",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NDv.NDv.Q%2FO.Q%2FO.NE2.Mol.Mol.Mol.Mol.OUo.OUo.RQP.RQP.NDH.NDH.MqS.MqS.MqO.MqO.MqO.MpK.MpK.MpK.MpK.ND4.ND4.RQG.RQG.Mq6.Mq6.Mq6.Mq6.Mp2.Mp2.Mp2.Mp2.Pzj.Pzj.Pzj.NC4.NC4.NC4.NC4.NDM.NDM.NDM.NC6.NC6.NC6.Py5%21%21%21&deck_code=M4Lc3M1gIbymDrK7&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "GD01-118",
+          4
+        ],
+        [
+          "GD01-126",
+          1
+        ],
+        [
+          "ST01-009",
+          4
+        ],
+        [
+          "GD02-079",
+          2
+        ],
+        [
+          "GD04-077",
+          2
+        ],
+        [
+          "GD01-086",
+          2
+        ],
+        [
+          "ST04-012",
+          2
+        ],
+        [
+          "ST04-010",
+          3
+        ],
+        [
+          "ST02-010",
+          4
+        ],
+        [
+          "GD01-073",
+          2
         ],
         [
           "GD04-068",
           2
         ],
         [
-          "GD04-077",
+          "ST04-001",
+          4
+        ],
+        [
+          "ST02-001",
+          4
+        ],
+        [
+          "GD03-125",
+          3
+        ],
+        [
+          "GD01-024",
+          4
+        ],
+        [
+          "GD01-090",
+          3
+        ],
+        [
+          "GD01-025",
+          3
+        ],
+        [
+          "GD03-021",
+          1
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6529774-0",
+      "deckName": "優勝 AJI 使用デッキ",
+      "rank": "優勝",
+      "playerName": "AJI",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "TSUTAYAあべの橋店",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6529774&no=0",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=Q%2FY.Q%2FY.Q%2FY.NDH.NDH.NDH.NDH.Q%2Fd.Q%2Fd.Q%2Fd.Pye.Pye.Pye.Pye.RQB.Q%2FZ.Q%2FZ.Q%2FZ.Q%2Fe.Mq6.Mq6.Mq6.Mq6.RP%2B.RP%2B.RP%2B.RP%2B.Q%2Ff.Q%2Ff.Q%2Ff.Q%2Ff.O00.O00.O00.MqO.MqO.MqO.MqO.NDv.NDv.NDv.NDv.Mov.O08.RR1.RR1.RVH.RVH.RVH.RVH%21%21%21&deck_code=4JdNlHSyyTO6hc0C&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "ST09-001",
+          3
+        ],
+        [
+          "GD01-086",
+          4
+        ],
+        [
+          "ST09-006",
+          3
+        ],
+        [
+          "GD03-056",
+          4
+        ],
+        [
+          "GD04-063",
+          1
+        ],
+        [
+          "ST09-002",
+          3
+        ],
+        [
+          "ST09-007",
+          1
+        ],
+        [
+          "ST04-001",
+          4
+        ],
+        [
+          "GD04-050",
+          4
+        ],
+        [
+          "ST09-008",
+          4
+        ],
+        [
+          "ST05-010",
+          3
+        ],
+        [
+          "ST04-010",
+          4
+        ],
+        [
+          "GD01-118",
+          4
+        ],
+        [
+          "ST01-014",
+          1
+        ],
+        [
+          "ST05-014",
+          1
+        ],
+        [
+          "GD04-117",
+          2
+        ],
+        [
+          "GD04-130",
+          4
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6529774-1",
+      "deckName": "準優勝 ササクレ 使用デッキ",
+      "rank": "準優勝",
+      "playerName": "ササクレ",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "TSUTAYAあべの橋店",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6529774&no=1",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RPm.RPm.RPm.RPn.RPn.RPn.RPo.RPo.RPo.RPo.RQB.RQB.RQB.RQc.RQc.RQc.RQc.RPk.RPk.RPk.RPk.PyX.PyX.Pyl.Pyl.Pyl.OVR.Poq.Poq.Por.Por.Por.Pot.Pot.Pot.Pot.Pp0.Pp0.Poz.Poy.Poy.Poy.Poy.Pp2.Pp2.Pp2.Pp2.RQ2.RQ2.RQ2%21%21%21&deck_code=QWsXmOLYuwAsRbMZ&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "GD04-036",
+          3
+        ],
+        [
+          "GD04-037",
+          3
+        ],
+        [
+          "GD04-038",
+          4
+        ],
+        [
+          "GD04-063",
+          3
+        ],
+        [
+          "GD04-090",
+          4
+        ],
+        [
+          "GD04-034",
+          4
+        ],
+        [
+          "GD03-049",
+          2
+        ],
+        [
+          "GD03-063",
+          3
+        ],
+        [
+          "GD02-111",
+          1
+        ],
+        [
+          "ST07-001",
+          2
+        ],
+        [
+          "ST07-002",
+          3
+        ],
+        [
+          "ST07-004",
+          4
+        ],
+        [
+          "ST07-013",
+          2
+        ],
+        [
+          "ST07-010",
+          1
+        ],
+        [
+          "ST07-009",
+          4
+        ],
+        [
+          "ST07-015",
+          4
+        ],
+        [
+          "GD04-054",
+          3
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6529774-2",
+      "deckName": "3位 ジェイ 使用デッキ",
+      "rank": "3位",
+      "playerName": "ジェイ",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "TSUTAYAあべの橋店",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6529774&no=2",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RPj.RPj.RPj.Pxr.Pxr.NCT.NCT.NCT.NCS.Mpa.Mpa.Mpa.QDm.OJJ.OJJ.OJJ.OJJ.RPq.RPo.RPo.Mps.Mps.Mps.NDQ.NDQ.NDQ.NDQ.PzC.QDW.NDZ.NDZ.RQv.RQv.RQv.NDn.Q%2FN.Q%2FN.Q%2FN.PzT.PzT.PzT.PzT.Mpy.Mpy.Mpy.Mpy.NE4.NE4.Mq0.Mq0%21%21%21&deck_code=vX8M5XAgPka2otMa&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "GD04-033",
+          3
+        ],
+        [
+          "GD03-005",
+          2
+        ],
+        [
+          "GD01-044",
+          4
+        ],
+        [
+          "ST03-001",
+          3
+        ],
+        [
+          "GD03-035",
+          1
+        ],
+        [
+          "GD01-051",
+          4
+        ],
+        [
+          "GD04-040",
+          1
+        ],
+        [
+          "GD04-038",
+          2
+        ],
+        [
+          "ST03-010",
+          3
+        ],
+        [
+          "GD01-093",
+          4
+        ],
+        [
+          "GD03-092",
+          1
+        ],
+        [
+          "GD01-100",
+          3
+        ],
+        [
+          "GD04-109",
+          3
+        ],
+        [
+          "GD01-111",
+          4
+        ],
+        [
+          "GD03-109",
+          4
+        ],
+        [
+          "ST03-013",
+          4
+        ],
+        [
+          "GD01-128",
+          2
+        ],
+        [
+          "ST03-015",
+          2
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6529467-0",
+      "deckName": "優勝 ちゃら松 使用デッキ",
+      "rank": "優勝",
+      "playerName": "ちゃら松",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "TSUTAYAデイズタウンつくば",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6529467&no=0",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=Q%2FY.Q%2FY.Q%2FY.Q%2FY.NDH.NDH.NDH.NDH.Q%2Fd.Q%2Fd.Q%2Fd.Q%2Fd.RQB.RQB.Pye.Pye.Pye.Pye.Q%2FZ.Q%2FZ.Q%2FZ.Q%2Fe.Q%2Fe.Mq6.Mq6.Mq6.Mq6.RP%2B.RP%2B.RP%2B.RP%2B.MqO.MqO.MqO.MqO.Q%2Ff.Q%2Ff.Q%2Ff.O00.O00.O00.O00.NDv.NDv.NDv.NDv.RVH.RVH.RVH.RVH%21%21%21&deck_code=9V8zDaWjhwYyicIK&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "ST09-001",
           4
         ],
         [
@@ -717,11 +749,95 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
           4
         ],
         [
-          "GD04-074",
+          "ST09-006",
           4
         ],
         [
-          "GD04-097",
+          "GD04-063",
+          2
+        ],
+        [
+          "GD03-056",
+          4
+        ],
+        [
+          "ST09-002",
+          3
+        ],
+        [
+          "ST09-007",
+          2
+        ],
+        [
+          "ST04-001",
+          4
+        ],
+        [
+          "GD04-050",
+          4
+        ],
+        [
+          "ST04-010",
+          4
+        ],
+        [
+          "ST09-008",
+          3
+        ],
+        [
+          "ST05-010",
+          4
+        ],
+        [
+          "GD01-118",
+          4
+        ],
+        [
+          "GD04-130",
+          4
+        ]
+      ],
+      "token": [],
+      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
+    },
+    {
+      "id": "6529467-1",
+      "deckName": "準優勝 オノ 使用デッキ",
+      "rank": "準優勝",
+      "playerName": "オノ",
+      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
+      "storeName": "TSUTAYAデイズタウンつくば",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6529467&no=1",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NC4.NC4.NC4.NC4.NCu.NCu.NCu.Mp2.Mp2.Mp2.Mp2.Pzj.Pzj.Pzj.Pzj.Mq6.Mq6.Mq6.Mq6.RQG.RQG.MqO.MqO.MqO.MqO.MpK.MpK.MpK.MpK.RR1.RR1.Mov.Mov.NDH.NDH.NDH.NDH.RQP.RQP.RQP.RQP.OUo.OUo.OUo.OUo.NDv.NDv.NDv.NDv.NE2%21%21%21&deck_code=VHqlzrXYOvkutAS1&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
+      "main": [
+        [
+          "GD01-024",
+          4
+        ],
+        [
+          "GD01-066",
+          3
+        ],
+        [
+          "ST02-001",
+          4
+        ],
+        [
+          "GD03-125",
+          4
+        ],
+        [
+          "ST04-001",
+          4
+        ],
+        [
+          "GD04-068",
+          2
+        ],
+        [
+          "ST04-010",
           4
         ],
         [
@@ -737,57 +853,41 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
           2
         ],
         [
+          "GD01-086",
+          4
+        ],
+        [
+          "GD04-077",
+          4
+        ],
+        [
+          "GD02-079",
+          4
+        ],
+        [
           "GD01-118",
           4
         ],
         [
-          "GD03-125",
-          4
+          "GD01-126",
+          1
         ]
       ],
       "token": [],
       "tokenNote": "公式大会結果ページにトークン一覧はありません。"
     },
     {
-      "id": "6515275-1",
-      "deckName": "準優勝 YD 使用デッキ",
-      "rank": "準優勝",
-      "playerName": "YD",
+      "id": "6529467-2",
+      "deckName": "3位 ふー 使用デッキ",
+      "rank": "3位",
+      "playerName": "ふー",
       "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "G-PROJECT中津店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6515275&no=1",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=MoV.MoV.MoV.MoV.OUG.OUG.OUG.OUG.Pye.Pye.Pye.Pye.NB%2F.NB%2F.NB%2F.NB%2F.RQ4.RQ4.RQ4.N%2Fu.N%2Fu.N%2Fu.N%2Fu.NBz.NBz.N%2Fq.N%2Fq.N%2Fq.N%2Fq.Mod.Mod.Mod.Mod.OTS.OTS.NBp.NBp.Mon.Mon.Mon.Mon.O00.O00.O00.O00.NDZ.NDZ.NDZ.MpW.MpW%21%21%21&deck_code=NaStCzWObFCk4ZeA&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
+      "storeName": "TSUTAYAデイズタウンつくば",
+      "eventDate": "2026.05.17",
+      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6529467&no=2",
+      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=N%2Fr.N%2Fr.N%2Fr.N%2Fr.Moe.Moe.Moe.Moe.OUH.OUH.OUH.OUH.N%2Fv.N%2Fv.N%2Fv.N%2Fv.NB%2F.NB%2F.NB%2F.NB%2F.Pye.Pye.MoW.MoW.MoW.MoW.RZA.RZA.OUK.OUK.OUK.OUK.QDa.QE6.QE6.QE6.QE6.Moo.Moo.Moo.Moo.QDW.QDW.QE8.QE8.QE8.Moy.Moy.MpX.MpX%21%21%21&deck_code=W1agtRhb4IxeLyfc&game_title_id=15",
+      "fetchedAt": "2026-05-22T17:05:37Z",
       "main": [
-        [
-          "ST01-001",
-          4
-        ],
-        [
-          "GD02-054",
-          4
-        ],
-        [
-          "GD03-056",
-          4
-        ],
-        [
-          "GD01-020",
-          4
-        ],
-        [
-          "GD04-056",
-          3
-        ],
-        [
-          "ST05-006",
-          4
-        ],
-        [
-          "GD01-018",
-          2
-        ],
         [
           "ST05-004",
           4
@@ -797,48 +897,24 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
           4
         ],
         [
-          "GD02-013",
-          2
-        ],
-        [
-          "GD01-008",
-          2
-        ],
-        [
-          "ST01-010",
+          "GD02-054",
           4
         ],
         [
-          "ST05-010",
+          "ST05-006",
           4
         ],
         [
-          "GD01-100",
-          3
+          "GD01-020",
+          4
         ],
         [
-          "ST02-016",
-          2
-        ]
-      ],
-      "token": [],
-      "tokenNote": "公式大会結果ページにトークン一覧はありません。"
-    },
-    {
-      "id": "6515275-2",
-      "deckName": "3位 成田隼人 使用デッキ",
-      "rank": "3位",
-      "playerName": "成田隼人",
-      "eventName": "ニュータイプチャレンジ 2026 MISSION3（5月開催）",
-      "storeName": "G-PROJECT中津店",
-      "eventDate": "2026.05.10",
-      "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6776&event=6515275&no=2",
-      "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=QDr.QDr.QDr.OUK.OUK.OUK.OUK.QDa.MoW.MoW.MoW.RZA.RZA.RZA.RZA.NB%2F.NB%2F.NB%2F.NB%2F.OUH.OUH.OUH.OUH.N%2Fv.N%2Fv.N%2Fv.N%2Fv.NBz.NBz.NBz.NBz.NwO.NwO.NwO.MpX.MpX.O0B.O0B.Moo.Moo.Moo.Moo.QE6.QE6.QE6.QE6.QDW.QDW.QDW.QDW%21%21%21&deck_code=od72F0nmts1urRgI&game_title_id=15",
-      "fetchedAt": "2026-05-21T17:29:02Z",
-      "main": [
+          "GD03-056",
+          4
+        ],
         [
-          "GD03-050",
-          3
+          "ST01-001",
+          4
         ],
         [
           "GD02-055",
@@ -849,52 +925,28 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
           1
         ],
         [
-          "ST01-001",
-          3
-        ],
-        [
-          "GD03-056",
+          "ST05-010",
           4
-        ],
-        [
-          "GD01-020",
-          4
-        ],
-        [
-          "GD02-054",
-          4
-        ],
-        [
-          "ST05-006",
-          4
-        ],
-        [
-          "GD01-018",
-          4
-        ],
-        [
-          "GD01-008",
-          3
-        ],
-        [
-          "ST02-016",
-          2
-        ],
-        [
-          "ST05-015",
-          2
         ],
         [
           "ST01-010",
           4
         ],
         [
-          "ST05-010",
-          4
+          "GD01-100",
+          2
         ],
         [
-          "GD01-100",
-          4
+          "ST05-014",
+          3
+        ],
+        [
+          "ST01-015",
+          2
+        ],
+        [
+          "ST02-016",
+          2
         ]
       ],
       "token": [],
