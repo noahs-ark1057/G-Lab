@@ -1,5 +1,5 @@
 window.__OFFICIAL_GUNDAM_CARD_DB = {
-  "generatedAt": "2026-05-26T17:57:35Z",
+  "generatedAt": "2026-05-27T17:55:42Z",
   "source": "https://www.gundam-gcg.com/jp/cards/",
   "packageCount": 17,
   "cardCount": 784,
