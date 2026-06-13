@@ -1,5 +1,5 @@
 window.__TOURNAMENT_REFERENCE_DECKS = {
-  "generatedAt": "2026-06-12T17:34:54Z",
+  "generatedAt": "2026-06-13T16:11:10Z",
   "source": "https://www.gundam-gcg.com/jp/tournament-results/",
   "eventCount": 4,
   "deckCount": 12,
@@ -14,7 +14,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6565627&no=0",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RQB.RQB.RQB.RQB.RZX.RZX.RZX.RZX.RVH.RVH.RVH.RVH.PyY.PyY.PyY.PyY.Pye.Pye.Pye.Pye.PzE.PzE.PzE.PzE.QE6.QE6.QE6.QE6.OUH.OUH.OUH.OUH.OUK.OUK.OUK.OUK.OUN.NCu.NCu.NCu.NDv.NDv.NDv.NDv.N%2Fu.N%2Fu.N%2Fu.N%2Fu.Mov.Mov%21%21%21&deck_code=7M9KiOdSvsXKQpbl&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD04-063",
@@ -86,7 +86,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6565627&no=1",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RPK.MoV.MoV.MoV.MoV.Pye.Pye.Pye.Pye.NB%2F.NB%2F.NB%2F.N%2Fu.N%2Fu.N%2Fu.N%2Fu.OUG.OUG.OUG.OUG.N%2Fq.N%2Fq.N%2Fq.N%2Fq.Pyl.Pyl.Pyl.Pyl.Mod.Mod.Mod.NBp.NBp.NBp.NBp.O00.O00.O00.O00.Mon.Mon.Mon.Mon.Mox.MpW.MpW.NDZ.NDZ.NDZ.NDZ%21%21%21&deck_code=NhDtinOCMsYro9Er&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD04-008",
@@ -162,7 +162,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6565627&no=2",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RPj.RPj.RPj.RPj.PyJ.PyJ.NCu.NCu.NCu.Mq6.Mq6.Mq6.Mq6.RQG.RQG.RQG.ND4.ND4.ND4.NDH.NDH.NDH.NDH.RQP.RQP.OUo.OUo.Mps.Mps.Mps.Mps.MqO.MqO.MqO.MqO.MqQ.MqQ.MqQ.NDv.NDv.NDv.NDv.Mpy.Mpy.Mpy.Mpy.NE4.NE4.NE4.NE4%21%21%21&deck_code=qCjInBZlbpL9I6RI&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD04-033",
@@ -238,7 +238,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6547648&no=0",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NDH.NDH.RQP.RQP.OUo.OUo.OUo.OUo.ND4.ND4.RQG.RQG.RQG.Mq6.Mq6.Mq6.Mq6.PyJ.PyJ.PyJ.PyJ.NCu.NCu.NCu.NCu.PyI.PyI.QDl.NDv.NDv.NDv.NDv.Mpy.Mpy.Mpy.Mpy.Q%2FU.Q%2FU.Q%2FU.Q%2FU.Pn1.Pn1.Pn1.Pn1.OJV.OJV.NE4.NE4.NE4.NE4%21%21%21&deck_code=ALmZmV5kaLRf9uN3&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD01-086",
@@ -314,7 +314,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6547648&no=1",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=N%2Fq.N%2Fq.N%2Fq.Jmi.Jmi.Moe.Moe.OTS.OTS.OTS.OTS.Pyl.Pyl.Jm2.Jm2.Jm2.Jm2.N%2Fv.N%2Fv.N%2Fu.N%2Fu.OUG.OUG.OUH.OUI.NB%2F.NB%2F.NB%2F.NB%2F.Pye.RZA.RZA.RZA.MoW.MoW.MoW.MoW.QE6.QE6.QE6.QE6.Moo.Moo.Moo.Jml.NDa.NDa.NDa.MpX.MpW%21%21%21&deck_code=4c8aMFP5vsVFaWOy&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "ST05-004",
@@ -386,7 +386,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6547648&no=2",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NBp.NBp.N%2Fq.N%2Fq.N%2Fq.N%2Fq.Q%2Fc.Q%2Fc.Q%2Fc.Q%2Fc.OTS.OTS.OTS.OTS.N%2Fu.N%2Fu.N%2Fu.N%2Fu.OUG.OUG.OUG.OUG.Pye.Pye.Pye.Pye.RQ4.RQ4.RQ4.NB%2F.NB%2F.NB%2F.NB%2F.MoV.MoV.MoV.MoV.Mon.Mon.Mon.Mon.QE6.QE6.QE6.QE6.NDZ.NDZ.NDZ.MpW.MpW%21%21%21&deck_code=HvzcC6Bbh1rlEqTR&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD01-008",
@@ -458,7 +458,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6535197&no=0",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NB%2F.NB%2F.NB%2F.NB%2F.MoV.MoV.MoV.MoV.NBz.NBp.NBp.NBp.NBp.Mod.Mod.Mod.Mod.OTS.Pye.Pye.Pye.Pye.RQB.RQB.RQB.OUG.OUG.OUG.OUG.N%2Fu.N%2Fu.N%2Fu.N%2Fu.N%2Fq.N%2Fq.N%2Fq.N%2Fq.Mon.Mon.Mon.Mon.O01.O01.O01.O01.NDa.NDa.MpX.MpX.RaR%21%21%21&deck_code=e6GZ2tR5Q40XnZJ3&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD01-020",
@@ -538,7 +538,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6535197&no=1",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=RZ7.RZ7.RQE.RZV.RZV.RQG.RQG.RQG.RQG.Py0.Py0.NBl.MoV.MoV.Pmr.Pmr.RQP.RQP.RQP.RQP.NDH.NDH.NDH.Mol.Mol.Mol.NDK.NDK.NDK.NDK.Mon.Mon.Mon.Mon.QEH.MqS.MqS.MqS.RZj.NDZ.NDZ.NDZ.RaQ.RaQ.NDv.NDv.NDv.RVH.PpI.PpI%21%21%21&deck_code=WWRhK6WXAJwQf0FN&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD01-002",
@@ -630,7 +630,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6535197&no=2",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NBp.NBp.NBp.NBp.Mod.Mod.Mod.Mod.Pxx.RQn.RQn.RQn.RQn.Mox.NBz.NBz.NBz.NBz.Mon.Mon.Mon.Mon.RV9.RV9.RV9.RQk.RQk.RQk.RQk.NBm.NBm.NB%2F.NB%2F.NB%2F.NB%2F.MoV.MoV.MoV.MoV.NDZ.NDZ.NDZ.NDZ.RPE.RPE.RQD.RQD.RQD.RQD.RR1%21%21%21&deck_code=rvZCgISK4uSgPr65&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD01-008",
@@ -710,7 +710,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6527966&no=0",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=Mod.Mod.Mod.Mod.OUG.OUG.OUG.OUG.OUJ.OUJ.OUJ.NBp.NBp.NBp.MoV.MoV.MoV.MoV.N%2Fq.N%2Fq.N%2Fq.N%2Fq.N%2Fu.N%2Fu.N%2Fu.N%2Fu.O00.O00.O00.O00.O08.O08.NB%2F.NB%2F.NB%2F.Mon.Mon.Mon.Mon.MpW.MpW.Pye.Pye.Pye.Pye.NDZ.NDZ.ND%2F.ND%2F.RQ4%21%21%21&deck_code=27voUvwUcO9tlRtH&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "ST01-005",
@@ -790,7 +790,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6527966&no=1",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=NC5.NC5.NC5.NC5.Mp3.Mp3.Mp3.Mp3.Pmy.NC7.NC7.NC7.NC7.RZX.RZX.RZX.RZX.Pmp.JmK.JmK.OUo.OUo.OUo.OUo.Pmq.Pmq.Pmq.Pmq.RQP.RQP.RZj.RZj.RZj.RZj.NDw.NDw.NDw.NDw.MpL.MpL.MpL.MpL.NDN.NDN.NDN.NDN.Pzj.Pzj.Pzj.Pzj%21%21%21&deck_code=3DEKctpsuImEwcWM&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD01-024",
@@ -866,7 +866,7 @@ window.__TOURNAMENT_REFERENCE_DECKS = {
       "eventDate": "2026.06.07",
       "sourceUrl": "https://www.gundam-gcg.com/jp/tournament-results/players_deck.php?series=6791&event=6527966&no=2",
       "tcgPlusUrl": "https://www.bandai-tcg-plus.com/deck_recipe?deck=OUJ.OUJ.Pye.Pye.Pye.Pye.RQ4.MoV.MoV.MoV.MoV.OUG.OUG.OUG.OUG.N%2Fu.N%2Fu.N%2Fu.N%2Fu.NBz.NBz.NBz.Pyl.Pyl.Q%2Fc.Q%2Fc.Q%2Fc.Q%2Fc.N%2Fq.N%2Fq.N%2Fq.N%2Fq.NBp.NBp.NBp.NBp.O00.O00.O00.O00.Mon.Mon.Mon.Moo.PnA.PnA.O0A.O0A.MpW.MpW%21%21%21&deck_code=JgSm1RESfSqIFHgm&game_title_id=15",
-      "fetchedAt": "2026-06-12T17:34:54Z",
+      "fetchedAt": "2026-06-13T16:11:10Z",
       "main": [
         [
           "GD02-055",
