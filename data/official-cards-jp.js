@@ -1,83 +1,75 @@
 window.__OFFICIAL_GUNDAM_CARD_DB = {
-  "generatedAt": "2026-06-14T14:18:31.3151925Z",
+  "generatedAt": "2026-06-15T19:01:28Z",
   "source": "https://www.gundam-gcg.com/jp/cards/",
-  "packageCount": 19,
+  "packageCount": 17,
   "cardCount": 784,
   "packages": [
     {
-      "id": "616101",
+      "id": "615101",
       "name": "Newtype Rising [GD01]"
     },
     {
-      "id": "616102",
+      "id": "615102",
       "name": "Dual Impact [GD02]"
     },
     {
-      "id": "616103",
+      "id": "615103",
       "name": "Steel Requiem [GD03]"
     },
     {
-      "id": "616104",
+      "id": "615104",
       "name": "Phantom Aria [GD04]"
     },
     {
-      "id": "616001",
+      "id": "615001",
       "name": "Heroic Beginnings [ST01]"
     },
     {
-      "id": "616002",
+      "id": "615002",
       "name": "Wings of Advance [ST02]"
     },
     {
-      "id": "616003",
+      "id": "615003",
       "name": "Zeon's Rush [ST03]"
     },
     {
-      "id": "616004",
+      "id": "615004",
       "name": "SEED Strike [ST04]"
     },
     {
-      "id": "616005",
+      "id": "615005",
       "name": "Iron Bloom [ST05]"
     },
     {
-      "id": "616006",
+      "id": "615006",
       "name": "Clan Unity [ST06]"
     },
     {
-      "id": "616007",
+      "id": "615007",
       "name": "Celestial Drive [ST07]"
     },
     {
-      "id": "616008",
+      "id": "615008",
       "name": "Flash of Radiance [ST08]"
     },
     {
-      "id": "616009",
+      "id": "615009",
       "name": "Destiny Ignition [ST09]"
     },
     {
-      "id": "616010",
-      "name": "Generation Pulse [ST10]"
-    },
-    {
-      "id": "616201",
-      "name": "Eternal Nexus [EB01]"
-    },
-    {
-      "id": "616701",
+      "id": "615701",
       "name": "限定商品収録カード"
     },
     {
-      "id": "616000",
+      "id": "615000",
       "name": "リミテッドBOX Ver.β"
     },
     {
-      "id": "616801",
+      "id": "615801",
       "name": "基本カード"
     },
     {
-      "id": "616901",
+      "id": "615901",
       "name": "プロモーションカード"
     }
   ],
@@ -89,7 +81,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-001.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -154,11 +146,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-002.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -216,7 +208,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-003.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -268,7 +260,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-004.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -327,11 +319,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-005.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -396,7 +388,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-006.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -448,7 +440,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-007.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -501,7 +493,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-008.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -554,11 +546,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-009.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -613,11 +605,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-010.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -679,11 +671,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-011.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -745,7 +737,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-012.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -795,7 +787,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-013.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -844,11 +836,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-014.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -916,7 +908,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST07-015.webp?260416",
       "packages": [
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -973,11 +965,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-001.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -1034,15 +1026,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-002.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -1105,7 +1097,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-003.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1155,7 +1147,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-004.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1205,11 +1197,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-005.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -1266,11 +1258,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-006.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -1327,7 +1319,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-007.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1377,7 +1369,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-008.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1428,11 +1420,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-009.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -1494,11 +1486,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-010.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -1560,7 +1552,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-011.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1609,7 +1601,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-012.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1658,7 +1650,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-013.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1707,7 +1699,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-014.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1757,7 +1749,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST06-015.webp?260416",
       "packages": [
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         }
       ],
@@ -1807,7 +1799,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXB-002.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -1856,7 +1848,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXR-002.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -1905,7 +1897,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-030.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -1954,7 +1946,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-001.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2019,7 +2011,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-002.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2071,7 +2063,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-003.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2130,7 +2122,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-004.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2188,7 +2180,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-005.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2239,7 +2231,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-006.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2292,7 +2284,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-007.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2344,7 +2336,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-008.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2408,7 +2400,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-009.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2457,7 +2449,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST09-010.webp?260416",
       "packages": [
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -2509,7 +2501,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-001.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -2567,7 +2559,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-002.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -2625,11 +2617,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-003.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -2692,7 +2684,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-004.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -2744,7 +2736,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-005.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -2795,11 +2787,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-006.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -2856,7 +2848,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-007.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -2901,7 +2893,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-008.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -2946,7 +2938,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-009.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -2991,7 +2983,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-010.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3036,7 +3028,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-011.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3086,7 +3078,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-012.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3132,7 +3124,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-013.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3176,7 +3168,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-014.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3220,7 +3212,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-015.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3265,7 +3257,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-016.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3309,7 +3301,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-017.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3354,7 +3346,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-018.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3405,7 +3397,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-019.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3450,7 +3442,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-020.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3500,7 +3492,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-021.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3559,7 +3551,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-022.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3604,7 +3596,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-023.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3656,7 +3648,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-024.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3707,7 +3699,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-025.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3751,7 +3743,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-026.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3796,7 +3788,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-027.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3842,7 +3834,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-028.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3887,11 +3879,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-029.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -3955,7 +3947,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-030.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -3999,7 +3991,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-031.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4045,7 +4037,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-032.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4090,7 +4082,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-033.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4134,7 +4126,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-034.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4178,7 +4170,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-035.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4229,11 +4221,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-036.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -4290,7 +4282,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-037.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4348,7 +4340,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-038.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4418,11 +4410,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-039.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -4479,7 +4471,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-040.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4530,7 +4522,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-041.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4581,7 +4573,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-042.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4626,7 +4618,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-043.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4670,7 +4662,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-044.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4714,7 +4706,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-045.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4758,7 +4750,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-046.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4803,7 +4795,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-047.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4847,11 +4839,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-048.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -4908,7 +4900,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-049.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4952,7 +4944,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-050.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -4996,7 +4988,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-051.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5040,7 +5032,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-052.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5084,7 +5076,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-053.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5135,7 +5127,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-054.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5193,7 +5185,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-055.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5245,11 +5237,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-056.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -5306,7 +5298,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-057.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5352,7 +5344,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-058.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5397,7 +5389,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-059.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5448,7 +5440,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-060.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5499,7 +5491,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-061.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5543,7 +5535,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-062.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5588,7 +5580,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-063.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5633,7 +5625,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-064.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5677,7 +5669,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-065.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5720,7 +5712,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-066.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5772,7 +5764,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-067.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5817,7 +5809,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-068.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5863,11 +5855,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-069.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -5931,7 +5923,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-070.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -5983,7 +5975,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-071.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6041,7 +6033,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-072.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6092,7 +6084,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-073.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6149,7 +6141,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-074.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6194,7 +6186,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-075.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6239,11 +6231,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-076.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -6301,7 +6293,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-077.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6346,7 +6338,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-078.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6391,7 +6383,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-079.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6435,7 +6427,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-080.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6479,7 +6471,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-081.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6524,7 +6516,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-082.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6576,7 +6568,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-083.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6619,7 +6611,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-084.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6664,7 +6656,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-085.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6721,7 +6713,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-086.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6764,7 +6756,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-087.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6808,11 +6800,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-088.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -6869,7 +6861,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-089.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -6913,11 +6905,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-090.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -6973,11 +6965,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-091.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -7046,7 +7038,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-092.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7089,7 +7081,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-093.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7139,7 +7131,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-094.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7189,7 +7181,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-095.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7232,11 +7224,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-096.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -7292,11 +7284,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-097.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -7352,11 +7344,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-098.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -7419,7 +7411,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-099.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7462,7 +7454,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-100.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7511,7 +7503,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-101.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7554,7 +7546,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-102.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7597,7 +7589,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-103.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7646,11 +7638,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-104.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -7705,7 +7697,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-105.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7749,11 +7741,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-106.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -7815,11 +7807,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-107.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -7874,7 +7866,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-108.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7917,7 +7909,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-109.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -7961,11 +7953,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-110.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -8027,7 +8019,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-111.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8077,11 +8069,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-112.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -8142,7 +8134,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-113.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8185,7 +8177,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-114.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8229,7 +8221,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-115.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8272,7 +8264,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-116.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8315,11 +8307,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-117.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -8368,7 +8360,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-118.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8411,7 +8403,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-119.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8454,7 +8446,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-120.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8497,7 +8489,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-121.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8542,7 +8534,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-122.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8586,7 +8578,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-123.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8631,7 +8623,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-124.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8676,7 +8668,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-125.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8720,7 +8712,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-126.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8764,7 +8756,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-127.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8808,7 +8800,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-128.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8852,7 +8844,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-129.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8903,7 +8895,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD02-130.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8947,7 +8939,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-010.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -8996,7 +8988,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-011.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9045,7 +9037,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-012.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9094,7 +9086,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-013.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9143,7 +9135,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-014.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9192,7 +9184,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-015.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9247,7 +9239,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-016.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9296,7 +9288,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-017.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9345,7 +9337,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-018.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9394,7 +9386,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-019.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9443,7 +9435,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-012.webp?260416",
       "packages": [
         {
-          "id": "616102",
+          "id": "615102",
           "name": "Dual Impact [GD02]"
         }
       ],
@@ -9486,7 +9478,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-001.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9550,11 +9542,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-002.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -9611,7 +9603,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-003.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9662,7 +9654,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-004.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9713,7 +9705,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-005.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9763,7 +9755,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-006.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9814,7 +9806,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-007.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9865,7 +9857,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-008.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9922,7 +9914,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-009.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -9978,11 +9970,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-010.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -10038,7 +10030,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-011.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -10087,7 +10079,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-012.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -10136,7 +10128,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-013.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -10185,7 +10177,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-014.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -10235,7 +10227,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST08-015.webp?260416",
       "packages": [
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -10285,19 +10277,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-001.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -10392,11 +10384,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-002.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -10453,7 +10445,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-003.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         }
       ],
@@ -10505,7 +10497,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-004.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         }
       ],
@@ -10557,11 +10549,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-005.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -10617,7 +10609,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-006.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         }
       ],
@@ -10668,11 +10660,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-007.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -10729,11 +10721,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-008.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -10789,7 +10781,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-009.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         }
       ],
@@ -10846,15 +10838,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-010.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -10917,15 +10909,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-011.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -11005,11 +10997,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-012.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -11065,11 +11057,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-013.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -11138,19 +11130,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-014.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -11229,11 +11221,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-015.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -11291,11 +11283,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST01-016.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -11351,11 +11343,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-001.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -11404,11 +11396,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-002.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -11457,11 +11449,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-003.webp?260416",
       "packages": [
         {
-          "id": "616001",
+          "id": "615001",
           "name": "Heroic Beginnings [ST01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -11510,11 +11502,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-001.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -11572,15 +11564,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-002.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -11644,7 +11636,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-003.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -11693,7 +11685,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-004.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -11743,7 +11735,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-005.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -11795,7 +11787,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-006.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -11845,11 +11837,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-007.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -11906,7 +11898,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-008.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -11957,7 +11949,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-009.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -12007,7 +11999,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-011.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -12064,7 +12056,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-012.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -12113,7 +12105,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-015.webp?260416",
       "packages": [
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         }
       ],
@@ -12170,7 +12162,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-001.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12235,7 +12227,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-002.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12293,7 +12285,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-003.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12351,11 +12343,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-004.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -12413,15 +12405,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-005.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -12484,7 +12476,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-006.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12535,7 +12527,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-007.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12579,15 +12571,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-008.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -12644,11 +12636,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-009.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -12700,7 +12692,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-010.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12745,11 +12737,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-011.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -12800,7 +12792,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-012.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12845,15 +12837,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-013.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -12917,7 +12909,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-014.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -12970,11 +12962,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-015.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -13023,15 +13015,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-016.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -13100,7 +13092,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-017.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13145,11 +13137,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-018.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -13199,7 +13191,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-019.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13250,7 +13242,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-020.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13293,7 +13285,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-021.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13336,7 +13328,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-022.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13379,7 +13371,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-023.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13443,11 +13435,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-024.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -13511,7 +13503,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-025.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13568,11 +13560,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-026.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -13629,7 +13621,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-027.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13687,11 +13679,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-028.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -13754,7 +13746,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-029.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13804,11 +13796,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-030.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -13857,11 +13849,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-031.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -13912,7 +13904,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-032.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -13957,7 +13949,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-033.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14001,11 +13993,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-034.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -14055,7 +14047,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-035.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14099,7 +14091,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-036.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14142,7 +14134,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-037.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14185,7 +14177,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-038.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14229,7 +14221,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-039.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14272,11 +14264,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-040.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -14327,11 +14319,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-041.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -14381,7 +14373,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-042.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14426,7 +14418,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-043.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14471,7 +14463,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-044.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14522,7 +14514,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-045.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14586,7 +14578,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-046.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14637,11 +14629,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-047.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -14698,7 +14690,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-048.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14743,11 +14735,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-049.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -14798,7 +14790,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-050.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14848,11 +14840,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-051.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -14909,7 +14901,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-052.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14953,7 +14945,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-053.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -14997,11 +14989,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-054.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -15059,7 +15051,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-055.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15102,7 +15094,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-056.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15146,7 +15138,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-057.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15190,7 +15182,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-058.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15241,7 +15233,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-059.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15291,7 +15283,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-060.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15334,7 +15326,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-061.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15377,7 +15369,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-062.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15420,7 +15412,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-063.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15471,7 +15463,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-064.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15514,11 +15506,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-065.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -15575,7 +15567,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-066.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15633,11 +15625,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-067.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -15700,15 +15692,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-068.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -15765,7 +15757,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-069.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15823,15 +15815,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-070.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -15907,7 +15899,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-071.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -15958,11 +15950,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-072.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -16013,7 +16005,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-073.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16058,7 +16050,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-074.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16103,11 +16095,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-075.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -16158,11 +16150,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-076.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -16220,11 +16212,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-077.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -16275,7 +16267,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-078.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16318,7 +16310,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-079.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16362,7 +16354,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-080.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16406,11 +16398,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-081.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -16467,7 +16459,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-082.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16512,7 +16504,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-083.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16557,7 +16549,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-084.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16601,7 +16593,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-085.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -16645,15 +16637,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-086.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -16709,11 +16701,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-087.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -16776,15 +16768,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-088.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -16846,11 +16838,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-089.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -16899,11 +16891,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-090.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -16971,11 +16963,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-091.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -17024,7 +17016,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-092.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17067,7 +17059,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-093.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17124,7 +17116,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-094.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17175,7 +17167,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-095.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17219,11 +17211,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-096.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -17278,11 +17270,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-097.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -17338,7 +17330,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-098.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17381,11 +17373,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-099.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -17434,19 +17426,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-100.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -17519,7 +17511,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-101.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17562,7 +17554,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-102.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17605,7 +17597,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-103.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17655,7 +17647,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-104.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17698,11 +17690,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-105.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -17757,11 +17749,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-106.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -17810,15 +17802,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-107.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -17879,7 +17871,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-108.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17929,7 +17921,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-109.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -17985,7 +17977,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-110.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18028,15 +18020,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-111.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -18097,7 +18089,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-112.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18141,7 +18133,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-113.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18185,7 +18177,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-114.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18228,7 +18220,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-115.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18271,7 +18263,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-116.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18315,11 +18307,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-117.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -18374,23 +18366,23 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-118.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -18469,7 +18461,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-119.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18512,11 +18504,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-120.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -18565,7 +18557,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-121.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18615,7 +18607,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-122.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18658,7 +18650,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-123.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18703,11 +18695,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-124.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -18757,7 +18749,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-125.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18815,7 +18807,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-126.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18859,7 +18851,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-127.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18903,7 +18895,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-128.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18947,7 +18939,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-129.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -18991,7 +18983,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD01-130.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19035,7 +19027,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-002.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19090,7 +19082,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-003.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19139,7 +19131,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-004.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19188,7 +19180,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-005.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19237,7 +19229,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-006.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19286,7 +19278,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-007.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19335,7 +19327,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-008.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19384,7 +19376,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-009.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19433,7 +19425,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-011.webp?260416",
       "packages": [
         {
-          "id": "616101",
+          "id": "615101",
           "name": "Newtype Rising [GD01]"
         }
       ],
@@ -19476,7 +19468,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-001.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19529,7 +19521,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-002.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19574,7 +19566,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-003.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19620,7 +19612,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-004.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19672,7 +19664,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-005.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19716,7 +19708,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-006.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19762,7 +19754,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-007.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19808,7 +19800,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-008.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19854,7 +19846,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-009.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19901,7 +19893,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-010.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19946,7 +19938,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-011.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -19991,7 +19983,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-012.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20038,7 +20030,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-013.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20091,7 +20083,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-014.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20135,7 +20127,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-015.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20188,7 +20180,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-016.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20238,7 +20230,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-017.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20282,7 +20274,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-018.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20327,7 +20319,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-019.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20373,7 +20365,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-020.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20419,7 +20411,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-021.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20472,7 +20464,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-022.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20516,7 +20508,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-023.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20563,7 +20555,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-024.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20608,7 +20600,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-025.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20653,7 +20645,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-026.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20697,7 +20689,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-027.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20741,7 +20733,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-028.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20784,7 +20776,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-029.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20837,7 +20829,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-030.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20882,7 +20874,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-031.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20926,7 +20918,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-032.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -20971,7 +20963,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-033.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21022,7 +21014,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-034.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21069,7 +21061,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-035.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21121,7 +21113,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-036.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21167,7 +21159,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-037.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21214,7 +21206,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-038.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21260,7 +21252,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-039.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21305,7 +21297,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-040.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21350,7 +21342,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-041.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21396,7 +21388,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-042.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21441,7 +21433,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-043.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21485,7 +21477,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-044.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21528,7 +21520,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-045.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21575,7 +21567,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-046.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21621,7 +21613,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-047.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21667,7 +21659,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-048.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21712,7 +21704,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-049.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21757,7 +21749,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-050.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21803,7 +21795,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-051.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21855,7 +21847,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-052.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21900,7 +21892,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-053.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -21953,7 +21945,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-054.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22006,7 +21998,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-055.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22052,7 +22044,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-056.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22099,7 +22091,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-057.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22145,7 +22137,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-058.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22189,7 +22181,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-059.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22233,7 +22225,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-060.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22277,7 +22269,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-061.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22322,7 +22314,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-062.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22368,7 +22360,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-063.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22414,7 +22406,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-064.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22459,7 +22451,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-065.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22511,7 +22503,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-066.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22556,7 +22548,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-067.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22620,7 +22612,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-068.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22672,7 +22664,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-069.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22717,7 +22709,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-070.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22769,7 +22761,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-071.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22814,7 +22806,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-072.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22859,7 +22851,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-073.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22905,7 +22897,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-074.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22950,7 +22942,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-075.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -22995,7 +22987,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-076.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23038,7 +23030,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-077.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23082,7 +23074,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-078.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23126,7 +23118,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-079.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23170,7 +23162,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-080.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23214,7 +23206,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-081.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23258,7 +23250,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-082.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23302,7 +23294,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-083.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23345,7 +23337,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-084.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23389,7 +23381,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-085.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23432,7 +23424,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-086.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23475,7 +23467,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-087.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23525,7 +23517,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-088.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23568,7 +23560,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-089.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23612,7 +23604,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-090.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23663,7 +23655,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-091.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23707,7 +23699,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-092.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23751,7 +23743,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-093.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23802,7 +23794,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-094.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23846,7 +23838,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-095.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23898,7 +23890,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-096.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23948,7 +23940,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-097.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -23992,7 +23984,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-098.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24043,7 +24035,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-099.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24087,7 +24079,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-100.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24137,7 +24129,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-101.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24187,7 +24179,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-102.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24237,7 +24229,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-103.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24280,7 +24272,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-104.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24324,7 +24316,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-105.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24367,7 +24359,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-106.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24411,7 +24403,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-107.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24467,7 +24459,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-108.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24518,7 +24510,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-109.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24561,7 +24553,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-110.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24604,7 +24596,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-111.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24648,7 +24640,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-112.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24692,7 +24684,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-113.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24742,7 +24734,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-114.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24792,7 +24784,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-115.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24842,7 +24834,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-116.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24887,7 +24879,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-117.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24930,7 +24922,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-118.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -24973,7 +24965,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-119.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25016,7 +25008,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-120.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25059,7 +25051,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-121.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25104,7 +25096,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-122.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25148,7 +25140,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-123.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25199,7 +25191,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-124.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25243,7 +25235,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-125.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25287,7 +25279,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-126.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25338,7 +25330,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-127.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25382,7 +25374,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-128.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25426,7 +25418,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-129.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25478,7 +25470,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD04-130.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25522,7 +25514,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-031.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25565,7 +25557,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-032.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25608,7 +25600,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-033.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25651,7 +25643,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-034.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25694,7 +25686,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-035.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25737,7 +25729,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-036.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25780,7 +25772,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-037.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25823,7 +25815,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-038.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25866,7 +25858,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-039.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25909,7 +25901,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-040.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25952,7 +25944,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-021.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -25995,7 +25987,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-022.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -26038,7 +26030,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-023.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -26081,7 +26073,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-024.webp?260416",
       "packages": [
         {
-          "id": "616104",
+          "id": "615104",
           "name": "Phantom Aria [GD04]"
         }
       ],
@@ -26124,11 +26116,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-001.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -26191,19 +26183,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-002.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -26272,7 +26264,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-003.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -26322,7 +26314,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-004.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -26371,11 +26363,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-005.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -26431,7 +26423,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-006.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -26489,11 +26481,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-007.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -26550,7 +26542,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-008.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -26600,7 +26592,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-009.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -26651,19 +26643,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-010.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -26737,15 +26729,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-011.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -26813,7 +26805,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-012.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -26862,11 +26854,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-013.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -26921,7 +26913,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-014.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -26971,19 +26963,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-015.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -27065,11 +27057,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST04-016.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         },
         {
-          "id": "616009",
+          "id": "615009",
           "name": "Destiny Ignition [ST09]"
         }
       ],
@@ -27125,7 +27117,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-008.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -27168,7 +27160,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-009.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -27211,7 +27203,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-010.webp?260416",
       "packages": [
         {
-          "id": "616004",
+          "id": "615004",
           "name": "SEED Strike [ST04]"
         }
       ],
@@ -27254,7 +27246,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-001.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27313,7 +27305,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-002.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27372,7 +27364,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-003.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27424,7 +27416,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-004.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27469,7 +27461,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-005.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27514,7 +27506,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-006.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27559,7 +27551,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-007.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27604,7 +27596,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-008.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27650,7 +27642,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-009.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27703,11 +27695,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-010.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -27770,7 +27762,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-011.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27814,7 +27806,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-012.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27860,7 +27852,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-013.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27905,7 +27897,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-014.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -27956,7 +27948,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-015.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28008,7 +28000,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-016.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28053,7 +28045,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-017.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28111,7 +28103,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-018.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28162,7 +28154,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-019.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28221,11 +28213,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-020.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -28283,11 +28275,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-021.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -28344,7 +28336,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-022.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28404,7 +28396,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-023.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28449,7 +28441,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-024.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28494,7 +28486,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-025.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28546,7 +28538,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-026.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28592,11 +28584,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-027.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -28647,7 +28639,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-028.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28692,7 +28684,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-029.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28744,7 +28736,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-030.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28798,7 +28790,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-031.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28844,7 +28836,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-032.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28888,7 +28880,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-033.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28946,7 +28938,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-034.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -28998,7 +28990,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-035.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29068,7 +29060,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-036.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29119,7 +29111,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-037.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29177,7 +29169,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-038.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29222,7 +29214,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-039.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29274,7 +29266,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-040.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29320,7 +29312,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-041.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29365,7 +29357,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-042.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29410,7 +29402,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-043.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29455,7 +29447,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-044.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29499,7 +29491,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-045.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29543,7 +29535,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-046.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29587,7 +29579,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-047.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29632,11 +29624,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-048.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -29687,7 +29679,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-049.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29752,7 +29744,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-050.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29811,7 +29803,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-051.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29864,7 +29856,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-052.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29923,7 +29915,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-053.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -29975,7 +29967,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-054.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30027,11 +30019,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-055.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -30083,7 +30075,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-056.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30136,7 +30128,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-057.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30182,7 +30174,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-058.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30235,7 +30227,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-059.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30287,11 +30279,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-060.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -30340,7 +30332,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-061.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30386,7 +30378,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-062.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30431,7 +30423,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-063.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30476,7 +30468,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-064.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30521,7 +30513,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-065.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30566,7 +30558,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-066.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30611,7 +30603,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-067.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30657,7 +30649,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-068.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30703,7 +30695,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-069.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30754,7 +30746,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-070.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30805,7 +30797,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-071.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30856,11 +30848,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-072.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -30924,7 +30916,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-073.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -30975,7 +30967,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-074.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31027,7 +31019,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-075.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31072,11 +31064,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-076.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -31133,7 +31125,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-077.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31177,7 +31169,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-078.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31222,7 +31214,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-079.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31267,7 +31259,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-080.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31313,11 +31305,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-081.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -31381,7 +31373,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-082.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31432,7 +31424,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-083.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31476,7 +31468,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-084.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31527,7 +31519,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-085.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31577,7 +31569,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-086.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31627,11 +31619,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-087.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -31688,7 +31680,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-088.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31738,11 +31730,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-089.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -31799,7 +31791,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-090.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31843,7 +31835,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-091.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31892,11 +31884,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-092.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -31952,7 +31944,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-093.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -31996,7 +31988,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-094.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32046,7 +32038,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-095.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32089,7 +32081,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-096.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32133,7 +32125,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-097.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32183,7 +32175,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-098.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32240,7 +32232,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-099.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32290,11 +32282,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-100.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -32345,7 +32337,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-101.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32401,7 +32393,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-102.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32444,7 +32436,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-103.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32494,7 +32486,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-104.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32538,7 +32530,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-105.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32587,11 +32579,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-106.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -32640,7 +32632,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-107.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32691,7 +32683,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-108.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32735,11 +32727,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-109.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -32807,7 +32799,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-110.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32857,7 +32849,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-111.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32900,7 +32892,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-112.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -32943,11 +32935,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-113.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -33009,11 +33001,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-114.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -33075,7 +33067,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-115.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33120,7 +33112,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-116.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33163,11 +33155,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-117.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -33216,11 +33208,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-118.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -33294,7 +33286,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-119.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33337,7 +33329,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-120.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33381,7 +33373,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-121.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33432,7 +33424,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-122.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33476,7 +33468,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-123.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33521,7 +33513,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-124.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33565,7 +33557,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-125.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33616,7 +33608,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-126.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33660,7 +33652,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-127.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33704,7 +33696,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-128.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33748,7 +33740,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-129.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33792,7 +33784,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-130.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33843,7 +33835,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-131.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33887,7 +33879,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/GD03-132.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33931,7 +33923,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-020.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -33980,7 +33972,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-021.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34029,7 +34021,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-022.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34078,7 +34070,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-023.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34127,7 +34119,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-024.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34176,7 +34168,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-025.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34231,7 +34223,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-026.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34280,7 +34272,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-027.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34329,7 +34321,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-028.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34378,7 +34370,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/R-029.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34427,15 +34419,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-010.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -34504,15 +34496,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-013.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -34573,15 +34565,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST05-014.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616005",
+          "id": "615005",
           "name": "Iron Bloom [ST05]"
         },
         {
-          "id": "616007",
+          "id": "615007",
           "name": "Celestial Drive [ST07]"
         }
       ],
@@ -34648,7 +34640,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-013.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34691,7 +34683,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-014.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         }
       ],
@@ -34734,11 +34726,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-015.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -34787,11 +34779,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-016.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -34840,11 +34832,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-017.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -34893,11 +34885,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-018.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -34946,11 +34938,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-019.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -34999,11 +34991,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-020.webp?260416",
       "packages": [
         {
-          "id": "616103",
+          "id": "615103",
           "name": "Steel Requiem [GD03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -35052,11 +35044,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-001.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -35119,15 +35111,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-002.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -35196,7 +35188,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-003.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -35253,7 +35245,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-004.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -35303,11 +35295,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-005.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -35363,7 +35355,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-006.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -35414,7 +35406,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-007.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -35465,7 +35457,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-008.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -35514,7 +35506,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-009.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -35563,19 +35555,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-010.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -35642,11 +35634,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-011.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -35708,11 +35700,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-012.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -35767,11 +35759,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-013.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -35833,11 +35825,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-014.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616008",
+          "id": "615008",
           "name": "Flash of Radiance [ST08]"
         }
       ],
@@ -35898,11 +35890,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-015.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -35958,7 +35950,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST02-016.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -36008,7 +36000,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-004.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -36051,7 +36043,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-005.webp?260416",
       "packages": [
         {
-          "id": "616002",
+          "id": "615002",
           "name": "Wings of Advance [ST02]"
         }
       ],
@@ -36094,7 +36086,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-001.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36158,7 +36150,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-002.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36209,7 +36201,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-003.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36260,7 +36252,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-004.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36310,7 +36302,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-005.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36359,11 +36351,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-006.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -36420,11 +36412,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-007.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -36480,19 +36472,19 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-008.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         },
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -36560,7 +36552,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-009.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36617,7 +36609,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-010.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36680,11 +36672,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-011.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -36746,7 +36738,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-012.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36795,15 +36787,15 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-013.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         },
         {
-          "id": "616006",
+          "id": "615006",
           "name": "Clan Unity [ST06]"
         },
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -36870,7 +36862,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-014.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36926,7 +36918,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-015.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -36976,11 +36968,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/ST03-016.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -37036,11 +37028,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-006.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         },
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         }
       ],
@@ -37089,7 +37081,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/T-007.webp?260416",
       "packages": [
         {
-          "id": "616003",
+          "id": "615003",
           "name": "Zeon's Rush [ST03]"
         }
       ],
@@ -37132,7 +37124,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-001.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37175,7 +37167,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-002.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37218,7 +37210,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-003.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37261,7 +37253,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-004.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37304,7 +37296,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-005.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37347,7 +37339,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-006.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37390,7 +37382,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-007.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37433,7 +37425,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-008.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37476,7 +37468,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-009.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37519,7 +37511,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-010.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37562,7 +37554,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-011.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37605,7 +37597,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-018.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37648,7 +37640,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXBP-019.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37691,7 +37683,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-001.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37734,7 +37726,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-002.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37777,7 +37769,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-003.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37820,7 +37812,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-001.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37863,7 +37855,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-002.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37906,7 +37898,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-003.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37949,7 +37941,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-004.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -37992,7 +37984,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-005.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38035,7 +38027,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-006.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38078,7 +38070,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-007.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38121,7 +38113,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-008.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38164,7 +38156,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-009.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38207,7 +38199,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-010.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38250,7 +38242,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-011.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38293,7 +38285,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-012.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38336,7 +38328,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-013.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38379,7 +38371,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-014.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38422,7 +38414,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-015.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38465,7 +38457,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-016.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38508,7 +38500,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-017.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38551,7 +38543,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-018.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38594,7 +38586,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-019.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38637,7 +38629,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-020.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38680,7 +38672,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-021.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38723,7 +38715,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-022.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38766,7 +38758,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-023.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38809,7 +38801,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-044.webp?260416",
       "packages": [
         {
-          "id": "616901",
+          "id": "615901",
           "name": "プロモーションカード"
         }
       ],
@@ -38852,11 +38844,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "",
       "packages": [
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616801",
+          "id": "615801",
           "name": "基本カード"
         }
       ],
@@ -38898,11 +38890,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "",
       "packages": [
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616801",
+          "id": "615801",
           "name": "基本カード"
         }
       ],
@@ -38944,11 +38936,11 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "",
       "packages": [
         {
-          "id": "616000",
+          "id": "615000",
           "name": "リミテッドBOX Ver.β"
         },
         {
-          "id": "616801",
+          "id": "615801",
           "name": "基本カード"
         }
       ],
@@ -38996,7 +38988,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-004.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39039,7 +39031,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-005.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39082,7 +39074,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-006.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39125,7 +39117,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-007.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39168,7 +39160,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-008.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39211,7 +39203,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-009.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39254,7 +39246,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-010.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39297,7 +39289,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-011.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39340,7 +39332,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-012.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39383,7 +39375,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/EXRP-013.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39426,7 +39418,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-024.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39469,7 +39461,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-025.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39512,7 +39504,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-026.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39555,7 +39547,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-027.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39598,7 +39590,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-028.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39641,7 +39633,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-029.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39684,7 +39676,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-030.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39727,7 +39719,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-031.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39770,7 +39762,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-032.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39813,7 +39805,7 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrl": "https://www.gundam-gcg.com/jp/images/cards/card/RP-033.webp?260416",
       "packages": [
         {
-          "id": "616701",
+          "id": "615701",
           "name": "限定商品収録カード"
         }
       ],
@@ -39850,7 +39842,4 @@ window.__OFFICIAL_GUNDAM_CARD_DB = {
       "imageUrlLocal": "assets/official-cards/RP-033.webp"
     }
   ]
-}
-
-
-;
+};
