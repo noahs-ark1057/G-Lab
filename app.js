@@ -22,6 +22,10 @@ const THEME_SWITCH_IN_MS = 420;
 const DECK_TYPE_ORDER = ["UNIT", "PILOT", "COMMAND", "BASE"];
 const REFERENCE_HISTORY_LIMIT = 24;
 let confirmAcceptHandler = null;
+let searchRenderTimer = null;
+const renderCache = {
+  filterGroupsBuilt: false,
+};
 const TYPE_SPLIT_PATTERN = /\s*(?:\/|／|,|，|\+|＋|&|＆|\|)\s*/g;
 
 function getDiagnosisMode(theme = loadTheme()) {
@@ -367,6 +371,10 @@ const elements = {
   mobileCompareFab: document.getElementById("mobileCompareFab"),
   mobileCompareCount: document.getElementById("mobileCompareCount"),
   mobileTopFab: document.getElementById("mobileTopFab"),
+  mobileDetailFabGroup: document.getElementById("mobileDetailFabGroup"),
+  mobileDetailMinusFab: document.getElementById("mobileDetailMinusFab"),
+  mobileDetailCountFab: document.getElementById("mobileDetailCountFab"),
+  mobileDetailPlusFab: document.getElementById("mobileDetailPlusFab"),
   backToTopButton: document.getElementById("backToTopButton"),
   deckNameInput: document.getElementById("deckNameInput"),
   deckNoteInput: document.getElementById("deckNoteInput"),
@@ -578,6 +586,19 @@ function setupEnhancementUI() {
     elements.mobileTopFab.setAttribute("aria-label", "TOPに戻る");
     elements.mobileTopFab.setAttribute("title", "TOPに戻る");
   }
+  if (elements.mobileDetailMinusFab) {
+    elements.mobileDetailMinusFab.textContent = "-";
+    elements.mobileDetailMinusFab.setAttribute("aria-label", "1枚減らす");
+    elements.mobileDetailMinusFab.setAttribute("title", "1枚減らす");
+  }
+  if (elements.mobileDetailCountFab) {
+    elements.mobileDetailCountFab.textContent = "0";
+  }
+  if (elements.mobileDetailPlusFab) {
+    elements.mobileDetailPlusFab.textContent = "+";
+    elements.mobileDetailPlusFab.setAttribute("aria-label", "1枚増やす");
+    elements.mobileDetailPlusFab.setAttribute("title", "1枚増やす");
+  }
   if (elements.mobileDeckFab) {
     elements.mobileDeckFab.innerHTML = `
       <svg class="mobile-fab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -593,6 +614,18 @@ function setupEnhancementUI() {
     elements.mobileCompareFab.setAttribute("title", "カード比較を開く");
   }
   document.querySelectorAll(".catalog-panel .kicker, .filters-panel .kicker, .deck-panel-head .kicker, .compare-modal-head .kicker").forEach((node) => node.remove());
+  const filterTitle = elements.filtersPanel?.querySelector(".panel-head h2");
+  if (filterTitle) {
+    filterTitle.textContent = "カード検索";
+  }
+  const catalogTitle = elements.catalogPanel?.querySelector(".panel-head h2");
+  if (catalogTitle) {
+    catalogTitle.textContent = "カード一覧";
+  }
+  const deckTitle = document.querySelector("#tab-deck .deck-panel-head h2");
+  if (deckTitle) {
+    deckTitle.textContent = "現在のデッキ";
+  }
   document.querySelectorAll('.view-button[data-view="grid"]').forEach((button) => {
     button.textContent = "グリッド";
   });
@@ -729,7 +762,6 @@ function setupEnhancementUI() {
       <div class="compare-modal-dialog reference-modal-dialog" role="dialog" aria-modal="true" aria-label="大会入賞デッキ参考">
         <div class="compare-modal-head reference-modal-head">
           <div class="reference-modal-title">
-            <p class="kicker">Reference</p>
             <div class="reference-modal-title-row">
               <h2>大会入賞デッキ参考</h2>
               <span id="referenceDecksModalCount" class="reference-modal-count">0件</span>
@@ -907,6 +939,7 @@ function closeImagePreview() {
 
 function openDetailModal() {
   if (!elements.detailModal || isMobileViewport()) return;
+  renderSelectedCardInto(elements.detailModalContent, CARD_LOOKUP.get(state.selectedCardId));
   elements.detailModal.classList.add("is-open");
   elements.detailModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("is-detail-modal-open");
@@ -1080,6 +1113,55 @@ function isSectionButtonContextVisible(button) {
   return true;
 }
 
+function getDetailActionContext() {
+  const card = CARD_LOOKUP.get(state.selectedCardId);
+  if (!card) {
+    return {
+      card: null,
+      zone: state.activeDeckZone === "token" ? "token" : "main",
+      copies: 0,
+      canAdd: false,
+      isCompared: false,
+    };
+  }
+  const preferredZone =
+    state.activeDeckZone === "token" || state.quickAddTarget === "token" || card.isExtraCard ? "token" : "main";
+  return {
+    card,
+    zone: preferredZone,
+    copies: getCopies(preferredZone, card.id),
+    canAdd: canAddCard(card, preferredZone),
+    isCompared: state.compareIds.includes(card.id),
+  };
+}
+
+function syncMobileDetailFabs(detailUiOpen = isMobileViewport() && (state.isDetailDrawerOpen || document.body.classList.contains("is-detail-modal-open"))) {
+  const detailContext = getDetailActionContext();
+  const showGroup = detailUiOpen && !!detailContext.card;
+
+  if (elements.mobileDetailFabGroup) {
+    elements.mobileDetailFabGroup.classList.toggle("is-visible", showGroup);
+    elements.mobileDetailFabGroup.setAttribute("aria-hidden", showGroup ? "false" : "true");
+  }
+
+  if (elements.mobileDetailMinusFab) {
+    const canRemove = showGroup && detailContext.copies > 0;
+    elements.mobileDetailMinusFab.classList.toggle("is-disabled", showGroup && !canRemove);
+    elements.mobileDetailMinusFab.setAttribute("aria-hidden", showGroup ? "false" : "true");
+  }
+
+  if (elements.mobileDetailCountFab) {
+    elements.mobileDetailCountFab.textContent = String(detailContext.copies ?? 0);
+    elements.mobileDetailCountFab.setAttribute("aria-hidden", showGroup ? "false" : "true");
+  }
+
+  if (elements.mobileDetailPlusFab) {
+    const canIncrease = showGroup && detailContext.canAdd;
+    elements.mobileDetailPlusFab.classList.toggle("is-disabled", showGroup && !canIncrease);
+    elements.mobileDetailPlusFab.setAttribute("aria-hidden", showGroup ? "false" : "true");
+  }
+}
+
 function updateSectionTopButtons() {
   document.querySelectorAll(".section-top-button").forEach((button) => {
     const target = getSectionScrollTarget(button.dataset.scrollTarget || "");
@@ -1089,10 +1171,17 @@ function updateSectionTopButtons() {
   });
 
   if (elements.mobileTopFab) {
-    const isVisible = isMobileViewport() && getScrollTopForTarget(getActiveMobileTopTarget()) > 36;
+    const detailUiOpen =
+      isMobileViewport() && (state.isDetailDrawerOpen || document.body.classList.contains("is-detail-modal-open"));
+    const isVisible =
+      isMobileViewport() &&
+      !detailUiOpen &&
+      getScrollTopForTarget(getActiveMobileTopTarget()) > 36;
     elements.mobileTopFab.classList.toggle("is-visible", isVisible);
     elements.mobileTopFab.setAttribute("aria-hidden", isVisible ? "false" : "true");
   }
+
+  syncMobileDetailFabs();
 }
 
 function syncDesktopPanelLayout() {
@@ -1363,6 +1452,7 @@ function openCompareModal() {
   elements.compareModal.classList.add("is-open");
   elements.compareModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("is-compare-modal-open");
+  renderCompareModal();
   renderMobileState();
 }
 
@@ -1376,10 +1466,10 @@ function closeCompareModal() {
 
 function openReferenceModal() {
   if (!elements.referenceModal) return;
-  renderReferenceDecks();
   elements.referenceModal.classList.add("is-open");
   elements.referenceModal.setAttribute("aria-hidden", "false");
   document.body.classList.add("is-reference-modal-open");
+  renderReferenceDecks();
   elements.referenceModalDialog?.scrollTo({ top: 0, behavior: "auto" });
   renderMobileState();
 }
@@ -1734,7 +1824,6 @@ function buildDetailTagEntries(card) {
 
 function buildDetailBadgeEntries(card) {
   const entries = [];
-  if (card.rarity) entries.push({ label: card.rarity, filterGroup: "rarities", filterValue: card.rarity });
   if (card.displayColor && card.displayColor !== "Colorless") {
     entries.push({ label: card.displayColor, filterGroup: "colors", filterValue: card.displayColor });
   }
@@ -1748,14 +1837,23 @@ function buildDetailBadgeEntries(card) {
 function setupFilterAccordions() {
   if (!elements.filtersPanel) return;
   const titleMap = {
-    Rarity: "レアリティ",
+    packages: "収録商品",
+    colors: "色",
+    types: "種類",
+    levels: "レベル",
+    costs: "コスト",
+    aps: "AP",
+    hps: "HP",
+    titles: "作品",
+    rarities: "レアリティ",
+    traits: "特徴タグ",
   };
   elements.filtersPanel.querySelectorAll(".filter-block").forEach((section) => {
     const reset = section.querySelector(".mini-reset");
     const heading = section.querySelector(".filter-heading");
-    const rawTitle = heading?.querySelector("h3")?.textContent?.trim();
-    const title = titleMap[rawTitle] || rawTitle;
     const group = reset?.dataset.filterGroup;
+    const rawTitle = heading?.querySelector("h3")?.textContent?.trim();
+    const title = titleMap[group] || rawTitle;
     if (!reset || !heading || !title || !group || section.dataset.accordionified === "true") return;
 
     const details = document.createElement("details");
@@ -2457,6 +2555,8 @@ function runAiDiagnosis() {
 function createChip(container, value, group) {
   const button = document.createElement("button");
   button.type = "button";
+  button.dataset.filterGroup = group;
+  button.dataset.filterValue = value;
   button.className = `chip ${state.filters[group].has(value) ? "is-active" : ""}`;
   button.textContent = value;
   button.addEventListener("click", () => {
@@ -2470,44 +2570,36 @@ function createChip(container, value, group) {
   container.appendChild(button);
 }
 
-function renderFilterGroups() {
-  elements.packageFilters.innerHTML = "";
-  RAW_DB.packages.forEach((pkg) => createChip(elements.packageFilters, pkg.name, "packages"));
+function buildFilterGroup(container, values, group) {
+  if (!container) return;
+  container.innerHTML = "";
+  values.forEach((value) => createChip(container, value, group));
+}
 
-  elements.colorFilters.innerHTML = "";
-  COLORS.forEach((color) => createChip(elements.colorFilters, color, "colors"));
+function syncFilterChipStates() {
+  document.querySelectorAll(".chip[data-filter-group]").forEach((button) => {
+    const group = button.dataset.filterGroup;
+    const value = button.dataset.filterValue;
+    const isActive = !!group && state.filters[group]?.has(value);
+    button.classList.toggle("is-active", isActive);
+  });
+}
 
-  elements.typeFilters.innerHTML = "";
-  TYPES.forEach((type) => createChip(elements.typeFilters, type, "types"));
-
-  if (elements.levelFilters) {
-    elements.levelFilters.innerHTML = "";
-    LEVEL_VALUES.forEach((value) => createChip(elements.levelFilters, value, "levels"));
+function renderFilterGroups(forceBuild = false) {
+  if (!renderCache.filterGroupsBuilt || forceBuild) {
+    buildFilterGroup(elements.packageFilters, RAW_DB.packages.map((pkg) => pkg.name), "packages");
+    buildFilterGroup(elements.colorFilters, COLORS, "colors");
+    buildFilterGroup(elements.typeFilters, TYPES, "types");
+    buildFilterGroup(elements.levelFilters, LEVEL_VALUES, "levels");
+    buildFilterGroup(elements.costFilters, COST_VALUES, "costs");
+    buildFilterGroup(elements.apFilters, AP_VALUES, "aps");
+    buildFilterGroup(elements.hpFilters, HP_VALUES, "hps");
+    buildFilterGroup(elements.titleFilters, TITLES, "titles");
+    buildFilterGroup(elements.rarityFilters, RARITIES, "rarities");
+    buildFilterGroup(elements.traitFilters, TRAITS, "traits");
+    renderCache.filterGroupsBuilt = true;
   }
-
-  if (elements.costFilters) {
-    elements.costFilters.innerHTML = "";
-    COST_VALUES.forEach((value) => createChip(elements.costFilters, value, "costs"));
-  }
-
-  if (elements.apFilters) {
-    elements.apFilters.innerHTML = "";
-    AP_VALUES.forEach((value) => createChip(elements.apFilters, value, "aps"));
-  }
-
-  if (elements.hpFilters) {
-    elements.hpFilters.innerHTML = "";
-    HP_VALUES.forEach((value) => createChip(elements.hpFilters, value, "hps"));
-  }
-
-  elements.titleFilters.innerHTML = "";
-  TITLES.forEach((title) => createChip(elements.titleFilters, title, "titles"));
-
-  elements.rarityFilters.innerHTML = "";
-  RARITIES.forEach((rarity) => createChip(elements.rarityFilters, rarity, "rarities"));
-
-  elements.traitFilters.innerHTML = "";
-  TRAITS.forEach((trait) => createChip(elements.traitFilters, trait, "traits"));
+  syncFilterChipStates();
 }
 
 function renderFavoriteControls() {
@@ -2521,6 +2613,7 @@ function renderFavoriteControls() {
 
 function renderCompareModal() {
   if (!elements.compareModalContent) return;
+  if (!document.body.classList.contains("is-compare-modal-open")) return;
   const compareCards = state.compareIds.map((id) => CARD_LOOKUP.get(id)).filter(Boolean);
   if (compareCards.length < 2) {
     elements.compareModalContent.innerHTML = `
@@ -2547,7 +2640,6 @@ function renderCompareModal() {
           </div>
           <div class="compare-card-stats">
             <span class="detail-pill">${escapeHtml(card.number)}</span>
-            <span class="detail-pill">${escapeHtml(card.rarity)}</span>
             <span class="detail-pill">${escapeHtml(card.displayColor)}</span>
             ${card.level !== null ? `<span class="detail-pill">Lv ${card.level}</span>` : ""}
             ${card.cost !== null ? `<span class="detail-pill">Cost ${card.cost}</span>` : ""}
@@ -2651,9 +2743,6 @@ function renderCatalog() {
     article.innerHTML = `
       <div class="card-art is-previewable" role="button" tabindex="0" aria-label="${escapeHtml(card.name)} の詳細を開く">
         <img src="${selectedVariant.imageUrl}" alt="${escapeHtml(card.name)}" loading="lazy" />
-        <div class="art-badges art-badges--end">
-          <span class="card-rarity">${escapeHtml(card.rarity)}</span>
-        </div>
       </div>
       <div class="card-body">
         <h3>${escapeHtml(card.name)}</h3>
@@ -2757,23 +2846,10 @@ function renderDeckList(zone, container) {
         <span class="deck-tile-qty">${entry.qty}</span>
         <div class="deck-tile-footer">
           <span class="deck-tile-code">${escapeHtml(card.number)}</span>
-          <div class="deck-tile-actions">
-            <button type="button" data-action="down" aria-label="Decrease ${escapeHtml(card.name)}">-</button>
-            <button type="button" data-action="up" aria-label="Increase ${escapeHtml(card.name)}">+</button>
-          </div>
         </div>
       </div>
       <strong class="deck-tile-name">${escapeHtml(card.name)}</strong>
     `;
-
-    row.querySelector('[data-action="down"]').addEventListener("click", (event) => {
-      event.stopPropagation();
-      removeCardFromDeck(card.id, zone);
-    });
-    row.querySelector('[data-action="up"]').addEventListener("click", (event) => {
-      event.stopPropagation();
-      addCardToDeck(card.id, zone, 1);
-    });
     row.addEventListener("click", () => {
       openCardDetails(card.id, "side", state.activeTab);
     });
@@ -2812,6 +2888,7 @@ function renderReferenceDecks() {
   }
   elements.referenceDecksModalCount.textContent = `${referenceDecks.length}件`;
   elements.referenceDecksFetchedAt.textContent = formatDateTimeJa(RAW_REFERENCE_DECKS.generatedAt);
+  if (!document.body.classList.contains("is-reference-modal-open")) return;
   elements.referenceDecksList.innerHTML = "";
 
   if (!referenceDecks.length) {
@@ -3157,7 +3234,9 @@ function renderSelectedCardInto(container, card) {
 function renderSelectedCard() {
   const card = CARD_LOOKUP.get(state.selectedCardId);
   renderSelectedCardInto(elements.selectedCardDetails, card);
-  renderSelectedCardInto(elements.detailModalContent, card);
+  if (document.body.classList.contains("is-detail-modal-open")) {
+    renderSelectedCardInto(elements.detailModalContent, card);
+  }
 }
 
 function drawOpeningHand() {
@@ -3664,7 +3743,10 @@ function renderMobileState() {
   const filterDrawerOpen = state.isFilterDrawerOpen;
   const sideDrawerOpen = state.isSideDrawerOpen && isMobileViewport();
   const detailDrawerOpen = state.isDetailDrawerOpen && isMobileViewport();
+  const detailUiOpen =
+    isMobileViewport() && (detailDrawerOpen || document.body.classList.contains("is-detail-modal-open"));
   const compareModalOpen = document.body.classList.contains("is-compare-modal-open");
+  const detailContext = getDetailActionContext();
   document.body.classList.toggle("is-filter-drawer-open", filterDrawerOpen);
   document.body.classList.toggle("is-side-drawer-open", sideDrawerOpen);
   document.body.classList.toggle("is-detail-drawer-open", detailDrawerOpen);
@@ -3699,11 +3781,12 @@ function renderMobileState() {
     elements.mobileDeckFab.setAttribute("title", deckFabLabel);
   }
   if (elements.mobileCompareFab) {
-    const canShowCompareFab = isMobileViewport() && sideDrawerOpen;
+    const canShowCompareFab = isMobileViewport() && !filterDrawerOpen;
     elements.mobileCompareFab.classList.toggle("is-hidden", !canShowCompareFab && !compareModalOpen);
-    elements.mobileCompareFab.classList.toggle("is-active", compareModalOpen);
+    elements.mobileCompareFab.classList.toggle("is-active", compareModalOpen || detailContext.isCompared);
     elements.mobileCompareFab.setAttribute("aria-hidden", !canShowCompareFab && !compareModalOpen ? "true" : "false");
   }
+  syncMobileDetailFabs(detailUiOpen);
   updateSectionTopButtons();
 }
 
@@ -3715,6 +3798,9 @@ function clearFilters() {
 }
 
 function render() {
+  const isDeckTab = state.activeTab === "deck";
+  const isSimTab = state.activeTab === "sim";
+  const isSaveTab = state.activeTab === "save";
   if (!["main", "token"].includes(state.quickAddTarget)) {
     state.quickAddTarget = state.activeDeckZone;
   }
@@ -3736,26 +3822,37 @@ function render() {
   renderFilterAccordionCounts();
   renderCatalog();
   renderCompareBar();
-  renderDeckList("main", elements.mainDeckList);
-  renderDeckList("token", elements.tokenDeckList);
-  renderTokenEmptyState();
-  renderStats();
-  renderAiDiagnosis();
+  if (isDeckTab) {
+    renderDeckList("main", elements.mainDeckList);
+    renderDeckList("token", elements.tokenDeckList);
+    renderTokenEmptyState();
+    renderStats();
+    renderCurve();
+    renderAiDiagnosis();
+  }
   renderReferenceDecks();
-  renderCurve();
   renderSelectedCard();
-  renderSavedDecks();
-  renderCloudSyncPanel();
-  renderFocusCards();
-  renderOpeningHand();
-  renderCheckResult();
+  if (isSaveTab) {
+    renderSavedDecks();
+    renderCloudSyncPanel();
+  }
+  if (isSimTab) {
+    renderFocusCards();
+    renderOpeningHand();
+    renderCheckResult();
+  }
   updateSectionTopButtons();
 }
 
 function bindEvents() {
   elements.searchInput.addEventListener("input", (event) => {
     state.query = event.target.value;
-    renderCatalog();
+    if (searchRenderTimer) {
+      window.clearTimeout(searchRenderTimer);
+    }
+    searchRenderTimer = window.setTimeout(() => {
+      renderCatalog();
+    }, 90);
   });
 
   elements.quickAddTarget.addEventListener("change", (event) => {
@@ -3827,6 +3924,18 @@ function bindEvents() {
     scrollToTopTarget(getActiveMobileTopTarget());
   });
 
+  elements.mobileDetailMinusFab?.addEventListener("click", () => {
+    const { card, zone, copies } = getDetailActionContext();
+    if (!card || copies <= 0) return;
+    removeCardFromDeck(card.id, zone);
+  });
+
+  elements.mobileDetailPlusFab?.addEventListener("click", () => {
+    const { card, zone, canAdd } = getDetailActionContext();
+    if (!card || !canAdd) return;
+    addCardToDeck(card.id, zone, 1);
+  });
+
   elements.mobileBottomFilterButton?.addEventListener("click", () => {
     if (state.isFilterDrawerOpen) {
       closeFilterDrawer();
@@ -3875,6 +3984,16 @@ function bindEvents() {
   });
 
   elements.mobileCompareFab?.addEventListener("click", () => {
+    if (state.isDetailDrawerOpen && isMobileViewport()) {
+      const { card, isCompared } = getDetailActionContext();
+      if (!card) return;
+      if (!isCompared && state.compareIds.length >= COMPARE_LIMIT) {
+        openCompareModal();
+        return;
+      }
+      toggleCompare(card.id);
+      return;
+    }
     if (document.body.classList.contains("is-compare-modal-open")) {
       closeCompareModal();
     } else {
@@ -3999,8 +4118,7 @@ function bindEvents() {
       if (isMobileViewport()) {
         setMobileView("side");
       }
-      renderTabs();
-      renderMobileState();
+      render();
     });
   });
 
