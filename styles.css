@@ -1977,6 +1977,7 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
   font-size: 0.64rem;
   letter-spacing: 0.02em;
   font-weight: 700;
@@ -5091,4 +5092,142 @@ body[data-theme="red"] .ai-suggestion-copy strong {
 
 body[data-theme="red"] .hero-db-stamp {
   background: rgba(255, 255, 255, 0.08);
+}
+
+/* Touch-first list cards */
+.catalog-grid.is-list .catalog-card {
+  grid-template-columns: 88px minmax(0, 1fr);
+  grid-template-areas:
+    "art title"
+    "art code"
+    "art set"
+    "art meta"
+    "art tools"
+    "actions actions";
+  column-gap: 10px;
+  row-gap: 4px;
+  align-items: start;
+  min-height: 0;
+  padding: 8px;
+  overflow: visible;
+}
+
+.catalog-grid.is-list .card-art {
+  grid-area: art;
+  width: 88px;
+  align-self: start;
+}
+
+.catalog-grid.is-list .card-body {
+  display: contents;
+}
+
+.catalog-grid.is-list .catalog-card h3 {
+  grid-area: title;
+  min-height: 0;
+  padding-right: 54px;
+  font-size: 1rem;
+  line-height: 1.28;
+}
+
+.catalog-grid.is-list .card-code-line {
+  grid-area: code;
+}
+
+.catalog-grid.is-list .card-subline {
+  grid-area: set;
+}
+
+.catalog-grid.is-list .card-meta {
+  grid-area: meta;
+}
+
+.catalog-grid.is-list .card-tools-row {
+  grid-area: tools;
+  margin-top: 2px;
+}
+
+.catalog-grid.is-list .catalog-actions {
+  grid-area: actions;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 8px;
+  padding: 0;
+}
+
+.catalog-grid.is-list .catalog-qty-actions {
+  display: contents;
+}
+
+.catalog-grid.is-list .catalog-qty-actions button,
+.catalog-grid.is-list .card-copy {
+  min-height: 48px;
+  height: 48px;
+  border-radius: 12px;
+  align-self: stretch;
+}
+
+.catalog-grid.is-list .catalog-qty-actions button[data-action="remove"] {
+  grid-column: 1;
+}
+
+.catalog-grid.is-list .catalog-qty-actions button[data-action="add"] {
+  grid-column: 3;
+  border-color: rgba(44, 143, 162, 0.3);
+  background: linear-gradient(180deg, #fbffff, #eefbfc);
+}
+
+.catalog-grid.is-list .card-copy {
+  grid-column: 2;
+  justify-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.catalog-grid.is-list .card-copy-label {
+  display: none;
+}
+
+.catalog-grid.is-list .card-copy strong {
+  font-size: 1.16rem;
+  line-height: 1;
+}
+
+.catalog-grid.is-list .favorite-star {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 10px;
+}
+
+body[data-theme="red"] .catalog-grid.is-list .catalog-qty-actions button[data-action="add"] {
+  border-color: rgba(255, 214, 164, 0.28);
+  background: rgba(255, 244, 226, 0.08);
+}
+
+@media (max-width: 720px) {
+  .catalog-grid.is-list .catalog-card {
+    grid-template-columns: 84px minmax(0, 1fr);
+    column-gap: 9px;
+    row-gap: 4px;
+    padding: 8px;
+  }
+
+  .catalog-grid.is-list .card-art {
+    width: 84px;
+  }
+
+  .catalog-grid.is-list .catalog-actions {
+    grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+  }
 }

@@ -2765,7 +2765,10 @@ function renderCatalog() {
             <button type="button" data-action="remove" ${copiesInZone > 0 ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>-1</button>
             <button type="button" data-action="add" ${canAddToZone ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>+1</button>
           </div>
-          <span class="card-copy">Deck ${copiesInZone}</span>
+          <span class="card-copy">
+            <span class="card-copy-label">Deck</span>
+            <strong>${copiesInZone}</strong>
+          </span>
           <button
             type="button"
             data-action="favorite"
