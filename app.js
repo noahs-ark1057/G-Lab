@@ -10,11 +10,13 @@ const MAIN_DECK_TYPES = ["UNIT", "PILOT", "COMMAND", "BASE"];
 const RESOURCE_TYPE = "RESOURCE";
 const EXTRA_TYPES = ["UNIT TOKEN", "EX BASE", "EX RESOURCE"];
 const STORAGE_KEY = "gundam-deck-maker-official-jp";
+const CURRENT_DRAFT_STORAGE_KEY = `${STORAGE_KEY}-current-draft`;
 const PACKAGE_SHORTCUT_LIMIT = 12;
 const RARITY_ORDER = ["C", "U", "R", "LR", "P"];
 const FAVORITES_STORAGE_KEY = `${STORAGE_KEY}-favorites`;
 const THEME_STORAGE_KEY = `${STORAGE_KEY}-theme`;
 const REFERENCE_HISTORY_STORAGE_KEY = `${STORAGE_KEY}-reference-history`;
+const DRAFT_AUTOSAVE_DELAY_MS = 250;
 const COMPARE_LIMIT = 3;
 const THEME_SWITCH_OUT_MS = 280;
 const THEME_SWITCH_BG_MS = 360;
@@ -23,6 +25,8 @@ const DECK_TYPE_ORDER = ["UNIT", "PILOT", "COMMAND", "BASE"];
 const REFERENCE_HISTORY_LIMIT = 24;
 let confirmAcceptHandler = null;
 let searchRenderTimer = null;
+let draftAutosaveTimer = null;
+let lastPersistedDraftSignature = "";
 const renderCache = {
   filterGroupsBuilt: false,
 };
@@ -1251,6 +1255,60 @@ function loadSavedDecks() {
 function persistDecks({ skipCloud = false } = {}) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state.savedDecks));
   if (!skipCloud) notifyCloudState("decks");
+}
+
+function getDraftSignature(payload) {
+  if (!payload || typeof payload !== "object") return "";
+  return JSON.stringify({
+    id: payload.id || "",
+    name: payload.name || "",
+    note: payload.note || "",
+    main: payload.main || [],
+    token: payload.token || [],
+    resource: payload.resource || [],
+    aiDiagnosis: payload.aiDiagnosis || null,
+  });
+}
+
+function loadCurrentDeckDraft() {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(CURRENT_DRAFT_STORAGE_KEY) || "null");
+    return parsed && typeof parsed === "object" ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+function persistCurrentDeckDraft() {
+  try {
+    const payload = {
+      ...serializeCurrentDeck(),
+      autosavedAt: new Date().toISOString(),
+    };
+    const signature = getDraftSignature(payload);
+    if (signature === lastPersistedDraftSignature) return;
+    window.localStorage.setItem(CURRENT_DRAFT_STORAGE_KEY, JSON.stringify(payload));
+    lastPersistedDraftSignature = signature;
+  } catch {
+  }
+}
+
+function queueCurrentDeckDraftSave() {
+  const signature = getDraftSignature(serializeCurrentDeck());
+  if (signature === lastPersistedDraftSignature && !draftAutosaveTimer) return;
+  window.clearTimeout(draftAutosaveTimer);
+  draftAutosaveTimer = window.setTimeout(() => {
+    draftAutosaveTimer = null;
+    persistCurrentDeckDraft();
+  }, DRAFT_AUTOSAVE_DELAY_MS);
+}
+
+function hydrateCurrentDeckDraft() {
+  const draft = loadCurrentDeckDraft();
+  if (!draft) return false;
+  loadDeck(draft, { renderAfter: false });
+  lastPersistedDraftSignature = getDraftSignature(serializeCurrentDeck());
+  return true;
 }
 
 function loadFavorites() {
@@ -2549,6 +2607,7 @@ function runAiDiagnosis() {
     signature: getDeckSnapshotSignature(),
     createdAt: new Date().toISOString(),
   };
+  queueCurrentDeckDraftSave();
   renderAiDiagnosis();
 }
 
@@ -3494,7 +3553,7 @@ function serializeCurrentDeck() {
   };
 }
 
-function loadDeck(payload) {
+function loadDeck(payload, { renderAfter = true } = {}) {
   state.deck.id = payload.id || `deck-${Date.now()}`;
   state.deck.name = payload.name || "Imported Deck";
   state.deck.note = payload.note || "";
@@ -3504,7 +3563,7 @@ function loadDeck(payload) {
   state.openingHand = [];
   state.lastCheck = null;
   state.aiDiagnosis = payload.aiDiagnosis ? { ...createEmptyAiDiagnosis(), ...payload.aiDiagnosis } : createEmptyAiDiagnosis();
-  render();
+  if (renderAfter) render();
 }
 
 function saveCurrentDeck({ duplicate = false } = {}) {
@@ -3518,6 +3577,7 @@ function saveCurrentDeck({ duplicate = false } = {}) {
     state.savedDecks.unshift(payload);
   }
   persistDecks();
+  queueCurrentDeckDraftSave();
   renderSavedDecks();
 }
 
@@ -3845,6 +3905,7 @@ function render() {
     renderCheckResult();
   }
   updateSectionTopButtons();
+  queueCurrentDeckDraftSave();
 }
 
 function bindEvents() {
@@ -3883,10 +3944,18 @@ function bindEvents() {
 
   elements.deckNameInput.addEventListener("input", (event) => {
     state.deck.name = event.target.value;
+    queueCurrentDeckDraftSave();
   });
 
   elements.deckNoteInput.addEventListener("input", (event) => {
     state.deck.note = event.target.value;
+    queueCurrentDeckDraftSave();
+  });
+
+  window.addEventListener("beforeunload", () => {
+    window.clearTimeout(draftAutosaveTimer);
+    draftAutosaveTimer = null;
+    persistCurrentDeckDraft();
   });
 
   elements.themeToggleButton?.addEventListener("click", () => {
@@ -4320,6 +4389,7 @@ window.GLabApp = {
 };
 
 seedInitialDeck();
+hydrateCurrentDeckDraft();
 setupDeckZoneUI();
 setupDetailUI();
 setupEnhancementUI();
