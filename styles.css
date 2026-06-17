@@ -2110,8 +2110,19 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 }
 
 .card-compare-chip {
-  padding: 7px 12px;
-  font-size: 0.76rem;
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  line-height: 0;
+}
+
+.card-compare-chip svg {
+  width: 19px;
+  height: 19px;
 }
 
 .detail-pill {
@@ -2124,8 +2135,8 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
-    "qty qty"
-    ". star";
+    ". star"
+    "qty qty";
   gap: 8px;
   align-items: stretch;
   padding-right: 0;
@@ -3227,6 +3238,18 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   box-shadow: 0 8px 18px rgba(106, 124, 146, 0.14);
 }
 
+.deck-tile-thumb::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 40%;
+  height: 7%;
+  background: rgba(5, 8, 12, 0.9);
+  pointer-events: none;
+}
+
 .side-panel .deck-tile {
   gap: 4px;
 }
@@ -3241,12 +3264,15 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   height: 100%;
   object-fit: cover;
   border-radius: 0;
+  transform: scale(1.1);
+  transform-origin: top center;
 }
 
 .deck-tile-qty {
   position: absolute;
   top: 6px;
   right: 6px;
+  z-index: 2;
   min-width: 26px;
   padding: 4px 7px;
   border-radius: 999px;
@@ -3259,23 +3285,11 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 }
 
 .deck-tile-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 6px;
-  background: linear-gradient(180deg, transparent, rgba(11, 22, 35, 0.72));
+  display: none;
 }
 
 .deck-tile-code {
-  color: #f5f8fc;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+  display: none;
 }
 
 .side-panel .deck-tile-qty {
@@ -4453,15 +4467,16 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .card-tools-row .card-compare-chip {
-    padding: 5px 8px;
-    font-size: 0.66rem;
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
   }
 
   .catalog-actions {
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-      "qty qty"
-      ". star";
+      ". star"
+      "qty qty";
     gap: 8px;
     align-items: stretch;
   }
@@ -4813,8 +4828,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   .catalog-actions {
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-      "qty qty"
-      ". star";
+      ". star"
+      "qty qty";
     align-items: stretch;
   }
 

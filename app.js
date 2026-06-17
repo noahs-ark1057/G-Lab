@@ -2856,8 +2856,18 @@ function renderCatalog() {
           }
         </div>
         <div class="card-tools-row">
-          <button type="button" data-action="compare" class="tool-chip card-compare-chip ${isCompared ? "is-active" : ""}" ${compareDisabled ? "disabled" : ""}>
-            ${isCompared ? "比較中" : "比較"}
+          <button
+            type="button"
+            data-action="compare"
+            class="tool-chip card-compare-chip ${isCompared ? "is-active" : ""}"
+            aria-label="${isCompared ? "比較から外す" : "カード比較に追加"}"
+            title="${isCompared ? "比較から外す" : "カード比較に追加"}"
+            ${compareDisabled ? "disabled" : ""}
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="4" y="6" width="7" height="10" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8" />
+              <rect x="13" y="8" width="7" height="10" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8" />
+            </svg>
           </button>
         </div>
         <div class="catalog-actions">
@@ -2946,14 +2956,11 @@ function renderDeckList(zone, container) {
     const row = document.createElement("article");
     row.className = "deck-tile";
     row.draggable = zone === "main";
-    row.title = `${card.name}\n${card.number} / ${formatCardStats(card)}`;
+    row.title = `${card.name}\n${formatCardStats(card)}`;
     row.innerHTML = `
       <div class="deck-tile-thumb">
         <img src="${variant.imageUrl}" alt="${escapeHtml(card.name)}" loading="lazy" />
         <span class="deck-tile-qty">${entry.qty}</span>
-        <div class="deck-tile-footer">
-          <span class="deck-tile-code">${escapeHtml(card.number)}</span>
-        </div>
       </div>
       <strong class="deck-tile-name">${escapeHtml(card.name)}</strong>
     `;
