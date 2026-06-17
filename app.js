@@ -18,6 +18,7 @@ const THEME_STORAGE_KEY = `${STORAGE_KEY}-theme`;
 const REFERENCE_HISTORY_STORAGE_KEY = `${STORAGE_KEY}-reference-history`;
 const DRAFT_AUTOSAVE_DELAY_MS = 250;
 const COMPARE_LIMIT = 3;
+const CATALOG_PULL_SEARCH_THRESHOLD = 42;
 const THEME_SWITCH_OUT_MS = 280;
 const THEME_SWITCH_BG_MS = 360;
 const THEME_SWITCH_IN_MS = 420;
@@ -27,6 +28,8 @@ let confirmAcceptHandler = null;
 let searchRenderTimer = null;
 let draftAutosaveTimer = null;
 let lastPersistedDraftSignature = "";
+let catalogPullStartY = 0;
+let catalogPullTracking = false;
 const renderCache = {
   filterGroupsBuilt: false,
 };
@@ -294,6 +297,7 @@ const state = {
   curvePage: "level",
   favorites: loadFavorites(),
   compareIds: [],
+  isCatalogSearchVisible: false,
   selectedCardId: ALL_CARDS.find((card) => card.isMainDeckCard)?.id || ALL_CARDS[0]?.id || null,
   selectedVariantByCard: {},
   filters: {
@@ -339,6 +343,8 @@ const elements = {
   dbStamp: document.getElementById("dbStamp"),
   themeToggleButton: document.getElementById("themeToggleButton"),
   searchInput: document.getElementById("searchInput"),
+  catalogPullSearch: document.getElementById("catalogPullSearch"),
+  catalogSearchInput: document.getElementById("catalogSearchInput"),
   resetFiltersButton: document.getElementById("resetFiltersButton"),
   quickAddTarget: document.getElementById("quickAddTarget"),
   catalogSort: document.getElementById("catalogSort"),
@@ -571,6 +577,9 @@ function setupEnhancementUI() {
   elements.closeFiltersButton?.remove();
   if (elements.searchInput) {
     elements.searchInput.placeholder = getSearchPlaceholder(state.theme);
+  }
+  if (elements.catalogSearchInput) {
+    elements.catalogSearchInput.placeholder = getSearchPlaceholder(state.theme);
   }
   if (elements.resetFiltersButton) {
     elements.resetFiltersButton.textContent = "リセット";
@@ -826,6 +835,84 @@ function setupEnhancementUI() {
 
 function isMobileViewport() {
   return window.matchMedia("(max-width: 980px)").matches;
+}
+
+function syncSearchInputs(value = state.query) {
+  [elements.searchInput, elements.catalogSearchInput].filter(Boolean).forEach((input) => {
+    if (input.value !== value) {
+      input.value = value;
+    }
+  });
+}
+
+function setCatalogPullSearchVisible(visible) {
+  state.isCatalogSearchVisible = Boolean(visible);
+  if (!elements.catalogPullSearch) return;
+  elements.catalogPullSearch.classList.toggle("is-visible", state.isCatalogSearchVisible);
+  elements.catalogPullSearch.setAttribute("aria-hidden", state.isCatalogSearchVisible ? "false" : "true");
+}
+
+function scheduleSearchRender() {
+  if (searchRenderTimer) {
+    window.clearTimeout(searchRenderTimer);
+  }
+  searchRenderTimer = window.setTimeout(() => {
+    renderCatalog();
+  }, 90);
+}
+
+function handleSearchInput(event) {
+  state.query = event.currentTarget.value;
+  syncSearchInputs();
+  scheduleSearchRender();
+}
+
+function isCatalogPullBlockedTarget(target) {
+  return Boolean(target?.closest?.("button, input, select, textarea, a, [role='button']"));
+}
+
+function setupCatalogPullSearchGesture() {
+  if (!elements.catalogPanel || !elements.catalogPullSearch) return;
+
+  elements.catalogPanel.addEventListener(
+    "touchstart",
+    (event) => {
+      if (!isMobileViewport() || state.isCatalogSearchVisible || isCatalogPullBlockedTarget(event.target)) {
+        catalogPullTracking = false;
+        return;
+      }
+      if (elements.catalogPanel.scrollTop > 6) {
+        catalogPullTracking = false;
+        return;
+      }
+      catalogPullStartY = event.touches[0]?.clientY || 0;
+      catalogPullTracking = true;
+    },
+    { passive: true },
+  );
+
+  elements.catalogPanel.addEventListener(
+    "touchmove",
+    (event) => {
+      if (!catalogPullTracking) return;
+      const currentY = event.touches[0]?.clientY || 0;
+      if (currentY - catalogPullStartY >= CATALOG_PULL_SEARCH_THRESHOLD && elements.catalogPanel.scrollTop <= 6) {
+        setCatalogPullSearchVisible(true);
+        catalogPullTracking = false;
+      }
+    },
+    { passive: true },
+  );
+
+  ["touchend", "touchcancel"].forEach((type) => {
+    elements.catalogPanel.addEventListener(
+      type,
+      () => {
+        catalogPullTracking = false;
+      },
+      { passive: true },
+    );
+  });
 }
 
 function closeFilterDrawer() {
@@ -1784,9 +1871,7 @@ function applyCardTagFilter(group, value) {
 function focusCatalogWithTagFilter(group, value) {
   if (!group || !value || !state.filters[group]) return;
   state.filters[group].add(value);
-  if (elements.searchInput) {
-    elements.searchInput.value = state.query;
-  }
+  syncSearchInputs();
   closeDetailModal();
   closeDetailDrawer();
   closeFilterDrawer();
@@ -1807,9 +1892,7 @@ function focusCatalogWithQueryToken(token) {
     tokens.push(token);
   }
   state.query = tokens.join(" ").trim();
-  if (elements.searchInput) {
-    elements.searchInput.value = state.query;
-  }
+  syncSearchInputs();
   closeDetailModal();
   closeDetailDrawer();
   closeFilterDrawer();
@@ -2869,6 +2952,15 @@ function renderCatalog() {
               <rect x="13" y="8" width="7" height="10" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8" />
             </svg>
           </button>
+          <button
+            type="button"
+            data-action="favorite"
+            class="favorite-star ${isFavorite ? "is-active" : ""}"
+            aria-label="${isFavorite ? "お気に入り解除" : "お気に入り追加"}"
+            title="${isFavorite ? "お気に入り解除" : "お気に入り追加"}"
+          >
+            ${isFavorite ? "★" : "☆"}
+          </button>
         </div>
         <div class="catalog-actions">
           <div class="catalog-qty-rail" aria-label="${escapeHtml(card.name)} のデッキ枚数">
@@ -2883,15 +2975,6 @@ function renderCatalog() {
               <button type="button" data-action="add" ${canAddToZone ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>+1</button>
             </div>
           </div>
-          <button
-            type="button"
-            data-action="favorite"
-            class="favorite-star ${isFavorite ? "is-active" : ""}"
-            aria-label="${isFavorite ? "お気に入り解除" : "お気に入り追加"}"
-            title="${isFavorite ? "お気に入り解除" : "お気に入り追加"}"
-          >
-            ${isFavorite ? "★" : "☆"}
-          </button>
         </div>
       </div>
     `;
@@ -3795,6 +3878,9 @@ function renderThemeToggle() {
   if (elements.searchInput) {
     elements.searchInput.placeholder = getSearchPlaceholder(state.theme);
   }
+  if (elements.catalogSearchInput) {
+    elements.catalogSearchInput.placeholder = getSearchPlaceholder(state.theme);
+  }
   const brandName = state.theme === "red" ? "Z-Lab" : "G-Lab";
   const heroLogo = document.querySelector(".hero-logo-image");
   const heroWordmark = document.querySelector(".hero-logo-wordmark text");
@@ -3855,6 +3941,7 @@ function renderViewButtons() {
 
 function renderMobileState() {
   document.body.dataset.mobileView = state.mobileView;
+  setCatalogPullSearchVisible(state.isCatalogSearchVisible);
   const filterDrawerOpen = state.isFilterDrawerOpen;
   const sideDrawerOpen = state.isSideDrawerOpen && isMobileViewport();
   const detailDrawerOpen = state.isDetailDrawerOpen && isMobileViewport();
@@ -3921,7 +4008,7 @@ function render() {
   }
   syncDesktopPanelLayout();
   renderThemeToggle();
-  elements.searchInput.value = state.query;
+  syncSearchInputs();
   elements.quickAddTarget.value = state.quickAddTarget;
   elements.catalogSort.value = state.sort;
   elements.showExtraCards.checked = state.showExtras;
@@ -3961,15 +4048,11 @@ function render() {
 }
 
 function bindEvents() {
-  elements.searchInput.addEventListener("input", (event) => {
-    state.query = event.target.value;
-    if (searchRenderTimer) {
-      window.clearTimeout(searchRenderTimer);
-    }
-    searchRenderTimer = window.setTimeout(() => {
-      renderCatalog();
-    }, 90);
+  [elements.searchInput, elements.catalogSearchInput].filter(Boolean).forEach((input) => {
+    input.addEventListener("input", handleSearchInput);
+    input.addEventListener("search", handleSearchInput);
   });
+  setupCatalogPullSearchGesture();
 
   elements.quickAddTarget.addEventListener("change", (event) => {
     state.quickAddTarget = event.target.value;

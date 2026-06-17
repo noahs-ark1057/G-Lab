@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500;700;800&family=Orbitron:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260617-card-actions-2" />
+    <link rel="stylesheet" href="./styles.css?v=20260617-catalog-search-actions" />
   </head>
   <body>
     <div class="app-shell">
@@ -239,6 +239,13 @@
                 <button class="view-button" data-view="list" type="button">リスト</button>
               </div>
             </div>
+          </div>
+
+          <div id="catalogPullSearch" class="catalog-pull-search" aria-hidden="true">
+            <label class="field catalog-pull-search-field">
+              <span>検索</span>
+              <input id="catalogSearchInput" type="search" placeholder="例: アムロ / ホワイトベース / etc..." />
+            </label>
           </div>
 
           <div id="activeFilterSummary" class="active-filter-summary" hidden></div>
@@ -566,7 +573,7 @@
     <script src="./data/official-cards-jp.js"></script>
     <script src="./data/tournament-reference-decks-jp.js"></script>
     <script src="./supabase-config.js"></script>
-    <script src="./app.js?v=20260617-card-actions-2"></script>
+    <script src="./app.js?v=20260617-catalog-search-actions"></script>
     <script type="module" src="./supabase-cloud.js"></script>
   </body>
 </html>

@@ -5345,3 +5345,230 @@ body[data-theme="red"] .card-copy {
     grid-template-columns: minmax(0, 1fr) 88px minmax(0, 1fr);
   }
 }
+
+/* Catalog search reveal and compact touch actions */
+.catalog-panel .panel-head {
+  justify-content: space-between;
+}
+
+.catalog-panel .panel-head > div:first-child {
+  flex: 1 1 auto;
+}
+
+.catalog-panel .catalog-controls {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.catalog-view-switch {
+  justify-content: end;
+}
+
+.catalog-pull-search {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  margin: -6px 0 0;
+  pointer-events: none;
+  transition:
+    grid-template-rows 0.24s ease,
+    opacity 0.2s ease,
+    transform 0.24s ease,
+    margin 0.24s ease;
+}
+
+.catalog-pull-search.is-visible {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+  margin: -4px 0 12px;
+  pointer-events: auto;
+}
+
+.catalog-pull-search > .field {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.catalog-pull-search-field {
+  gap: 6px;
+}
+
+.catalog-pull-search-field span {
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.catalog-pull-search-field input {
+  min-height: 44px;
+  border-radius: 16px;
+}
+
+.card-tools-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 40px;
+  margin-top: 2px;
+}
+
+.card-compare-chip,
+.favorite-star {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: #6f8092;
+  display: inline-grid;
+  place-items: center;
+  box-shadow: 0 8px 18px rgba(38, 56, 76, 0.06);
+}
+
+.card-compare-chip.is-active,
+.favorite-star.is-active {
+  color: var(--accent-2);
+  border-color: rgba(211, 166, 73, 0.42);
+  background: rgba(211, 166, 73, 0.12);
+}
+
+.card-compare-chip:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.catalog-actions {
+  display: block;
+  margin-top: 6px;
+  padding: 0;
+}
+
+.catalog-grid:not(.is-list) .card-tools-row {
+  margin-top: 0;
+  min-height: 38px;
+}
+
+.catalog-grid:not(.is-list) .card-tools-row .card-compare-chip,
+.catalog-grid:not(.is-list) .card-tools-row .favorite-star {
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+}
+
+.catalog-grid:not(.is-list) .catalog-actions {
+  margin-top: 4px;
+}
+
+.catalog-grid.is-list .catalog-card {
+  overflow: visible;
+  padding: 8px;
+}
+
+.catalog-grid.is-list .catalog-card h3,
+.catalog-grid.is-list .card-code-line,
+.catalog-grid.is-list .card-subline,
+.catalog-grid.is-list .card-meta {
+  padding-right: 54px;
+}
+
+.catalog-grid.is-list .card-tools-row {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 0;
+  margin: 0;
+}
+
+.catalog-grid.is-list .card-tools-row .favorite-star {
+  order: 1;
+}
+
+.catalog-grid.is-list .card-tools-row .card-compare-chip {
+  order: 2;
+}
+
+.catalog-grid.is-list .card-tools-row .card-compare-chip,
+.catalog-grid.is-list .card-tools-row .favorite-star {
+  width: 46px;
+  height: 46px;
+  min-height: 46px;
+}
+
+.catalog-grid.is-list .catalog-actions {
+  margin-top: 5px;
+}
+
+.catalog-grid.is-list .favorite-star {
+  position: static;
+  border-radius: 999px;
+}
+
+body[data-theme="red"] .card-compare-chip,
+body[data-theme="red"] .favorite-star {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 245, 246, 0.86);
+}
+
+body[data-theme="red"] .card-compare-chip.is-active,
+body[data-theme="red"] .favorite-star.is-active {
+  color: var(--accent-2);
+  border-color: rgba(255, 194, 122, 0.42);
+  background: rgba(255, 194, 122, 0.13);
+}
+
+@media (max-width: 720px) {
+  .catalog-panel .panel-head {
+    gap: 10px;
+  }
+
+  .catalog-panel .catalog-controls {
+    margin-left: auto;
+  }
+
+  .catalog-pull-search.is-visible {
+    margin-bottom: 10px;
+  }
+
+  .catalog-grid:not(.is-list) .card-body {
+    gap: 4px;
+    padding-bottom: 8px;
+  }
+
+  .catalog-grid:not(.is-list) .card-tools-row {
+    min-height: 34px;
+  }
+
+  .catalog-grid:not(.is-list) .card-tools-row .card-compare-chip,
+  .catalog-grid:not(.is-list) .card-tools-row .favorite-star {
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+  }
+
+  .catalog-grid.is-list .card-tools-row .card-compare-chip,
+  .catalog-grid.is-list .card-tools-row .favorite-star {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
+
+  .catalog-grid.is-list .catalog-card h3,
+  .catalog-grid.is-list .card-code-line,
+  .catalog-grid.is-list .card-subline,
+  .catalog-grid.is-list .card-meta {
+    padding-right: 50px;
+  }
+}
