@@ -2861,14 +2861,18 @@ function renderCatalog() {
           </button>
         </div>
         <div class="catalog-actions">
-          <div class="catalog-qty-actions">
-            <button type="button" data-action="remove" ${copiesInZone > 0 ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>-1</button>
-            <button type="button" data-action="add" ${canAddToZone ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>+1</button>
+          <div class="catalog-qty-rail" aria-label="${escapeHtml(card.name)} のデッキ枚数">
+            <div class="catalog-qty-actions">
+              <button type="button" data-action="remove" ${copiesInZone > 0 ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>-1</button>
+            </div>
+            <span class="card-copy">
+              <span class="card-copy-label">Deck</span>
+              <strong>${copiesInZone}</strong>
+            </span>
+            <div class="catalog-qty-actions">
+              <button type="button" data-action="add" ${canAddToZone ? "" : 'class="is-disabled" disabled aria-disabled="true"'}>+1</button>
+            </div>
           </div>
-          <span class="card-copy">
-            <span class="card-copy-label">Deck</span>
-            <strong>${copiesInZone}</strong>
-          </span>
           <button
             type="button"
             data-action="favorite"

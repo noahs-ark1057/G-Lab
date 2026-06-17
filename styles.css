@@ -2122,10 +2122,10 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 .catalog-actions {
   margin-top: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(54px, 0.72fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
-    "minus copy plus"
-    ". . star";
+    "qty qty"
+    ". star";
   gap: 8px;
   align-items: stretch;
   padding-right: 0;
@@ -2141,13 +2141,26 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
   display: contents;
 }
 
+.catalog-qty-rail {
+  grid-area: qty;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(54px, 0.62fr) minmax(0, 1fr);
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.98);
+}
+
 .catalog-qty-actions button {
   width: 100%;
   min-width: 42px;
   min-height: 42px;
   padding: 7px 10px;
   justify-content: center;
-  border-radius: 12px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   font-weight: 700;
 }
 
@@ -2161,12 +2174,11 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 }
 
 .catalog-qty-actions button[data-action="remove"] {
-  grid-area: minus;
+  grid-column: 1;
 }
 
 .catalog-qty-actions button[data-action="add"] {
-  grid-area: plus;
-  border-color: rgba(44, 143, 162, 0.3);
+  grid-column: 3;
   background: linear-gradient(180deg, #fbffff, #eefbfc);
 }
 
@@ -2178,7 +2190,7 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 }
 
 .card-copy {
-  grid-area: copy;
+  grid-column: 2;
   min-width: 0;
   max-width: 100%;
   width: 100%;
@@ -2188,7 +2200,10 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 12px;
+  border: 0;
+  border-inline: 1px solid var(--line);
+  border-radius: 0;
+  background: #f6f9fc;
   font-size: 0.86rem;
 }
 
@@ -4443,10 +4458,10 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .catalog-actions {
-    grid-template-columns: minmax(0, 1fr) minmax(48px, 0.72fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-      "minus copy plus"
-      ". . star";
+      "qty qty"
+      ". star";
     gap: 8px;
     align-items: stretch;
   }
@@ -4462,6 +4477,10 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 
   .catalog-qty-actions {
     display: contents;
+  }
+
+  .catalog-qty-rail {
+    grid-template-columns: minmax(0, 1fr) minmax(46px, 0.58fr) minmax(0, 1fr);
   }
 
   .card-meta {
@@ -4497,7 +4516,6 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .card-copy {
-    grid-area: copy;
     padding: 6px 6px;
     font-size: 0.9rem;
     letter-spacing: 0.01em;
@@ -4793,15 +4811,19 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .catalog-actions {
-    grid-template-columns: minmax(0, 1fr) minmax(46px, 0.72fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-      "minus copy plus"
-      ". . star";
+      "qty qty"
+      ". star";
     align-items: stretch;
   }
 
   .catalog-qty-actions {
     display: contents;
+  }
+
+  .catalog-qty-rail {
+    grid-template-columns: minmax(0, 1fr) minmax(42px, 0.56fr) minmax(0, 1fr);
   }
 
   .catalog-qty-actions button {
@@ -5196,10 +5218,10 @@ body[data-theme="red"] .hero-db-stamp {
 .catalog-grid.is-list .catalog-actions {
   grid-area: actions;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
-  grid-template-areas: none;
+  grid-template-columns: 1fr;
+  grid-template-areas: "qty";
   grid-template-rows: auto;
-  gap: 8px;
+  gap: 0;
   align-items: stretch;
   margin-top: 8px;
   padding: 0;
@@ -5209,11 +5231,16 @@ body[data-theme="red"] .hero-db-stamp {
   display: contents;
 }
 
+.catalog-grid.is-list .catalog-qty-rail {
+  grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
+  border-radius: 16px;
+}
+
 .catalog-grid.is-list .catalog-qty-actions button,
 .catalog-grid.is-list .card-copy {
   min-height: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 0;
   align-self: stretch;
 }
 
@@ -5223,7 +5250,6 @@ body[data-theme="red"] .hero-db-stamp {
 
 .catalog-grid.is-list .catalog-qty-actions button[data-action="add"] {
   grid-column: 3;
-  border-color: rgba(44, 143, 162, 0.3);
   background: linear-gradient(180deg, #fbffff, #eefbfc);
 }
 
@@ -5234,6 +5260,8 @@ body[data-theme="red"] .hero-db-stamp {
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+  border-inline: 1px solid var(--line);
+  background: #f6f9fc;
   font-size: 1rem;
 }
 
@@ -5261,6 +5289,24 @@ body[data-theme="red"] .catalog-grid.is-list .catalog-qty-actions button[data-ac
   background: rgba(255, 244, 226, 0.08);
 }
 
+body[data-theme="red"] .catalog-qty-rail {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+body[data-theme="red"] .catalog-qty-actions button {
+  background: transparent;
+}
+
+body[data-theme="red"] .catalog-qty-actions button[data-action="add"] {
+  background: rgba(255, 244, 226, 0.08);
+}
+
+body[data-theme="red"] .card-copy {
+  border-inline-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.09);
+}
+
 @media (max-width: 720px) {
   .catalog-grid.is-list .catalog-card {
     grid-template-columns: 84px minmax(0, 1fr);
@@ -5274,8 +5320,13 @@ body[data-theme="red"] .catalog-grid.is-list .catalog-qty-actions button[data-ac
   }
 
   .catalog-grid.is-list .catalog-actions {
-    grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
-    gap: 8px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "qty";
+    gap: 0;
     margin-top: 8px;
+  }
+
+  .catalog-grid.is-list .catalog-qty-rail {
+    grid-template-columns: minmax(0, 1fr) 88px minmax(0, 1fr);
   }
 }
