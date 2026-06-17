@@ -5,12 +5,13 @@ on:
   schedule:
     - cron: "0 15 * * *"
 
-permissions:
-  contents: write
-
 jobs:
   refresh-db:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,10 +34,58 @@ jobs:
           python scripts/fetch_tournament_reference_decks.py --json data/tournament-reference-decks-jp.json --js data/tournament-reference-decks-jp.js
 
       - name: Commit and push if changed
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/official-cards-jp.json data/official-cards-jp.js data/tournament-reference-decks-jp.json data/tournament-reference-decks-jp.js assets/official-cards
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git commit -m "chore: refresh official card db"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  deploy-pages:
+    needs: refresh-db
+    if: needs.refresh-db.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout updated repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static site artifact
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp styles.css _site/
+          cp app.js _site/
+          cp robots.txt _site/
+          touch _site/.nojekyll
+          cp -r data _site/data
+          cp -r assets _site/assets
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
