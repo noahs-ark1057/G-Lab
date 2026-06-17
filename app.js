@@ -956,63 +956,104 @@ function closeDetailModal() {
   document.body.classList.remove("is-detail-modal-open");
 }
 
+function setupMobileZoomGuard() {
+  let lastTouchEndAt = 0;
+  const interactiveSelector = "button, a, input, textarea, select, summary, label, [role='button'], [contenteditable='true']";
+
+  document.addEventListener(
+    "touchend",
+    (event) => {
+      const now = Date.now();
+      const target = event.target instanceof Element ? event.target : event.target?.parentElement;
+      const isRepeatedTap = now - lastTouchEndAt < 280;
+      lastTouchEndAt = now;
+      if (!isRepeatedTap || target?.closest(interactiveSelector)) return;
+      event.preventDefault();
+    },
+    { passive: false },
+  );
+
+  document.addEventListener(
+    "gesturestart",
+    (event) => {
+      event.preventDefault();
+    },
+    { passive: false },
+  );
+
+  document.addEventListener(
+    "dblclick",
+    (event) => {
+      if (!isMobileViewport()) return;
+      event.preventDefault();
+    },
+    { passive: false },
+  );
+}
+
+function wrapAccordionBody(body) {
+  const existingInner = body.firstElementChild;
+  if (existingInner?.classList.contains("accordion-body-inner")) return existingInner;
+
+  const inner = document.createElement("div");
+  inner.className = "accordion-body-inner";
+  while (body.firstChild) {
+    inner.appendChild(body.firstChild);
+  }
+  body.appendChild(inner);
+  return inner;
+}
+
 function setupAccordionUI() {
   document.querySelectorAll(".accordion-box").forEach((details) => {
     if (details.dataset.accordionReady === "true") return;
     const summary = details.querySelector(".accordion-summary");
     const body = details.querySelector(".accordion-body");
     if (!summary || !body) return;
+    wrapAccordionBody(body);
+    body.style.removeProperty("height");
+    body.style.removeProperty("overflow");
+    let closeTimer = null;
 
-    const syncBodyState = (expanded) => {
-      details.dataset.expanded = expanded ? "true" : "false";
-      body.style.height = expanded ? "auto" : "0px";
-    };
-
-    const animateAccordion = (expanded) => {
-      if (details.dataset.animating === "true") return;
-      details.dataset.animating = "true";
-      body.style.overflow = "hidden";
-
+    const setExpanded = (expanded, { immediate = false } = {}) => {
+      window.clearTimeout(closeTimer);
       if (expanded) {
         details.open = true;
-        details.dataset.expanded = "true";
-        body.style.height = "0px";
-        void body.offsetHeight;
-        requestAnimationFrame(() => {
-          const targetHeight = body.scrollHeight;
+        if (immediate) {
+          details.dataset.expanded = "true";
+        } else {
           requestAnimationFrame(() => {
-            body.style.height = `${targetHeight}px`;
+            details.dataset.expanded = "true";
           });
-        });
-      } else {
-        body.style.height = `${body.scrollHeight}px`;
-        void body.offsetHeight;
-        requestAnimationFrame(() => {
-          details.dataset.expanded = "false";
-          body.style.height = "0px";
-        });
+        }
+        return;
       }
 
-      const handleEnd = (event) => {
-        if (event.propertyName !== "height") return;
-        body.removeEventListener("transitionend", handleEnd);
-        if (!expanded) {
+      details.dataset.expanded = "false";
+      if (immediate) {
+        details.open = false;
+        return;
+      }
+      closeTimer = window.setTimeout(() => {
+        if (details.dataset.expanded !== "true") {
           details.open = false;
         }
-        body.style.height = expanded ? "auto" : "0px";
-        body.style.overflow = "";
-        details.dataset.animating = "false";
-      };
-
-      body.addEventListener("transitionend", handleEnd);
+      }, 260);
     };
+
+    body.addEventListener("transitionend", (event) => {
+      if (event.propertyName !== "grid-template-rows") return;
+      if (details.dataset.expanded !== "true") {
+        details.open = false;
+      }
+    });
 
     summary.addEventListener("click", (event) => {
       event.preventDefault();
-      animateAccordion(!details.open);
+      setExpanded(!details.open);
     });
 
-    syncBodyState(details.open);
+    setExpanded(details.open, { immediate: true });
     details.dataset.accordionReady = "true";
   });
 }
@@ -4393,6 +4434,7 @@ hydrateCurrentDeckDraft();
 setupDeckZoneUI();
 setupDetailUI();
 setupEnhancementUI();
+setupMobileZoomGuard();
 bindEvents();
 hydrateFromHash();
 render();

@@ -50,6 +50,11 @@ body[data-theme="red"] {
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
 html,
 body {
   margin: 0;
@@ -224,6 +229,17 @@ body.is-reference-modal-open {
 
 button {
   cursor: pointer;
+  touch-action: manipulation;
+}
+
+a,
+label,
+summary,
+[role="button"],
+input,
+select,
+textarea {
+  touch-action: manipulation;
 }
 
 img {
@@ -2106,12 +2122,13 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 .catalog-actions {
   margin-top: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(54px, 0.72fr) minmax(0, 1fr);
   grid-template-areas:
-    "qty qty"
-    "copy star";
-  gap: 12px;
-  align-items: end;
+    "minus copy plus"
+    ". . star";
+  gap: 8px;
+  align-items: stretch;
+  padding-right: 0;
 }
 
 .catalog-grid.is-list .catalog-actions {
@@ -2121,28 +2138,42 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 }
 
 .catalog-qty-actions {
-  grid-area: qty;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
-  gap: 8px;
-  align-items: stretch;
+  display: contents;
 }
 
 .catalog-qty-actions button {
   width: 100%;
   min-width: 42px;
-  min-height: 36px;
+  min-height: 42px;
   padding: 7px 10px;
   justify-content: center;
   border-radius: 12px;
   font-weight: 700;
 }
 
+.catalog-card .card-copy-label {
+  display: none;
+}
+
+.catalog-card .card-copy strong {
+  font-size: 1.08rem;
+  line-height: 1;
+}
+
+.catalog-qty-actions button[data-action="remove"] {
+  grid-area: minus;
+}
+
+.catalog-qty-actions button[data-action="add"] {
+  grid-area: plus;
+  border-color: rgba(44, 143, 162, 0.3);
+  background: linear-gradient(180deg, #fbffff, #eefbfc);
+}
+
 .catalog-qty-actions button,
 .card-copy,
 .favorite-star {
-  min-height: 34px;
+  min-height: 42px;
   box-sizing: border-box;
 }
 
@@ -2152,11 +2183,13 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
   max-width: 100%;
   width: 100%;
   justify-self: start;
-  align-self: start;
+  align-self: stretch;
   justify-content: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border-radius: 12px;
+  font-size: 0.86rem;
 }
 
 .catalog-actions button,
@@ -2170,13 +2203,15 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 
 .favorite-star {
   grid-area: star;
+  position: static;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: end;
   justify-self: end;
+  align-self: center;
   width: 40px;
   height: 40px;
+  min-height: 40px;
   padding: 0;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -2808,21 +2843,28 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 }
 
 .accordion-body {
-  height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   opacity: 0;
   overflow: hidden;
   padding: 0 16px 0;
-  transform: translateY(-10px);
+  transform: translateY(-6px);
   transform-origin: top center;
-  will-change: height, opacity, transform;
+  will-change: grid-template-rows, opacity, transform;
   transition:
-    height 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.24s ease,
-    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
-    padding-bottom 0.24s ease;
+    grid-template-rows 0.24s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.18s ease,
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    padding-bottom 0.18s ease;
+}
+
+.accordion-body-inner {
+  min-height: 0;
+  overflow: hidden;
 }
 
 .accordion-box[data-expanded="true"] .accordion-body {
+  grid-template-rows: 1fr;
   opacity: 1;
   padding: 0 16px 16px;
   transform: translateY(0);
@@ -3748,6 +3790,12 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 }
 
 @media (max-width: 980px) {
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 16px;
+  }
+
   .image-preview-close {
     display: none;
   }
@@ -4395,12 +4443,12 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .catalog-actions {
-    grid-template-columns: minmax(0, 1fr) 36px;
+    grid-template-columns: minmax(0, 1fr) minmax(48px, 0.72fr) minmax(0, 1fr);
     grid-template-areas:
-      "qty qty"
-      "copy star";
+      "minus copy plus"
+      ". . star";
     gap: 8px;
-    align-items: end;
+    align-items: stretch;
   }
 
   .catalog-actions button,
@@ -4413,8 +4461,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .catalog-qty-actions {
-    grid-area: qty;
-    gap: 7px;
+    display: contents;
   }
 
   .card-meta {
@@ -4434,11 +4481,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .catalog-qty-actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    justify-content: start;
-    gap: 7px;
-    width: 100%;
+    display: contents;
   }
 
   .catalog-qty-actions button {
@@ -4456,15 +4499,15 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   .card-copy {
     grid-area: copy;
     padding: 6px 6px;
-    font-size: 0.56rem;
+    font-size: 0.9rem;
     letter-spacing: 0.01em;
-    min-height: 32px;
+    min-height: 34px;
   }
 
   .favorite-star {
-    grid-area: star;
     width: 36px;
     height: 36px;
+    min-height: 36px;
     font-size: 1rem;
   }
 
@@ -4705,8 +4748,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .catalog-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .catalog-grid.is-list .catalog-card {
@@ -4750,13 +4793,15 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .catalog-actions {
-    align-items: end;
+    grid-template-columns: minmax(0, 1fr) minmax(46px, 0.72fr) minmax(0, 1fr);
+    grid-template-areas:
+      "minus copy plus"
+      ". . star";
+    align-items: stretch;
   }
 
   .catalog-qty-actions {
-    grid-area: qty;
-    width: 100%;
-    gap: 5px;
+    display: contents;
   }
 
   .catalog-qty-actions button {
@@ -4769,7 +4814,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   .catalog-qty-actions button,
   .card-copy,
   .favorite-star {
-    min-height: 32px;
+    min-height: 36px;
   }
 
   .card-meta {
@@ -4800,6 +4845,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   .favorite-star {
     width: 32px;
     height: 32px;
+    min-height: 32px;
     font-size: 0.96rem;
   }
 
@@ -5151,6 +5197,8 @@ body[data-theme="red"] .hero-db-stamp {
   grid-area: actions;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
+  grid-template-areas: none;
+  grid-template-rows: auto;
   gap: 8px;
   align-items: stretch;
   margin-top: 8px;
