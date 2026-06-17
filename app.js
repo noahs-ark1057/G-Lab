@@ -1696,11 +1696,93 @@ function canAddCard(card, zone) {
   return false;
 }
 
+function setActionDisabled(button, disabled) {
+  if (!button) return;
+  button.disabled = disabled;
+  button.classList.toggle("is-disabled", disabled);
+  if (disabled) {
+    button.setAttribute("aria-disabled", "true");
+  } else {
+    button.removeAttribute("aria-disabled");
+  }
+}
+
+function updateCatalogQuantityControls() {
+  if (!elements.cardCatalog) return;
+  elements.cardCatalog.querySelectorAll(".catalog-card[data-card-id]").forEach((article) => {
+    const card = CARD_LOOKUP.get(article.dataset.cardId || "");
+    if (!card) return;
+    const copies = getCopies(state.quickAddTarget, card.id);
+    const canAdd = canAddCard(card, state.quickAddTarget);
+    const copy = article.querySelector(".card-copy strong");
+    const rail = article.querySelector(".catalog-qty-rail");
+    if (copy) {
+      copy.textContent = String(copies);
+    }
+    if (rail) {
+      rail.setAttribute("aria-label", `${card.name} のデッキ枚数`);
+    }
+    setActionDisabled(article.querySelector('[data-action="remove"]'), copies <= 0);
+    setActionDisabled(article.querySelector('[data-action="add"]'), !canAdd);
+  });
+}
+
+function getDeckListContainer(zone) {
+  if (zone === "main") return elements.mainDeckList;
+  if (zone === "token") return elements.tokenDeckList;
+  return null;
+}
+
+function cssEscape(value) {
+  if (window.CSS?.escape) return window.CSS.escape(value);
+  return String(value).replace(/["\\]/g, "\\$&");
+}
+
+function updateDeckTileQuantity(zone, cardId) {
+  const container = getDeckListContainer(zone);
+  const tile = container?.querySelector(`.deck-tile[data-card-id="${cssEscape(cardId)}"]`);
+  const qty = getCopies(zone, cardId);
+  if (!tile || qty <= 0) return false;
+  const qtyBadge = tile.querySelector(".deck-tile-qty");
+  if (qtyBadge) {
+    qtyBadge.textContent = String(qty);
+  }
+  return true;
+}
+
+function refreshDeckListAfterMutation(zone, cardId, { structural = false } = {}) {
+  const container = getDeckListContainer(zone);
+  if (!container) return;
+  if (!structural && updateDeckTileQuantity(zone, cardId)) return;
+  renderDeckList(zone, container);
+}
+
+function renderDeckMutationUpdates(zone, cardId, options = {}) {
+  updateCatalogQuantityControls();
+  refreshDeckListAfterMutation(zone, cardId, options);
+  renderStats();
+  renderCurve();
+  renderAiDiagnosis();
+  renderTokenEmptyState();
+  if (state.activeTab === "sim") {
+    renderFocusCards();
+    renderOpeningHand();
+    renderCheckResult();
+  }
+  if (!isMobileViewport()) {
+    renderSelectedCard();
+  }
+  syncMobileDetailFabs();
+  updateSectionTopButtons();
+  queueCurrentDeckDraftSave();
+}
+
 function addCardToDeck(cardId, zone = "main", qty = 1) {
   const card = CARD_LOOKUP.get(cardId);
   if (!card || !canAddCard(card, zone)) return;
 
   const existing = state.deck[zone].find((item) => item.cardId === cardId);
+  const structural = !existing;
   const limit = zone === "main" ? 4 : 99;
   if (existing) {
     existing.qty = Math.min(limit, existing.qty + qty);
@@ -1708,17 +1790,18 @@ function addCardToDeck(cardId, zone = "main", qty = 1) {
     state.deck[zone].push({ cardId, qty: Math.min(limit, qty) });
   }
   state.selectedCardId = cardId;
-  render();
+  renderDeckMutationUpdates(zone, cardId, { structural });
 }
 
 function removeCardFromDeck(cardId, zone = "main") {
   const existing = state.deck[zone].find((item) => item.cardId === cardId);
   if (!existing) return;
+  const structural = existing.qty <= 1;
   existing.qty -= 1;
   if (existing.qty <= 0) {
     state.deck[zone] = state.deck[zone].filter((item) => item.cardId !== cardId);
   }
-  render();
+  renderDeckMutationUpdates(zone, cardId, { structural });
 }
 
 function setDeckZone(zone, items) {
@@ -2923,6 +3006,7 @@ function renderCatalog() {
     const compareDisabled = !isCompared && state.compareIds.length >= COMPARE_LIMIT;
     const article = document.createElement("article");
     article.className = "catalog-card";
+    article.dataset.cardId = card.id;
     article.innerHTML = `
       <div class="card-art is-previewable" role="button" tabindex="0" aria-label="${escapeHtml(card.name)} の詳細を開く">
         <img src="${selectedVariant.imageUrl}" alt="${escapeHtml(card.name)}" loading="lazy" />
@@ -3000,7 +3084,7 @@ function renderCatalog() {
       openCardDetails(card.id, "catalog", state.activeTab);
     });
     article.querySelector('[data-action="remove"]').addEventListener("click", () => {
-      if (copiesInZone > 0) removeCardFromDeck(card.id, state.quickAddTarget);
+      removeCardFromDeck(card.id, state.quickAddTarget);
     });
     article.querySelector('[data-action="favorite"]').addEventListener("click", () => {
       toggleFavorite(card.id);
@@ -3009,10 +3093,10 @@ function renderCatalog() {
       toggleCompare(card.id);
     });
     article.querySelector('[data-action="add"]').addEventListener("click", () => {
-      if (canAddToZone) addCardToDeck(card.id, state.quickAddTarget, 1);
+      addCardToDeck(card.id, state.quickAddTarget, 1);
     });
     article.addEventListener("dblclick", () => {
-      if (canAddToZone) addCardToDeck(card.id, state.quickAddTarget, 1);
+      addCardToDeck(card.id, state.quickAddTarget, 1);
     });
 
     elements.cardCatalog.appendChild(article);
@@ -3038,6 +3122,7 @@ function renderDeckList(zone, container) {
 
     const row = document.createElement("article");
     row.className = "deck-tile";
+    row.dataset.cardId = card.id;
     row.draggable = zone === "main";
     row.title = `${card.name}\n${formatCardStats(card)}`;
     row.innerHTML = `
