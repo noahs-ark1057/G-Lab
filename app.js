@@ -2087,6 +2087,7 @@ function applyReferenceDeck(deck) {
   setDeckZone("resource", []);
   state.aiDiagnosis = createEmptyAiDiagnosis();
   state.lastCheck = null;
+  state.activeTab = "deck";
   setActiveDeckZone("main");
   recordReferenceHistory(deck);
   closeReferenceModal();
@@ -3219,17 +3220,15 @@ function renderReferenceDecks() {
             if (entry.card) {
               const variant = getCardVariant(entry.card);
               return `
-                <button
-                  type="button"
+                <div
                   class="reference-preview-card"
-                  data-reference-apply-card="${escapeHtml(deck.id)}"
-                  title="${escapeHtml(entry.card.name)} を反映"
+                  title="${escapeHtml(entry.card.name)}"
                 >
                   <span class="reference-preview-thumb">
                     <img src="${variant.imageUrl}" alt="${escapeHtml(entry.card.name)}" loading="lazy" />
                     <span class="reference-preview-qty">${qtyLabel}</span>
                   </span>
-                </button>
+                </div>
               `;
             }
             return `
@@ -3255,6 +3254,13 @@ function renderReferenceDecks() {
         <div class="reference-title-block">
           <strong>${escapeHtml(deck.deckName || "大会入賞デッキ")}</strong>
         </div>
+        <button
+          type="button"
+          class="solid-button reference-copy-button"
+          data-reference-copy="${escapeHtml(deck.id)}"
+        >
+          コピー
+        </button>
       </div>
       <div class="reference-meta">
         <span>大会名: ${escapeHtml(deck.eventName || "-")}</span>
@@ -3283,16 +3289,16 @@ function renderReferenceDecks() {
     });
     const applyReferenceDeckWithConfirm = () => {
       openConfirmModal({
-        title: "参考デッキを反映",
-        message: "現在のデッキをこの参考デッキで上書きします。続行してくれますか？",
-        acceptLabel: "反映する",
+        title: "参考デッキをコピー",
+        message: "現在編集中のデッキをこの参考デッキで上書きします。よろしいですか？",
+        acceptLabel: "上書きする",
         onAccept: () => {
           closeConfirmModal();
           applyReferenceDeck(deck);
         },
       });
     };
-    article.querySelectorAll("[data-reference-apply-card]").forEach((button) => {
+    article.querySelectorAll("[data-reference-copy]").forEach((button) => {
       button.addEventListener("click", () => {
         applyReferenceDeckWithConfirm();
       });

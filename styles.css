@@ -2997,7 +2997,6 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   background: transparent;
   color: inherit;
   text-align: left;
-  cursor: pointer;
 }
 
 .reference-preview-thumb {
@@ -3013,7 +3012,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 .reference-preview-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #ffffff;
 }
 
 .reference-preview-thumb--empty {
@@ -3039,6 +3039,13 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 
 .reference-preview-card.is-unresolved {
   opacity: 0.72;
+}
+
+.reference-copy-button {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding-inline: 18px;
+  white-space: nowrap;
 }
 
 .reference-preview-empty {
