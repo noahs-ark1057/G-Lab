@@ -2987,9 +2987,10 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 
 .reference-preview-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(54px, 64px));
   gap: 6px;
   align-content: start;
+  justify-content: start;
   min-width: 0;
   max-width: 100%;
 }
@@ -4893,7 +4894,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .reference-preview-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
   }
 
   .side-panel .deck-tile-qty {
