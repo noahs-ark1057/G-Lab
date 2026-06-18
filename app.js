@@ -658,7 +658,7 @@ function setupEnhancementUI() {
   }
   if (elements.cloudSyncMessage) {
     elements.cloudSyncMessage.textContent =
-      "Supabase を設定すると、保存デッキ・お気に入り・テーマ・参考デッキ履歴をユーザーごとに同期できます。";
+      "Supabase を設定すると、編集中デッキ・保存デッキ・お気に入り・テーマ・参考デッキ履歴をユーザーごとに同期できます。";
   }
   if (elements.cloudSyncBadge) {
     elements.cloudSyncBadge.textContent = "ローカル";
@@ -1411,16 +1411,26 @@ function loadCurrentDeckDraft() {
   }
 }
 
-function persistCurrentDeckDraft() {
+function storeCurrentDeckDraft(payload, { skipCloud = false } = {}) {
+  if (!payload || typeof payload !== "object") return;
+  const signature = getDraftSignature(payload);
+  if (signature === lastPersistedDraftSignature) return;
+  try {
+    window.localStorage.setItem(CURRENT_DRAFT_STORAGE_KEY, JSON.stringify(payload));
+  } catch {
+    return;
+  }
+  lastPersistedDraftSignature = signature;
+  if (!skipCloud) notifyCloudState("current-draft");
+}
+
+function persistCurrentDeckDraft({ skipCloud = false } = {}) {
   try {
     const payload = {
       ...serializeCurrentDeck(),
       autosavedAt: new Date().toISOString(),
     };
-    const signature = getDraftSignature(payload);
-    if (signature === lastPersistedDraftSignature) return;
-    window.localStorage.setItem(CURRENT_DRAFT_STORAGE_KEY, JSON.stringify(payload));
-    lastPersistedDraftSignature = signature;
+    storeCurrentDeckDraft(payload, { skipCloud });
   } catch {
   }
 }
@@ -1507,6 +1517,7 @@ function normalizeReferenceHistoryItems(items = []) {
 function getCloudSnapshot() {
   return {
     savedDecks: deepClone(state.savedDecks),
+    currentDraft: deepClone(loadCurrentDeckDraft()),
     favorites: [...state.favorites],
     theme: state.theme,
     referenceHistory: deepClone(state.referenceHistory),
@@ -1547,6 +1558,10 @@ function applyCloudSnapshot(snapshot, { persistLocal = true } = {}) {
   }
   if (Array.isArray(snapshot.referenceHistory)) {
     state.referenceHistory = normalizeReferenceHistoryItems(snapshot.referenceHistory);
+  }
+  if (snapshot.currentDraft && typeof snapshot.currentDraft === "object") {
+    loadDeck(snapshot.currentDraft, { renderAfter: false });
+    storeCurrentDeckDraft(snapshot.currentDraft, { skipCloud: true });
   }
   if (persistLocal) {
     persistDecks({ skipCloud: true });

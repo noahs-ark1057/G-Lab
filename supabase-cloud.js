@@ -244,9 +244,18 @@ if (!app?.getCloudSnapshot || !app?.applyCloudSnapshot || !app?.updateCloudState
       .slice(0, 24);
   }
 
+  function mergeCurrentDraft(localDraft, remoteDraft) {
+    const localTime = parseDate(localDraft?.autosavedAt || localDraft?.updatedAt);
+    const remoteTime = parseDate(remoteDraft?.autosavedAt || remoteDraft?.updatedAt);
+    if (!localDraft) return remoteDraft || null;
+    if (!remoteDraft) return localDraft || null;
+    return localTime >= remoteTime ? clone(localDraft) : clone(remoteDraft);
+  }
+
   function mergeSnapshots(localSnapshot, remoteSnapshot) {
     return {
       savedDecks: mergeSavedDecks(localSnapshot?.savedDecks || [], remoteSnapshot?.savedDecks || []),
+      currentDraft: mergeCurrentDraft(localSnapshot?.currentDraft, remoteSnapshot?.currentDraft),
       favorites: [...new Set([...(remoteSnapshot?.favorites || []), ...(localSnapshot?.favorites || [])])],
       theme:
         remoteSnapshot?.theme === "red" || remoteSnapshot?.theme === "light"
@@ -267,6 +276,8 @@ if (!app?.getCloudSnapshot || !app?.applyCloudSnapshot || !app?.updateCloudState
       user_id: state.session?.user?.id,
       email: state.session?.user?.email || null,
       saved_decks: Array.isArray(snapshot?.savedDecks) ? snapshot.savedDecks : [],
+      current_draft:
+        snapshot?.currentDraft && typeof snapshot.currentDraft === "object" ? snapshot.currentDraft : null,
       favorites: Array.isArray(snapshot?.favorites) ? snapshot.favorites : [],
       theme: snapshot?.theme === "red" ? "red" : "light",
       reference_history: Array.isArray(snapshot?.referenceHistory) ? snapshot.referenceHistory : [],
@@ -278,6 +289,7 @@ if (!app?.getCloudSnapshot || !app?.applyCloudSnapshot || !app?.updateCloudState
     if (!row || typeof row !== "object") return null;
     return {
       savedDecks: Array.isArray(row.saved_decks) ? row.saved_decks : [],
+      currentDraft: row.current_draft && typeof row.current_draft === "object" ? row.current_draft : null,
       favorites: Array.isArray(row.favorites) ? row.favorites : [],
       theme: row.theme === "red" ? "red" : "light",
       referenceHistory: Array.isArray(row.reference_history) ? row.reference_history : [],
@@ -292,7 +304,7 @@ if (!app?.getCloudSnapshot || !app?.applyCloudSnapshot || !app?.updateCloudState
     const query =
       `/rest/v1/${encodeURIComponent(config.table)}` +
       `?user_id=eq.${encodeURIComponent(userId)}` +
-      "&select=user_id,email,saved_decks,favorites,theme,reference_history,updated_at&limit=1";
+      "&select=user_id,email,saved_decks,current_draft,favorites,theme,reference_history,updated_at&limit=1";
 
     const rows = await apiRequest(query, {
       auth: true,

@@ -2,11 +2,15 @@ create table if not exists public.user_app_states (
   user_id uuid primary key references auth.users (id) on delete cascade,
   email text,
   saved_decks jsonb not null default '[]'::jsonb,
+  current_draft jsonb,
   favorites jsonb not null default '[]'::jsonb,
   theme text not null default 'light' check (theme in ('light', 'red')),
   reference_history jsonb not null default '[]'::jsonb,
   updated_at timestamptz not null default timezone('utc', now())
 );
+
+alter table public.user_app_states
+add column if not exists current_draft jsonb;
 
 create or replace function public.set_user_app_states_updated_at()
 returns trigger
