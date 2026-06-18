@@ -3254,18 +3254,18 @@ function renderReferenceDecks() {
         <div class="reference-title-block">
           <strong>${escapeHtml(deck.deckName || "大会入賞デッキ")}</strong>
         </div>
-        <button
-          type="button"
-          class="solid-button reference-copy-button"
-          data-reference-copy="${escapeHtml(deck.id)}"
-        >
-          コピー
-        </button>
       </div>
       <div class="reference-meta">
         <span>大会名: ${escapeHtml(deck.eventName || "-")}</span>
         <span>開催日: ${escapeHtml(deck.eventDate || "-")}</span>
       </div>
+      <button
+        type="button"
+        class="solid-button reference-copy-button"
+        data-reference-copy="${escapeHtml(deck.id)}"
+      >
+        この参考デッキをコピー
+      </button>
       <div class="deck-zone-tabbar reference-zone-tabbar">
         <button type="button" class="deck-zone-tab ${activeZone === "main" ? "is-active" : ""}" data-reference-zone="main" data-reference-id="${escapeHtml(deck.id)}">
           メイン ${mainCount}

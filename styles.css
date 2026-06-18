@@ -2976,6 +2976,9 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 }
 
 .reference-preview-frame {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
   border: 1px solid var(--divider);
   border-radius: 16px;
   background: var(--surface-soft);
@@ -2984,9 +2987,11 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 
 .reference-preview-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
   gap: 6px;
   align-content: start;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .reference-preview-card {
@@ -3042,7 +3047,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 }
 
 .reference-copy-button {
-  flex: 0 0 auto;
+  width: 100%;
   min-height: 38px;
   padding-inline: 18px;
   white-space: nowrap;
@@ -4888,7 +4893,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .reference-preview-list {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .side-panel .deck-tile-qty {
