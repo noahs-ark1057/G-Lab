@@ -50,6 +50,13 @@ window.__GLAB_SUPABASE__ = {
 - `anon public key` を使ってください
 - `service_role key` は入れないでください
 
+GitHub Pages で公開する場合は、リポジトリの `Settings > Secrets and variables > Actions` に次の 2 つを登録してください。
+
+- `SUPABASE_URL`
+- `SUPABASE_ANON_KEY`
+
+GitHub Actions のデプロイ時に、この 2 つから公開用の `supabase-config.js` が自動生成されます。Secrets が未設定の場合は、リポジトリ内の `supabase-config.js` がそのままコピーされます。
+
 ## 5. サイトで使う
 
 1. サイトを開く

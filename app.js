@@ -456,6 +456,7 @@ const elements = {
   cloudPasswordInput: document.getElementById("cloudPasswordInput"),
   cloudSignInButton: document.getElementById("cloudSignInButton"),
   cloudRegisterButton: document.getElementById("cloudRegisterButton"),
+  cloudManualSyncButton: document.getElementById("cloudManualSyncButton"),
   cloudSignOutButton: document.getElementById("cloudSignOutButton"),
   cloudDeckCount: document.getElementById("cloudDeckCount"),
   cloudFavoriteCount: document.getElementById("cloudFavoriteCount"),
@@ -683,6 +684,9 @@ function setupEnhancementUI() {
   }
   if (elements.cloudRegisterButton) {
     elements.cloudRegisterButton.textContent = "新規登録";
+  }
+  if (elements.cloudManualSyncButton) {
+    elements.cloudManualSyncButton.textContent = "今すぐ同期";
   }
   if (elements.cloudSignOutButton) {
     elements.cloudSignOutButton.textContent = "ログアウト";
@@ -1590,6 +1594,11 @@ function renderCloudSyncPanel() {
   if (elements.cloudPasswordInput) elements.cloudPasswordInput.disabled = !canUseCloud || hasUser || state.cloud.authBusy;
   if (elements.cloudSignInButton) elements.cloudSignInButton.disabled = !canUseCloud || hasUser || state.cloud.authBusy;
   if (elements.cloudRegisterButton) elements.cloudRegisterButton.disabled = !canUseCloud || hasUser || state.cloud.authBusy;
+  if (elements.cloudManualSyncButton) {
+    elements.cloudManualSyncButton.hidden = !hasUser;
+    elements.cloudManualSyncButton.disabled =
+      !canUseCloud || !hasUser || state.cloud.authBusy || state.cloud.status === "syncing";
+  }
   if (elements.cloudSignOutButton) {
     elements.cloudSignOutButton.hidden = !hasUser;
     elements.cloudSignOutButton.disabled = !hasUser || state.cloud.authBusy;
@@ -4508,6 +4517,9 @@ function bindEvents() {
   });
   elements.cloudSignOutButton?.addEventListener("click", () => {
     window.GLabCloud?.signOut?.();
+  });
+  elements.cloudManualSyncButton?.addEventListener("click", () => {
+    window.GLabCloud?.syncNow?.();
   });
   elements.saveDeckButton.addEventListener("click", () => saveCurrentDeck({ duplicate: false }));
   elements.duplicateDeckButton.addEventListener("click", () => saveCurrentDeck({ duplicate: true }));

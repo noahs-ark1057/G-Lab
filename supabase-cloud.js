@@ -32,7 +32,7 @@ if (!app?.getCloudSnapshot || !app?.applyCloudSnapshot || !app?.updateCloudState
     signIn,
     signUp,
     signOut,
-    syncNow: () => flushPendingSync("manual"),
+    syncNow: manualSync,
     config,
   };
 
@@ -95,6 +95,12 @@ if (!app?.getCloudSnapshot || !app?.applyCloudSnapshot || !app?.updateCloudState
 
   function isConfigured() {
     return /^https?:\/\//.test(config.url) && Boolean(config.anonKey);
+  }
+
+  function manualSync() {
+    if (!isConfigured() || !state.session?.access_token) return;
+    state.pendingSnapshot = clone(app.getCloudSnapshot());
+    return flushPendingSync("manual");
   }
 
   function loadStoredSession() {
@@ -304,32 +310,13 @@ if (!app?.getCloudSnapshot || !app?.applyCloudSnapshot || !app?.updateCloudState
       throw new Error("Supabase user id を取得できません。");
     }
 
-    if (state.remoteRowExists) {
-      await apiRequest(
-        `/rest/v1/${encodeURIComponent(config.table)}?user_id=eq.${encodeURIComponent(row.user_id)}`,
-        {
-          method: "PATCH",
-          auth: true,
-          headers: { Prefer: "return=representation" },
-          body: {
-            email: row.email,
-            saved_decks: row.saved_decks,
-            favorites: row.favorites,
-            theme: row.theme,
-            reference_history: row.reference_history,
-            updated_at: row.updated_at,
-          },
-        },
-      );
-    } else {
-      await apiRequest(`/rest/v1/${encodeURIComponent(config.table)}`, {
-        method: "POST",
-        auth: true,
-        headers: { Prefer: "return=representation" },
-        body: row,
-      });
-      state.remoteRowExists = true;
-    }
+    await apiRequest(`/rest/v1/${encodeURIComponent(config.table)}?on_conflict=user_id`, {
+      method: "POST",
+      auth: true,
+      headers: { Prefer: "resolution=merge-duplicates,return=representation" },
+      body: row,
+    });
+    state.remoteRowExists = true;
 
     app.updateCloudState({
       configured: true,

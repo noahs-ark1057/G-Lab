@@ -71,11 +71,37 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Prepare static site artifact
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           mkdir -p _site
           cp index.html _site/
           cp styles.css _site/
           cp app.js _site/
+          cp supabase-cloud.js _site/
+          if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_ANON_KEY:-}" ]; then
+            python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          config = {
+              "url": os.environ["SUPABASE_URL"],
+              "anonKey": os.environ["SUPABASE_ANON_KEY"],
+              "storageKey": "g-lab-supabase-session",
+              "table": "user_app_states",
+          }
+          Path("_site/supabase-config.js").write_text(
+              "window.__GLAB_SUPABASE__ = window.__GLAB_SUPABASE__ || "
+              + json.dumps(config, ensure_ascii=False, indent=2)
+              + ";\n",
+              encoding="utf-8",
+          )
+          PY
+          else
+            cp supabase-config.js _site/
+          fi
           cp robots.txt _site/
           touch _site/.nojekyll
           cp -r data _site/data
