@@ -52,7 +52,7 @@ body[data-theme="red"] {
 
 html {
   -webkit-text-size-adjust: 100%;
-  touch-action: manipulation;
+  touch-action: pan-y;
 }
 
 html,
@@ -3168,6 +3168,14 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 
 .deck-zone-pages {
   overflow: hidden;
+  touch-action: pan-y;
+}
+
+@supports (overflow: clip) {
+  .deck-zone-pages {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
 }
 
 .deck-zone-pages-track {
@@ -3993,6 +4001,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 
   .workspace {
     display: block;
+    touch-action: pan-y;
   }
 
   .filters-panel,
@@ -4012,6 +4021,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
     transform: translateX(105%);
     transition: transform 0.22s ease;
     overflow-y: auto;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
     padding: 12px 14px 156px;
     scroll-padding-bottom: 132px;
   }
@@ -4059,6 +4070,9 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
     transform: none;
     transition: none;
     overflow-y: visible;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
     padding: 20px 20px 110px;
   }
 
@@ -4072,6 +4086,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
     transform: translateX(105%);
     transition: transform 0.22s ease;
     overflow-y: auto;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
     padding: 20px 20px 110px;
     background: #ffffff;
   }
@@ -4090,6 +4106,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
     transform: translateX(105%);
     transition: transform 0.22s ease;
     overflow-y: auto;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
     padding-bottom: 110px;
     background: #ffffff;
   }
@@ -4333,6 +4351,13 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   #tab-deck > .deck-zone {
     grid-column: 1 / -1;
     grid-row: 8;
+    touch-action: pan-y;
+  }
+
+  .side-panel .tab-panel,
+  .deck-zone-panel,
+  .side-panel .deck-list {
+    touch-action: pan-y;
   }
 
   #tab-deck > .curve-box {

@@ -4055,13 +4055,18 @@ function renderViewButtons() {
 }
 
 function renderMobileState() {
+  const mobileViewport = isMobileViewport();
+  if (mobileViewport && state.mobileView !== "catalog") {
+    state.isSideDrawerOpen = false;
+    state.isFilterDrawerOpen = false;
+  }
   document.body.dataset.mobileView = state.mobileView;
   setCatalogPullSearchVisible(state.isCatalogSearchVisible);
   const filterDrawerOpen = state.isFilterDrawerOpen;
-  const sideDrawerOpen = state.isSideDrawerOpen && isMobileViewport();
-  const detailDrawerOpen = state.isDetailDrawerOpen && isMobileViewport();
+  const sideDrawerOpen = state.isSideDrawerOpen && mobileViewport && state.mobileView === "catalog";
+  const detailDrawerOpen = state.isDetailDrawerOpen && mobileViewport;
   const detailUiOpen =
-    isMobileViewport() && (detailDrawerOpen || document.body.classList.contains("is-detail-modal-open"));
+    mobileViewport && (detailDrawerOpen || document.body.classList.contains("is-detail-modal-open"));
   const compareModalOpen = document.body.classList.contains("is-compare-modal-open");
   const detailContext = getDetailActionContext();
   document.body.classList.toggle("is-filter-drawer-open", filterDrawerOpen);
@@ -4098,7 +4103,7 @@ function renderMobileState() {
     elements.mobileDeckFab.setAttribute("title", deckFabLabel);
   }
   if (elements.mobileCompareFab) {
-    const canShowCompareFab = isMobileViewport() && !filterDrawerOpen;
+    const canShowCompareFab = mobileViewport && !filterDrawerOpen;
     elements.mobileCompareFab.classList.toggle("is-hidden", !canShowCompareFab && !compareModalOpen);
     elements.mobileCompareFab.classList.toggle("is-active", compareModalOpen || detailContext.isCompared);
     elements.mobileCompareFab.setAttribute("aria-hidden", !canShowCompareFab && !compareModalOpen ? "true" : "false");
@@ -4453,11 +4458,14 @@ function bindEvents() {
 
   document.querySelectorAll(".deck-zone-pages").forEach((pages) => {
     let touchStartX = 0;
+    let touchStartY = 0;
     let touchEndX = 0;
+    let touchEndY = 0;
     pages.addEventListener(
       "touchstart",
       (event) => {
         touchStartX = event.changedTouches[0]?.clientX || 0;
+        touchStartY = event.changedTouches[0]?.clientY || 0;
       },
       { passive: true },
     );
@@ -4465,9 +4473,11 @@ function bindEvents() {
       "touchend",
       (event) => {
         touchEndX = event.changedTouches[0]?.clientX || 0;
-        const delta = touchEndX - touchStartX;
-        if (Math.abs(delta) < 40) return;
-        if (delta < 0) {
+        touchEndY = event.changedTouches[0]?.clientY || 0;
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        if (deltaX < 0) {
           setActiveDeckZone("token");
         } else {
           setActiveDeckZone("main");
@@ -4486,11 +4496,14 @@ function bindEvents() {
 
   if (elements.curvePages) {
     let touchStartX = 0;
+    let touchStartY = 0;
     let touchEndX = 0;
+    let touchEndY = 0;
     elements.curvePages.addEventListener(
       "touchstart",
       (event) => {
         touchStartX = event.changedTouches[0]?.clientX || 0;
+        touchStartY = event.changedTouches[0]?.clientY || 0;
       },
       { passive: true },
     );
@@ -4498,9 +4511,11 @@ function bindEvents() {
       "touchend",
       (event) => {
         touchEndX = event.changedTouches[0]?.clientX || 0;
-        const delta = touchEndX - touchStartX;
-        if (Math.abs(delta) < 40) return;
-        if (delta < 0) {
+        touchEndY = event.changedTouches[0]?.clientY || 0;
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
+        if (deltaX < 0) {
           setCurvePage("type");
         } else {
           setCurvePage("level");
