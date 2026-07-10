@@ -1506,6 +1506,7 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
   width: min(1120px, calc(100vw - 40px));
   max-height: calc(100vh - 48px);
   overflow: auto;
+  overflow-x: hidden;
   padding: 20px;
 }
 
@@ -1559,6 +1560,7 @@ body.is-detail-drawer-open .mobile-drawer-backdrop {
 .reference-modal-content {
   display: grid;
   gap: 14px;
+  min-width: 0;
 }
 
 .compare-card {
@@ -2932,6 +2934,8 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 .reference-item {
   display: grid;
   gap: 10px;
+  min-width: 0;
+  overflow: hidden;
   padding: 12px;
   border-radius: 18px;
   border: 1px solid var(--divider);
@@ -2954,6 +2958,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 .reference-title-block strong {
   display: block;
   margin: 0 0 4px;
+  overflow-wrap: anywhere;
 }
 
 .reference-apply-button {
@@ -2969,6 +2974,11 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   color: var(--ink-soft);
   font-size: 0.76rem;
+}
+
+.reference-meta span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .reference-zone-tabbar {
@@ -3051,7 +3061,9 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   width: 100%;
   min-height: 38px;
   padding-inline: 18px;
-  white-space: nowrap;
+  line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .reference-preview-empty {
@@ -4727,6 +4739,7 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   .compare-modal-dialog,
   .reference-modal-dialog {
     width: min(92vw, 420px);
+    max-width: calc(100vw - 16px);
     padding: 16px;
   }
 
@@ -4740,6 +4753,48 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
 
   .reference-meta {
     grid-template-columns: 1fr;
+  }
+
+  .reference-modal-head {
+    gap: 10px;
+  }
+
+  .reference-modal-title-row {
+    gap: 8px;
+  }
+
+  .reference-modal-title-row h2 {
+    font-size: 1.22rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .reference-modal-count {
+    min-height: 28px;
+    padding: 3px 10px;
+    font-size: 0.74rem;
+  }
+
+  .reference-item {
+    gap: 9px;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .reference-zone-tabbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .reference-zone-tabbar .deck-zone-tab {
+    min-width: 0;
+    padding-inline: 8px;
+  }
+
+  .reference-copy-button {
+    min-height: 42px;
+    padding: 9px 12px;
   }
 
   .image-preview-dialog {
@@ -4919,8 +4974,19 @@ body[data-theme="red"] .cloud-sync-badge.is-error {
   }
 
   .reference-preview-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 6px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 5px;
+    justify-content: stretch;
+  }
+
+  .reference-preview-frame {
+    padding: 6px;
+    border-radius: 14px;
+  }
+
+  .reference-preview-thumb {
+    width: 100%;
   }
 
   .side-panel .deck-tile-qty {
